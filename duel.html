@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HANABIE. HarajuQuizz X1</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main id="duel-app" class="app-shell duel-shell">
+      <section class="duel-panel" id="duel-home">
+        <div class="duel-heading">
+          <div>
+            <p class="kicker">X1 assíncrono</p>
+            <h1>HANABIE.<span>Challenge</span></h1>
+          </div>
+          <a class="ghost-link" href="./index.html">Menu</a>
+        </div>
+
+        <p class="duel-copy" id="duel-status">Crie um desafio de 20 perguntas e mande o link para outro fã tentar bater seu score.</p>
+
+        <div class="duel-actions">
+          <button class="primary-action" id="create-duel-button" type="button">Criar desafio X1</button>
+          <button class="primary-action" id="start-duel-button" type="button" hidden>Responder desafio</button>
+          <button class="ghost-action" id="copy-duel-button" type="button" hidden>Copiar link</button>
+        </div>
+
+        <div class="duel-scoreboard" id="duel-scoreboard"></div>
+      </section>
+
+      <section class="screen screen-game duel-game" id="duel-game" aria-live="polite">
+        <header class="hud">
+          <div class="hud-cell">
+            <span class="hud-label">Tempo</span>
+            <strong id="duel-timer">02:30</strong>
+          </div>
+          <div class="hud-cell">
+            <span class="hud-label">Score</span>
+            <strong id="duel-score">0</strong>
+          </div>
+          <div class="hud-cell combo-cell">
+            <span class="hud-label">Combo</span>
+            <strong id="duel-combo">x1</strong>
+          </div>
+          <div class="hud-cell">
+            <span class="hud-label">Perguntas</span>
+            <strong id="duel-progress">0/20</strong>
+          </div>
+        </header>
+
+        <section class="question-board">
+          <p class="round-label" id="duel-round">X1 01/20</p>
+          <h2 id="duel-question">Carregando desafio...</h2>
+          <div class="answers" id="duel-answers"></div>
+          <p class="feedback" id="duel-feedback"></p>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/duelApp.mjs"></script>
+  </body>
+</html>
