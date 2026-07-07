@@ -2956,5 +2956,503 @@
     "tags": [
       "song-meaning"
     ]
+  },
+  {
+    "id": "influence-yukina-bands",
+    "category": "members",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Qual grupo de bandas aparece como influencia citada por Yukina?",
+      "en": "Which group of bands is cited as Yukina influences?",
+      "es": "Que grupo de bandas aparece como influencia citada por Yukina?",
+      "ja": "ユキナの影響として挙げられているバンドの組み合わせは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Maximum the Hormone, A Crowd of Rebellion, Hysteric Panic e Ellegarden",
+        "Queen, ABBA, Journey e Toto",
+        "Nirvana, Pearl Jam, Soundgarden e Alice in Chains",
+        "Daft Punk, Justice, Air e Phoenix"
+      ],
+      "en": [
+        "Maximum the Hormone, A Crowd of Rebellion, Hysteric Panic, and Ellegarden",
+        "Queen, ABBA, Journey, and Toto",
+        "Nirvana, Pearl Jam, Soundgarden, and Alice in Chains",
+        "Daft Punk, Justice, Air, and Phoenix"
+      ],
+      "es": [
+        "Maximum the Hormone, A Crowd of Rebellion, Hysteric Panic y Ellegarden",
+        "Queen, ABBA, Journey y Toto",
+        "Nirvana, Pearl Jam, Soundgarden y Alice in Chains",
+        "Daft Punk, Justice, Air y Phoenix"
+      ],
+      "ja": [
+        "Maximum the Hormone、A Crowd of Rebellion、Hysteric Panic、Ellegarden",
+        "Queen、ABBA、Journey、Toto",
+        "Nirvana、Pearl Jam、Soundgarden、Alice in Chains",
+        "Daft Punk、Justice、Air、Phoenix"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Yukina cita Maximum the Hormone, A Crowd of Rebellion, Hysteric Panic e Ellegarden como influencias.",
+      "en": "Yukina cites Maximum the Hormone, A Crowd of Rebellion, Hysteric Panic, and Ellegarden as influences.",
+      "es": "Yukina cita Maximum the Hormone, A Crowd of Rebellion, Hysteric Panic y Ellegarden como influencias.",
+      "ja": "ユキナの影響としてこの4組が挙げられています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-matsuri-parents",
+    "category": "members",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Segundo fontes sobre influencias, quem ajudou a moldar o gosto musical de Matsuri?",
+      "en": "According to influence notes, who helped shape Matsuri's musical taste?",
+      "es": "Segun fuentes sobre influencias, quien ayudo a formar el gusto musical de Matsuri?",
+      "ja": "マツリの音楽の好みに影響を与えたとされるのは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Seus pais, fas de rock e metal",
+        "Um professor de piano classico",
+        "Um produtor de jazz de Osaka",
+        "Um DJ de techno de Berlim"
+      ],
+      "en": [
+        "Her parents, who are rock and metal fans",
+        "A classical piano teacher",
+        "A jazz producer from Osaka",
+        "A techno DJ from Berlin"
+      ],
+      "es": [
+        "Sus padres, fans de rock y metal",
+        "Un profesor de piano clasico",
+        "Un productor de jazz de Osaka",
+        "Un DJ de techno de Berlin"
+      ],
+      "ja": [
+        "ロックとメタル好きの両親",
+        "クラシックピアノの先生",
+        "大阪のジャズプロデューサー",
+        "ベルリンのテクノDJ"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Matsuri afirmou que seus gostos foram influenciados pelos pais, fas de rock e metal.",
+      "en": "Matsuri has said her taste was influenced by her parents, both rock and metal fans.",
+      "es": "Matsuri dijo que su gusto fue influido por sus padres, fans de rock y metal.",
+      "ja": "マツリの音楽的な好みは、ロックとメタル好きの両親の影響とされています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-hettsu-anime-songs",
+    "category": "members",
+    "difficulty": 3,
+    "prompt": {
+      "pt-BR": "Hettsu cita qual tipo de musica como sua maior influencia?",
+      "en": "Hettsu cites what kind of music as her biggest influence?",
+      "es": "Hettsu cita que tipo de musica como su mayor influencia?",
+      "ja": "ヘッツが最大の影響として挙げている音楽は?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Musicas de anime",
+        "Blues dos anos 30",
+        "Opera italiana",
+        "Country americano"
+      ],
+      "en": [
+        "Anime songs",
+        "1930s blues",
+        "Italian opera",
+        "American country"
+      ],
+      "es": [
+        "Canciones de anime",
+        "Blues de los anos 30",
+        "Opera italiana",
+        "Country estadounidense"
+      ],
+      "ja": [
+        "アニメソング",
+        "1930年代のブルース",
+        "イタリアオペラ",
+        "アメリカのカントリー"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Hettsu cita anime songs como uma grande influencia.",
+      "en": "Hettsu cites anime songs as a major influence.",
+      "es": "Hettsu cita las canciones de anime como una gran influencia.",
+      "ja": "ヘッツはアニメソングを大きな影響として挙げています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-chika-roots",
+    "category": "members",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Quais artistas aparecem como raizes musicais de Chika?",
+      "en": "Which artists are listed as Chika's musical roots?",
+      "es": "Que artistas aparecen como raices musicales de Chika?",
+      "ja": "チカの音楽的ルーツとして挙げられているアーティストは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "One OK Rock, Sekai No Owari e Spitz",
+        "Metallica, Slayer e Megadeth",
+        "Beyonce, Rihanna e SZA",
+        "Aphex Twin, Boards of Canada e Autechre"
+      ],
+      "en": [
+        "One OK Rock, Sekai No Owari, and Spitz",
+        "Metallica, Slayer, and Megadeth",
+        "Beyonce, Rihanna, and SZA",
+        "Aphex Twin, Boards of Canada, and Autechre"
+      ],
+      "es": [
+        "One OK Rock, Sekai No Owari y Spitz",
+        "Metallica, Slayer y Megadeth",
+        "Beyonce, Rihanna y SZA",
+        "Aphex Twin, Boards of Canada y Autechre"
+      ],
+      "ja": [
+        "ONE OK ROCK、SEKAI NO OWARI、スピッツ",
+        "Metallica、Slayer、Megadeth",
+        "Beyonce、Rihanna、SZA",
+        "Aphex Twin、Boards of Canada、Autechre"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Chika cita One OK Rock, Sekai No Owari e Spitz como raizes musicais.",
+      "en": "Chika cites One OK Rock, Sekai No Owari, and Spitz as musical roots.",
+      "es": "Chika cita One OK Rock, Sekai No Owari y Spitz como raices musicales.",
+      "ja": "チカの音楽的ルーツとしてこの3組が挙げられています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-all-anime-games",
+    "category": "history",
+    "difficulty": 3,
+    "prompt": {
+      "pt-BR": "Que tipo de cultura todas as integrantes admitiram curtir e que aparece em capas e MVs?",
+      "en": "What culture do all members admit enjoying, also visible in covers and music videos?",
+      "es": "Que cultura dicen disfrutar todas las integrantes y aparece en portadas y videos?",
+      "ja": "メンバー全員が好きだとされ、ジャケットやMVにも見える文化は?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Anime e videogames",
+        "Xadrez e astronomia",
+        "Hipismo e golf",
+        "Opera e ballet classico"
+      ],
+      "en": [
+        "Anime and video games",
+        "Chess and astronomy",
+        "Horse riding and golf",
+        "Opera and classical ballet"
+      ],
+      "es": [
+        "Anime y videojuegos",
+        "Ajedrez y astronomia",
+        "Equitacion y golf",
+        "Opera y ballet clasico"
+      ],
+      "ja": [
+        "アニメとゲーム",
+        "チェスと天文学",
+        "乗馬とゴルフ",
+        "オペラとクラシックバレエ"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Anime e videogames aparecem como gostos/influencias das integrantes e no visual da banda.",
+      "en": "Anime and video games are cited as member interests/influences and appear in the band's visuals.",
+      "es": "Anime y videojuegos aparecen como gustos/influencias y en el visual de la banda.",
+      "ja": "アニメとゲームはメンバーの関心やバンドのビジュアルにも表れています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-cocoa-otoko-fans",
+    "category": "history",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Quais integrantes eram fas de Cocoa Otoko na epoca de escola, segundo a historia do ponto final?",
+      "en": "Which members were Cocoa Otoko fans in school, according to the period story?",
+      "es": "Que integrantes eran fans de Cocoa Otoko en la escuela, segun la historia del punto final?",
+      "ja": "句点の由来に関係して、学生時代にCocoa Otokoのファンだったのは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Yukina e Hettsu",
+        "Matsuri e Chika",
+        "Kaede e Sae",
+        "Boa e Chika"
+      ],
+      "en": [
+        "Yukina and Hettsu",
+        "Matsuri and Chika",
+        "Kaede and Sae",
+        "Boa and Chika"
+      ],
+      "es": [
+        "Yukina y Hettsu",
+        "Matsuri y Chika",
+        "Kaede y Sae",
+        "Boa y Chika"
+      ],
+      "ja": [
+        "ユキナとヘッツ",
+        "マツリとチカ",
+        "カエデとサエ",
+        "ボアとチカ"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "O ponto em HANABIE. e ligado a Cocoa Otoko, de quem Yukina e Hettsu eram fas.",
+      "en": "The period in HANABIE. is linked to Cocoa Otoko, whom Yukina and Hettsu liked.",
+      "es": "El punto en HANABIE. se liga a Cocoa Otoko, grupo que gustaba a Yukina y Hettsu.",
+      "ja": "HANABIE.の句点は、ユキナとヘッツが好きだったCocoa Otokoへの言及です。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-bucchigiri-green-day",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Matsuri compôs Bucchigiri Tokyo depois de ver apresentacao de qual banda em festival europeu?",
+      "en": "Matsuri composed Bucchigiri Tokyo after seeing which band at a European festival?",
+      "es": "Matsuri compuso Bucchigiri Tokyo despues de ver a que banda en un festival europeo?",
+      "ja": "マツリがBucchigiri Tokyoを作るきっかけになった欧州フェスのバンドは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Green Day",
+        "Muse",
+        "Slipknot",
+        "Paramore"
+      ],
+      "en": [
+        "Green Day",
+        "Muse",
+        "Slipknot",
+        "Paramore"
+      ],
+      "es": [
+        "Green Day",
+        "Muse",
+        "Slipknot",
+        "Paramore"
+      ],
+      "ja": [
+        "Green Day",
+        "Muse",
+        "Slipknot",
+        "Paramore"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Segundo entrevista citada, Matsuri compôs a musica apos assistir Green Day em festival europeu.",
+      "en": "According to a cited interview, Matsuri composed it after watching Green Day at a European festival.",
+      "es": "Segun entrevista citada, Matsuri la compuso tras ver a Green Day en un festival europeo.",
+      "ja": "引用されたインタビューでは、マツリは欧州フェスでGreen Dayを見た後に作曲したとされています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "influence-metamorphose-precure",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Metamorphose! foi influenciada por qual anime citado pela fonte?",
+      "en": "Metamorphose! was influenced by which anime cited by the source?",
+      "es": "Metamorphose! fue influenciada por que anime citado por la fuente?",
+      "ja": "Metamorphose!に影響したとされるアニメは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Pretty Cure / Purikyua",
+        "Cowboy Bebop",
+        "Death Note",
+        "Initial D"
+      ],
+      "en": [
+        "Pretty Cure / Purikyua",
+        "Cowboy Bebop",
+        "Death Note",
+        "Initial D"
+      ],
+      "es": [
+        "Pretty Cure / Purikyua",
+        "Cowboy Bebop",
+        "Death Note",
+        "Initial D"
+      ],
+      "ja": [
+        "プリキュア",
+        "カウボーイビバップ",
+        "デスノート",
+        "頭文字D"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "A faixa e citada como influenciada pela fofura e forca de Pretty Cure/Purikyua.",
+      "en": "The track is cited as influenced by the cuteness and power of Pretty Cure/Purikyua.",
+      "es": "La cancion se cita como influida por la ternura y fuerza de Pretty Cure/Purikyua.",
+      "ja": "この曲はプリキュアのかわいさと力強さに影響されたとされています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "influence-otaku-lovely-subculture",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": {
+      "pt-BR": "Otaku Lovely Densetsu gira em torno de qual subcultura?",
+      "en": "Otaku Lovely Densetsu revolves around which subculture?",
+      "es": "Otaku Lovely Densetsu gira alrededor de que subcultura?",
+      "ja": "Otaku Lovely Densetsuのテーマになっているサブカルチャーは?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Cultura otaku japonesa",
+        "Surf californiano",
+        "Moda vitoriana britanica",
+        "Culinaria francesa"
+      ],
+      "en": [
+        "Japanese otaku culture",
+        "Californian surf culture",
+        "British Victorian fashion",
+        "French cuisine"
+      ],
+      "es": [
+        "Cultura otaku japonesa",
+        "Surf californiano",
+        "Moda victoriana britanica",
+        "Cocina francesa"
+      ],
+      "ja": [
+        "日本のオタク文化",
+        "カリフォルニアのサーフ文化",
+        "英国ヴィクトリア朝ファッション",
+        "フランス料理"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "A faixa e descrita como ligada a subcultura otaku japonesa.",
+      "en": "The track is described as tied to Japanese otaku subculture.",
+      "es": "La cancion se describe como ligada a la subcultura otaku japonesa.",
+      "ja": "この曲は日本のオタク文化をテーマにしていると説明されています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo",
+    "tags": [
+      "song-meaning"
+    ]
+  },
+  {
+    "id": "influence-harajuku-fashion-image",
+    "category": "history",
+    "difficulty": 2,
+    "prompt": {
+      "pt-BR": "Qual elemento de moda e central para a imagem Harajuku-core da banda?",
+      "en": "Which fashion element is central to the band's Harajuku-core image?",
+      "es": "Que elemento de moda es central para la imagen Harajuku-core de la banda?",
+      "ja": "バンドのHarajuku-coreイメージの中心にあるファッション要素は?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Moda de rua de Harajuku",
+        "Ternos formais italianos",
+        "Uniformes militares historicos",
+        "Roupas de cowboy"
+      ],
+      "en": [
+        "Harajuku street fashion",
+        "Formal Italian suits",
+        "Historical military uniforms",
+        "Cowboy outfits"
+      ],
+      "es": [
+        "Moda callejera de Harajuku",
+        "Trajes formales italianos",
+        "Uniformes militares historicos",
+        "Ropa de cowboy"
+      ],
+      "ja": [
+        "原宿ストリートファッション",
+        "イタリアのフォーマルスーツ",
+        "歴史的な軍服",
+        "カウボーイ衣装"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "A imagem Harajuku-core combina som pesado com moda/estetica de Harajuku.",
+      "en": "The Harajuku-core image combines heavy sound with Harajuku fashion/aesthetics.",
+      "es": "La imagen Harajuku-core combina sonido pesado con moda/estetica de Harajuku.",
+      "ja": "Harajuku-coreは重いサウンドと原宿のファッション/美学を組み合わせています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "influence-nico-vocaloid",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Que tipo de musica online japonesa tambem aparece como influencia das integrantes?",
+      "en": "Which type of Japanese online music is also cited as an influence on the members?",
+      "es": "Que tipo de musica online japonesa tambien aparece como influencia de las integrantes?",
+      "ja": "メンバーの影響としても挙げられる日本のオンライン音楽は?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Vocaloid e musica eletronica popular no Nico Nico Douga",
+        "Fado portugues em radios antigas",
+        "Country rock de Nashville",
+        "Tango argentino classico"
+      ],
+      "en": [
+        "Vocaloid and electronic music popular on Nico Nico Douga",
+        "Portuguese fado on old radio",
+        "Nashville country rock",
+        "Classic Argentine tango"
+      ],
+      "es": [
+        "Vocaloid y musica electronica popular en Nico Nico Douga",
+        "Fado portugues de radio antigua",
+        "Country rock de Nashville",
+        "Tango argentino clasico"
+      ],
+      "ja": [
+        "ボーカロイドとニコニコ動画で人気の電子音楽",
+        "古いラジオのポルトガル民謡",
+        "ナッシュビルのカントリーロック",
+        "クラシックなアルゼンチンタンゴ"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Vocaloid e musica eletronica do Nico Nico Douga sao citados entre as influencias.",
+      "en": "Vocaloid and Nico Nico Douga electronic music are cited among the influences.",
+      "es": "Vocaloid y musica electronica de Nico Nico Douga se citan entre las influencias.",
+      "ja": "ボーカロイドとニコニコ動画の電子音楽も影響として挙げられています。"
+    },
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   }
 ]

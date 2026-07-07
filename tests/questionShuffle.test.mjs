@@ -44,3 +44,20 @@ test('shuffleQuestions randomizes question order and each question choices', () 
   assert.equal(shuffled[0].choices[shuffled[0].answerIndex], 'Certa 2');
   assert.equal(shuffled[1].choices[shuffled[1].answerIndex], 'Certa');
 });
+
+test('shuffleQuestions can avoid recently seen questions at the front', () => {
+  const source = Array.from({ length: 6 }, (_, index) => ({
+    ...question,
+    id: `question-${index + 1}`
+  }));
+
+  const shuffled = shuffleQuestions(source, () => 0.99, {
+    recentQuestionIds: ['question-1', 'question-2', 'question-3'],
+    preferredFreshCount: 3
+  });
+
+  assert.deepEqual(
+    shuffled.slice(0, 3).map((item) => item.id),
+    ['question-4', 'question-5', 'question-6']
+  );
+});

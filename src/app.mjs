@@ -21,6 +21,10 @@ import { shuffleQuestions } from './questionShuffle.mjs';
 import { calculateFanRank } from './scoring.mjs';
 
 const LANGUAGE_STORAGE_KEY = 'hanabie-quiz-language';
+const RECENT_QUESTIONS_STORAGE_KEY = 'hanabie-recent-question-ids';
+const DEMO_AUDIO_ENABLED_STORAGE_KEY = 'hanabie-demo-audio-enabled';
+const RECENT_QUESTIONS_LIMIT = 48;
+const SESSION_RECENT_MARK_COUNT = 24;
 
 const app = document.querySelector('#app');
 const screens = {
@@ -154,6 +158,7 @@ async function boot() {
 
     audioStatus.textContent = t('audioLoaded', currentLanguage, { count: questions.length });
     startButton.disabled = false;
+    await startDefaultDemoTrack();
   } catch (error) {
     startButton.disabled = true;
     audioStatus.textContent = t('runLocalServer', currentLanguage, { message: error.message });
@@ -168,7 +173,11 @@ function startGame() {
   clearInterval(timerHandle);
   clearTimeout(feedbackHandle);
   const localizedQuestions = questions.map((question) => localizeQuestion(question, currentLanguage));
-  const shuffledQuestions = shuffleQuestions(localizedQuestions);
+  const shuffledQuestions = shuffleQuestions(localizedQuestions, Math.random, {
+    recentQuestionIds: getRecentQuestionIds(),
+    preferredFreshCount: Math.min(SESSION_RECENT_MARK_COUNT, localizedQuestions.length)
+  });
+  rememberRecentQuestions(shuffledQuestions.slice(0, SESSION_RECENT_MARK_COUNT).map((question) => question.id));
   state = createGameSession(shuffledQuestions, { startedAtMs: performance.now() });
   setScreen('game');
   renderQuestion();
@@ -331,6 +340,7 @@ async function handleAudioSelection(event) {
     return;
   }
 
+  setDemoAudioEnabled(false);
   try {
     disposeAudioAnalyser();
     const nextAudioElement = new Audio();
@@ -344,6 +354,7 @@ async function handleAudioSelection(event) {
 }
 
 async function handleDemoTrackSelection() {
+  setDemoAudioEnabled(true);
   try {
     disposeAudioAnalyser();
     audioInput.value = '';
@@ -357,6 +368,7 @@ async function handleDemoTrackSelection() {
 }
 
 function clearAudio() {
+  setDemoAudioEnabled(false);
   disposeAudioAnalyser();
   audioInput.value = '';
   audioStatus.textContent = t('audioCleared', currentLanguage);
@@ -533,6 +545,57 @@ function getStoredLanguage() {
     return getLanguage(localStorage.getItem(LANGUAGE_STORAGE_KEY));
   } catch {
     return DEFAULT_LANGUAGE;
+  }
+}
+
+function getRecentQuestionIds() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(RECENT_QUESTIONS_STORAGE_KEY) || '[]');
+    return Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+function rememberRecentQuestions(questionIds) {
+  const mergedIds = [...questionIds, ...getRecentQuestionIds()];
+  const uniqueIds = [];
+  for (const id of mergedIds) {
+    if (id && !uniqueIds.includes(id)) {
+      uniqueIds.push(id);
+    }
+  }
+  localStorage.setItem(RECENT_QUESTIONS_STORAGE_KEY, JSON.stringify(uniqueIds.slice(0, RECENT_QUESTIONS_LIMIT)));
+}
+
+async function startDefaultDemoTrack() {
+  if (!isDemoAudioEnabled() || audioAnalyser) {
+    return;
+  }
+
+  try {
+    audioInput.value = '';
+    audioAnalyser = await createGeneratedDemoAnalyser();
+    await audioAnalyser.play();
+    audioStatus.textContent = t('demoPlaying', currentLanguage, { name: audioAnalyser.title });
+  } catch {
+    disposeAudioAnalyser();
+  }
+}
+
+function isDemoAudioEnabled() {
+  try {
+    return localStorage.getItem(DEMO_AUDIO_ENABLED_STORAGE_KEY) !== 'false';
+  } catch {
+    return true;
+  }
+}
+
+function setDemoAudioEnabled(isEnabled) {
+  try {
+    localStorage.setItem(DEMO_AUDIO_ENABLED_STORAGE_KEY, isEnabled ? 'true' : 'false');
+  } catch {
+    // Audio preference is optional; the game works without localStorage.
   }
 }
 
