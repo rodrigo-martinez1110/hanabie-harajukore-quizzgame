@@ -4,15 +4,17 @@ export const ANALYTICS_SELECT =
   'event_type,player_id,country_code,language,score,accuracy,max_combo,answered,fan_rank,question_id,question_category,question_difficulty,correct,created_at';
 
 export function isAuthorizedAdminRequest(request, adminPassword) {
-  if (!adminPassword) {
+  const expectedPassword = String(adminPassword || '').trim();
+  if (!expectedPassword) {
     return false;
   }
 
   const headerPassword = request.headers?.['x-admin-password'] || request.headers?.['X-Admin-Password'];
   const authorization = request.headers?.authorization || request.headers?.Authorization || '';
   const bearerToken = authorization.startsWith('Bearer ') ? authorization.slice('Bearer '.length) : '';
+  const providedPassword = String(headerPassword || bearerToken || '').trim();
 
-  return constantTimeEqual(String(headerPassword || bearerToken || ''), String(adminPassword));
+  return constantTimeEqual(providedPassword, expectedPassword);
 }
 
 export function buildAnalyticsEventsQuery(url, now = new Date()) {

@@ -22,6 +22,17 @@ test('isAuthorizedAdminRequest accepts matching header or bearer token', () => {
   );
 });
 
+test('isAuthorizedAdminRequest ignores accidental surrounding spaces', () => {
+  assert.equal(
+    isAuthorizedAdminRequest({ headers: { 'x-admin-password': 'secret' } }, ' secret '),
+    true
+  );
+  assert.equal(
+    isAuthorizedAdminRequest({ headers: { authorization: 'Bearer secret ' } }, 'secret'),
+    true
+  );
+});
+
 test('buildAnalyticsEventsQuery selects owner stats for a period', () => {
   const query = buildAnalyticsEventsQuery(
     new URL('https://game.test/api/admin-stats?period=7d'),
