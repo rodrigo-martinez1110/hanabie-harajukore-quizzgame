@@ -356,6 +356,36 @@ const UI_COPY = {
     es: 'Responde rapido, mantén la racha y sube la Crowd Energy. El audio local, si se carga, anima la pantalla y queda en tu dispositivo.',
     ja: '速く答えて連続正解を守り、Crowd Energyを上げよう。読み込んだローカル音声は画面を動かすだけで、端末内に残ります。'
   },
+  scoreRulesTitle: {
+    'pt-BR': 'Como a pontuacao e calculada',
+    en: 'How scoring works',
+    es: 'Como se calcula la puntuacion',
+    ja: 'スコアの計算方法'
+  },
+  scoreRuleBase: {
+    'pt-BR': 'Cada acerto vale 100 pontos base + ate 50 pontos de velocidade.',
+    en: 'Each correct answer is worth 100 base points + up to 50 speed points.',
+    es: 'Cada acierto vale 100 puntos base + hasta 50 puntos por velocidad.',
+    ja: '正解は100ベースポイント + 最大50の速度ボーナス。'
+  },
+  scoreRuleCombo: {
+    'pt-BR': 'Acertos seguidos sobem o combo de x1 ate x5 e multiplicam os pontos.',
+    en: 'Correct streaks raise combo from x1 to x5 and multiply your points.',
+    es: 'Los aciertos seguidos suben el combo de x1 a x5 y multiplican puntos.',
+    ja: '連続正解でコンボがx1からx5まで上がり、ポイントを乗算します。'
+  },
+  scoreRuleFever: {
+    'pt-BR': 'No Fever, os pontos da resposta recebem multiplicador 2x.',
+    en: 'During Fever, answer points get a 2x multiplier.',
+    es: 'En Fever, los puntos de la respuesta reciben multiplicador 2x.',
+    ja: 'Fever中は回答ポイントが2xになります。'
+  },
+  scoreRuleRank: {
+    'pt-BR': 'O rank final usa score, precisao, maior combo e perguntas respondidas.',
+    en: 'Your final rank uses score, accuracy, max combo, and answered questions.',
+    es: 'El rango final usa score, precision, combo maximo y preguntas respondidas.',
+    ja: '最終ランクはスコア、正答率、最大コンボ、回答数で決まります。'
+  },
   close: {
     'pt-BR': 'Fechar',
     en: 'Close',

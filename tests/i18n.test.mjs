@@ -64,3 +64,13 @@ test('t returns UI copy for all supported languages', () => {
   assert.equal(t('startButton', 'ja'), 'プレイ');
   assert.equal(t('missing.key', 'en'), 'missing.key');
 });
+
+test('scoring explanation copy exists for every supported language', () => {
+  for (const language of ['pt-BR', 'en', 'es', 'ja']) {
+    assert.notEqual(t('scoreRulesTitle', language), 'scoreRulesTitle');
+    assert.match(t('scoreRuleBase', language), /100/);
+    assert.match(t('scoreRuleCombo', language), /x5|5/);
+    assert.match(t('scoreRuleFever', language), /2x|x2|2/);
+    assert.notEqual(t('scoreRuleRank', language), 'scoreRuleRank');
+  }
+});
