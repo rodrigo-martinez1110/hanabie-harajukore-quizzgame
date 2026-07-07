@@ -6,7 +6,7 @@ create table if not exists public.leaderboard_scores (
   run_id uuid not null unique,
   nickname text not null check (char_length(nickname) between 2 and 18),
   country_code char(2) not null check (country_code ~ '^[A-Z]{2}$'),
-  score integer not null check (score >= 0 and score <= 20000),
+  score integer not null check (score >= 0 and score <= 100000),
   accuracy numeric(5,4) not null check (accuracy >= 0 and accuracy <= 1),
   max_combo integer not null check (max_combo >= 1 and max_combo <= 5),
   answered integer not null check (answered >= 0 and answered <= 80),
@@ -17,6 +17,13 @@ create table if not exists public.leaderboard_scores (
 );
 
 alter table public.leaderboard_scores enable row level security;
+
+alter table public.leaderboard_scores
+  drop constraint if exists leaderboard_scores_score_check;
+
+alter table public.leaderboard_scores
+  add constraint leaderboard_scores_score_check
+  check (score >= 0 and score <= 100000);
 
 drop policy if exists "Public leaderboard read" on public.leaderboard_scores;
 drop policy if exists "No public leaderboard reads" on public.leaderboard_scores;

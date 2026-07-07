@@ -67,6 +67,24 @@ test('validateScoreSubmission normalizes a valid score payload', () => {
   assert.equal(result.value.fanRank, 'Fever Headliner');
 });
 
+test('validateScoreSubmission accepts high legitimate fever scores', () => {
+  const result = validateScoreSubmission({
+    playerId: '018fb6af-9cb8-75ba-9f40-97fcb2f9e111',
+    runId: '018fb6af-9cb8-75ba-9f40-97fcb2f9e222',
+    nickname: 'Jillinflames',
+    countryCode: 'US',
+    score: 24033,
+    accuracy: 0.96,
+    maxCombo: 5,
+    answered: 25,
+    language: 'en'
+  });
+
+  assert.equal(result.ok, true);
+  assert.equal(result.value.score, 24033);
+  assert.equal(result.value.fanRank, 'Hanabie. Legend');
+});
+
 test('validateScoreSubmission rejects impossible or malformed scores', () => {
   const result = validateScoreSubmission({
     playerId: 'bad',

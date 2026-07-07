@@ -82,7 +82,7 @@ export const FAN_RANK_TIERS = [
   }
 ];
 
-const MAX_SCORE = 20_000;
+const MAX_SCORE = 100_000;
 const MAX_ANSWERED = 80;
 const MAX_COMBO = 5;
 const SUPPORTED_LANGUAGES = ['pt-BR', 'en', 'es', 'ja'];
