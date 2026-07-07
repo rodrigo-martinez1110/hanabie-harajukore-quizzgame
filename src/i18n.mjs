@@ -188,6 +188,12 @@ const UI_COPY = {
     es: 'Respondidas',
     ja: '回答数'
   },
+  answeredShort: {
+    'pt-BR': 'resp',
+    en: 'ans',
+    es: 'resp',
+    ja: 'ans'
+  },
   officialLinks: {
     'pt-BR': 'Links oficiais',
     en: 'Official links',
@@ -211,6 +217,18 @@ const UI_COPY = {
     en: 'Leaderboard',
     es: 'Ranking',
     ja: 'ランキング'
+  },
+  leaderboardScoringTitle: {
+    'pt-BR': 'Como o rating e calculado',
+    en: 'How rating is calculated',
+    es: 'Como se calcula el rating',
+    ja: 'Rating calculation'
+  },
+  leaderboardScoringBody: {
+    'pt-BR': 'O score vem da partida. O rating do rank soma score + bonus de precisao + bonus de combo + bonus de respostas; abra um card para ver a conta.',
+    en: 'The score comes from the run. Rank rating adds score + accuracy bonus + combo bonus + answered bonus; open a card to see the math.',
+    es: 'El score viene de la partida. El rating suma score + bonus de precision + bonus de combo + bonus de respuestas; abre una tarjeta para ver la cuenta.',
+    ja: 'Score comes from the run. Rating adds score + accuracy bonus + combo bonus + answered bonus; open a card to see the math.'
   },
   top10Tab: {
     'pt-BR': 'Top 10',

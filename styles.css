@@ -609,6 +609,29 @@ h1 span {
   display: block;
 }
 
+.leaderboard-scoring-note {
+  margin: 14px 0 0;
+  padding: 12px;
+  border: 1px solid rgba(74, 229, 255, .24);
+  border-radius: 8px;
+  background: rgba(74, 229, 255, .08);
+}
+
+.leaderboard-scoring-note strong {
+  display: block;
+  color: var(--cyan);
+  font-size: 14px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.leaderboard-scoring-note p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .leaderboard-list {
   margin: 18px 0 0;
   padding: 0;
@@ -741,6 +764,42 @@ h1 span {
 
 .leaderboard-score {
   text-align: right;
+}
+
+.leaderboard-score small {
+  color: var(--yellow);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.leaderboard-score-explain {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.leaderboard-score-explain summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--cyan);
+  font-weight: 900;
+}
+
+.leaderboard-score-explain p {
+  max-width: 54ch;
+  margin: 6px 0;
+}
+
+.leaderboard-score-explain code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 6px;
+  border-radius: 6px;
+  color: var(--yellow);
+  background: rgba(0, 0, 0, .25);
+  white-space: normal;
 }
 
 .leaderboard-status {

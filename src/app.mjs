@@ -17,7 +17,11 @@ import {
   savePlayerProfile,
   submitLeaderboardScore
 } from './leaderboardClient.mjs';
-import { getLeaderboardEntryClasses, getLeaderboardPositionLabel } from './leaderboardPresentation.mjs';
+import {
+  explainLeaderboardScore,
+  getLeaderboardEntryClasses,
+  getLeaderboardPositionLabel
+} from './leaderboardPresentation.mjs';
 import { normalizeQuestionBank } from './questionBank.mjs';
 import { shuffleQuestions } from './questionShuffle.mjs';
 import { calculateFanRank } from './scoring.mjs';
@@ -511,6 +515,8 @@ function renderScoreList(scores, list) {
 function getScoreCardMarkup(score, position, options = {}) {
   const showPodiumLabel = (options.showPodiumLabel ?? true) && position <= 3;
   const accuracy = Math.round(Number(score.accuracy || 0) * 100);
+  const explanation = explainLeaderboardScore(score, currentLanguage);
+  const answeredLabel = t('answeredShort', currentLanguage);
   return `
     <span class="leaderboard-position">
       <span class="leaderboard-position-number">#${position}</span>
@@ -518,11 +524,17 @@ function getScoreCardMarkup(score, position, options = {}) {
     </span>
     <div class="leaderboard-player">
       <strong>${escapeHtml(score.nickname)}</strong>
-      <span>${escapeHtml(score.countryCode)} · ${escapeHtml(score.fanRank)}</span>
+      <span>${escapeHtml(score.countryCode)} &middot; ${escapeHtml(score.fanRank)}</span>
+      <details class="leaderboard-score-explain">
+        <summary>${escapeHtml(explanation.formulaLabel)}</summary>
+        <p>${escapeHtml(explanation.detail)}</p>
+        <code>${escapeHtml(explanation.summary)}</code>
+      </details>
     </div>
     <div class="leaderboard-score">
       <strong>${Number(score.score || 0)}</strong>
-      <span>${accuracy}% · x${Number(score.maxCombo || 1)}</span>
+      <span>${accuracy}% &middot; x${Number(score.maxCombo || 1)} &middot; ${Number(score.answered || 0)} ${escapeHtml(answeredLabel)}</span>
+      <small>Rating ${explanation.rating}</small>
     </div>
   `;
 }
