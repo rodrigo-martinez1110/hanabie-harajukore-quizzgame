@@ -194,6 +194,66 @@ const UI_COPY = {
     es: 'resp',
     ja: 'ans'
   },
+  reviewQuestionsButton: {
+    'pt-BR': 'Rever perguntas',
+    en: 'Review answers',
+    es: 'Revisar respuestas',
+    ja: 'Review answers'
+  },
+  hideReviewButton: {
+    'pt-BR': 'Ocultar revisao',
+    en: 'Hide review',
+    es: 'Ocultar revision',
+    ja: 'Hide review'
+  },
+  reviewTitle: {
+    'pt-BR': 'Revisao das respostas',
+    en: 'Answer review',
+    es: 'Revision de respuestas',
+    ja: 'Answer review'
+  },
+  reviewQuestionNumber: {
+    'pt-BR': 'Pergunta {number}',
+    en: 'Question {number}',
+    es: 'Pregunta {number}',
+    ja: 'Question {number}'
+  },
+  reviewCorrect: {
+    'pt-BR': 'Acertou',
+    en: 'Correct',
+    es: 'Correcta',
+    ja: 'Correct'
+  },
+  reviewWrong: {
+    'pt-BR': 'Errou',
+    en: 'Missed',
+    es: 'Incorrecta',
+    ja: 'Missed'
+  },
+  yourAnswerLabel: {
+    'pt-BR': 'Sua resposta',
+    en: 'Your answer',
+    es: 'Tu respuesta',
+    ja: 'Your answer'
+  },
+  correctAnswerLabel: {
+    'pt-BR': 'Resposta certa',
+    en: 'Correct answer',
+    es: 'Respuesta correcta',
+    ja: 'Correct answer'
+  },
+  noAnswerLabel: {
+    'pt-BR': 'Sem resposta',
+    en: 'No answer',
+    es: 'Sin respuesta',
+    ja: 'No answer'
+  },
+  noExplanationLabel: {
+    'pt-BR': 'Sem explicacao cadastrada.',
+    en: 'No explanation added.',
+    es: 'Sin explicacion registrada.',
+    ja: 'No explanation added.'
+  },
   officialLinks: {
     'pt-BR': 'Links oficiais',
     en: 'Official links',

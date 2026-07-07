@@ -53,6 +53,9 @@ const menuButton = document.querySelector('#menu-button');
 const restartButton = document.querySelector('#restart-button');
 const resultMenuButton = document.querySelector('#result-menu-button');
 const resultLeaderboardButton = document.querySelector('#result-leaderboard-button');
+const reviewToggleButton = document.querySelector('#review-toggle-button');
+const answerReview = document.querySelector('#answer-review');
+const answerReviewList = document.querySelector('#answer-review-list');
 const leaderboardMenuButton = document.querySelector('#leaderboard-menu-button');
 const scoreSubmitForm = document.querySelector('#score-submit-form');
 const nicknameInput = document.querySelector('#nickname-input');
@@ -118,6 +121,7 @@ menuButton.addEventListener('click', returnToMenu);
 restartButton.addEventListener('click', startGame);
 resultMenuButton.addEventListener('click', returnToMenu);
 resultLeaderboardButton.addEventListener('click', () => showLeaderboard('top10'));
+reviewToggleButton.addEventListener('click', toggleAnswerReview);
 leaderboardMenuButton.addEventListener('click', returnToMenu);
 scoreSubmitForm.addEventListener('submit', handleScoreSubmit);
 languageButtons.forEach((button) => {
@@ -319,6 +323,7 @@ function endGame() {
   resultAccuracyEl.textContent = `${Math.round(accuracy * 100)}%`;
   resultComboEl.textContent = `x${state?.maxCombo ?? 1}`;
   resultAnsweredEl.textContent = String(answered);
+  renderAnswerReview();
   setScreen('results');
 }
 
@@ -412,6 +417,9 @@ function returnToMenu() {
   state = null;
   answersEl.innerHTML = '';
   feedbackEl.textContent = '';
+  answerReview.hidden = true;
+  reviewToggleButton.textContent = t('reviewQuestionsButton', currentLanguage);
+  answerReviewList.innerHTML = '';
   questionTextEl.textContent = t('loadingQuestion', currentLanguage);
   setScreen('start');
   applyLanguage();
@@ -546,6 +554,47 @@ function renderRankGrid() {
       <p>${escapeHtml(getRankMeaning(tier, currentLanguage))}</p>
     </article>
   `).join('');
+}
+
+function toggleAnswerReview() {
+  answerReview.hidden = !answerReview.hidden;
+  reviewToggleButton.textContent = answerReview.hidden
+    ? t('reviewQuestionsButton', currentLanguage)
+    : t('hideReviewButton', currentLanguage);
+}
+
+function renderAnswerReview() {
+  const answers = state?.answerHistory || [];
+  answerReview.hidden = true;
+  reviewToggleButton.textContent = t('reviewQuestionsButton', currentLanguage);
+  reviewToggleButton.disabled = answers.length === 0;
+  answerReviewList.innerHTML = answers.map((answer, index) => getAnswerReviewMarkup(answer, index)).join('');
+}
+
+function getAnswerReviewMarkup(answer, index) {
+  const selectedChoice = answer.selectedChoice || t('noAnswerLabel', currentLanguage);
+  const resultKey = answer.correct ? 'reviewCorrect' : 'reviewWrong';
+  const resultClass = answer.correct ? 'is-correct' : 'is-wrong';
+  return `
+    <article class="answer-review-card ${resultClass}">
+      <div class="answer-review-heading">
+        <span>${escapeHtml(t('reviewQuestionNumber', currentLanguage, { number: index + 1 }))}</span>
+        <strong>${escapeHtml(t(resultKey, currentLanguage))}</strong>
+      </div>
+      <p class="answer-review-prompt">${escapeHtml(answer.prompt)}</p>
+      <dl>
+        <div>
+          <dt>${escapeHtml(t('yourAnswerLabel', currentLanguage))}</dt>
+          <dd>${escapeHtml(selectedChoice)}</dd>
+        </div>
+        <div>
+          <dt>${escapeHtml(t('correctAnswerLabel', currentLanguage))}</dt>
+          <dd>${escapeHtml(answer.correctChoice)}</dd>
+        </div>
+      </dl>
+      <p class="answer-review-explanation">${escapeHtml(answer.explanation || t('noExplanationLabel', currentLanguage))}</p>
+    </article>
+  `;
 }
 
 function trackGameEvent(eventType, details = {}) {

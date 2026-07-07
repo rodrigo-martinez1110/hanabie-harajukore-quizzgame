@@ -14,7 +14,8 @@ const questions = [
     difficulty: 1,
     prompt: 'Qual e o papel principal de Yukina?',
     choices: ['Guitarra', 'Vocal', 'Bateria', 'Baixo'],
-    answerIndex: 1
+    answerIndex: 1,
+    explanation: 'Yukina e a vocalista principal.'
   },
   {
     id: 'members-chika-role',
@@ -22,7 +23,8 @@ const questions = [
     difficulty: 1,
     prompt: 'Qual instrumento Chika toca?',
     choices: ['Bateria', 'Baixo', 'Guitarra', 'Teclado'],
-    answerIndex: 0
+    answerIndex: 0,
+    explanation: 'Chika e baterista.'
   }
 ];
 
@@ -46,6 +48,26 @@ test('answerCurrentQuestion updates score, stats, combo, and current question on
   assert.equal(next.score, 276);
   assert.equal(next.currentQuestion.id, 'members-chika-role');
   assert.equal(next.lastFeedback.correct, true);
+});
+
+test('answerCurrentQuestion records review history for the post-game explanation screen', () => {
+  const state = createGameSession(questions, { startedAtMs: 0 });
+  const next = answerCurrentQuestion(state, 2, 2500);
+
+  assert.equal(next.answerHistory.length, 1);
+  assert.deepEqual(next.answerHistory[0], {
+    questionId: 'members-yukina-role',
+    prompt: 'Qual e o papel principal de Yukina?',
+    choices: ['Guitarra', 'Vocal', 'Bateria', 'Baixo'],
+    selectedIndex: 2,
+    correctIndex: 1,
+    selectedChoice: 'Bateria',
+    correctChoice: 'Vocal',
+    correct: false,
+    explanation: 'Yukina e a vocalista principal.',
+    category: 'members',
+    difficulty: 1
+  });
 });
 
 test('answerCurrentQuestion resets combo on wrong answer and loops question queue', () => {

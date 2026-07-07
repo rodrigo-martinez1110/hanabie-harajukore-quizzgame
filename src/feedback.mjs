@@ -1,12 +1,11 @@
 import { t } from './i18n.mjs';
 
-export function formatAnswerFeedback({ correct, points, combo, correctChoice, explanation, language = 'pt-BR' }) {
-  const detail = explanation ? ` - ${explanation}` : '';
+export function formatAnswerFeedback({ correct, points, combo, correctChoice, language = 'pt-BR' }) {
   if (correct) {
-    return `${t('answerCorrect', language, { points, combo })}${detail}`;
+    return t('answerCorrect', language, { points, combo });
   }
 
-  return `${t('answerWrong', language, { answer: correctChoice })}${detail}`;
+  return t('answerWrong', language, { answer: correctChoice });
 }
 
 export function formatDifficultyLabel(difficulty, language = 'pt-BR') {

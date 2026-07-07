@@ -29,6 +29,7 @@ export function createGameSession(questions, options = {}) {
     correctCount: 0,
     crowdEnergy: 0,
     feverEndsAtMs: 0,
+    answerHistory: [],
     lastFeedback: null
   };
 }
@@ -58,6 +59,19 @@ export function answerCurrentQuestion(state, answerIndex, answeredAtMs) {
   const score = state.score + scoreResult.points;
   const maxCombo = Math.max(state.maxCombo, nextCombo);
   const accuracy = answeredCount === 0 ? 0 : correctCount / answeredCount;
+  const answerRecord = {
+    questionId: currentQuestion.id,
+    prompt: currentQuestion.prompt,
+    choices: [...currentQuestion.choices],
+    selectedIndex: answerIndex,
+    correctIndex: currentQuestion.answerIndex,
+    selectedChoice: currentQuestion.choices[answerIndex] || '',
+    correctChoice: currentQuestion.choices[currentQuestion.answerIndex] || '',
+    correct: isCorrect,
+    explanation: currentQuestion.explanation || '',
+    category: currentQuestion.category,
+    difficulty: currentQuestion.difficulty
+  };
 
   return {
     ...state,
@@ -71,6 +85,7 @@ export function answerCurrentQuestion(state, answerIndex, answeredAtMs) {
     correctCount,
     crowdEnergy,
     feverEndsAtMs,
+    answerHistory: [...(state.answerHistory || []), answerRecord],
     lastFeedback: {
       correct: isCorrect,
       selectedIndex: answerIndex,

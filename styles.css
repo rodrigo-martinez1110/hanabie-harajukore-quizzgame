@@ -498,6 +498,99 @@ h1 span {
   margin-top: 22px;
 }
 
+.answer-review {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.answer-review h3 {
+  margin: 0 0 12px;
+  color: var(--cyan);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.answer-review-list {
+  display: grid;
+  gap: 10px;
+  max-height: min(52vh, 520px);
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.answer-review-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, .06);
+}
+
+.answer-review-card.is-correct {
+  border-color: rgba(111, 255, 93, .38);
+}
+
+.answer-review-card.is-wrong {
+  border-color: rgba(255, 67, 103, .42);
+}
+
+.answer-review-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.answer-review-card.is-correct .answer-review-heading strong {
+  color: var(--lime);
+}
+
+.answer-review-card.is-wrong .answer-review-heading strong {
+  color: var(--danger);
+}
+
+.answer-review-prompt {
+  margin: 8px 0 10px;
+  color: var(--text);
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.answer-review dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.answer-review dl div {
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, .18);
+}
+
+.answer-review dt {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.answer-review dd {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-weight: 850;
+}
+
+.answer-review-explanation {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .score-submit {
   margin-top: 22px;
   display: grid;
@@ -1071,7 +1164,8 @@ dialog p {
   .answers,
   .hud,
   .game-controls,
-  .results-grid {
+  .results-grid,
+  .answer-review dl {
     grid-template-columns: 1fr;
   }
 

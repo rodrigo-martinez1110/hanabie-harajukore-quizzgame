@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { formatAnswerFeedback, formatDifficultyLabel } from '../src/feedback.mjs';
 
-test('formatAnswerFeedback includes points, combo, and explanation for correct answers', () => {
+test('formatAnswerFeedback keeps correct-answer feedback short during timed play', () => {
   const text = formatAnswerFeedback({
     correct: true,
     points: 320,
@@ -12,13 +12,10 @@ test('formatAnswerFeedback includes points, combo, and explanation for correct a
     explanation: 'Uma explosao de cansaco social e vontade de escapar do expediente.'
   });
 
-  assert.equal(
-    text,
-    '+320 Combo x4 - Uma explosao de cansaco social e vontade de escapar do expediente.'
-  );
+  assert.equal(text, '+320 Combo x4');
 });
 
-test('formatAnswerFeedback includes the right answer and explanation for misses', () => {
+test('formatAnswerFeedback keeps miss feedback short during timed play', () => {
   const text = formatAnswerFeedback({
     correct: false,
     points: 0,
@@ -27,10 +24,7 @@ test('formatAnswerFeedback includes the right answer and explanation for misses'
     explanation: 'Uma celebracao hiperativa de doces, desejo e energia kawaii pesada.'
   });
 
-  assert.equal(
-    text,
-    'Combo quebrou. Resposta: WE LOVE SWEETS - Uma celebracao hiperativa de doces, desejo e energia kawaii pesada.'
-  );
+  assert.equal(text, 'Combo quebrou. Resposta: WE LOVE SWEETS');
 });
 
 test('formatAnswerFeedback supports English copy', () => {
@@ -43,10 +37,7 @@ test('formatAnswerFeedback supports English copy', () => {
     language: 'en'
   });
 
-  assert.equal(
-    text,
-    'Combo broke. Answer: WE LOVE SWEETS - A hyperactive celebration of sweets and heavy kawaii energy.'
-  );
+  assert.equal(text, 'Combo broke. Answer: WE LOVE SWEETS');
 });
 
 test('formatDifficultyLabel names the five-point scale', () => {
