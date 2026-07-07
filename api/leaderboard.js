@@ -27,6 +27,7 @@ export default async function handler(request, response) {
     const rows = await supabaseResponse.json();
     createJsonResponse(response, 200, { scores: rows.map(mapScoreRow) });
   } catch (error) {
-    createJsonResponse(response, 500, { error: error.message });
+    console.error(error);
+    createJsonResponse(response, 500, { error: 'Could not load leaderboard.' });
   }
 }

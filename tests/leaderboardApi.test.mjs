@@ -4,8 +4,10 @@ import assert from 'node:assert/strict';
 import {
   buildLeaderboardQuery,
   createJsonResponse,
+  createRateLimiter,
   mapScoreRow,
-  parseJsonBody
+  parseJsonBody,
+  PayloadTooLargeError
 } from '../api/_leaderboardShared.mjs';
 
 test('buildLeaderboardQuery creates a top 10 global query by default', () => {
@@ -74,6 +76,39 @@ test('parseJsonBody reads request body chunks', async () => {
   });
 
   assert.deepEqual(body, { score: 123 });
+});
+
+test('parseJsonBody rejects oversized request bodies', async () => {
+  await assert.rejects(
+    parseJsonBody(
+      {
+        [Symbol.asyncIterator]: async function* iterator() {
+          yield Buffer.from('{"nickname":"');
+          yield Buffer.from('x'.repeat(32));
+          yield Buffer.from('"}');
+        }
+      },
+      { maxBytes: 16 }
+    ),
+    PayloadTooLargeError
+  );
+});
+
+test('createRateLimiter blocks repeated submissions inside the window', () => {
+  let now = 1_000;
+  const limiter = createRateLimiter({
+    maxAttempts: 2,
+    windowMs: 60_000,
+    now: () => now,
+    store: new Map()
+  });
+
+  assert.equal(limiter('ip:127.0.0.1').allowed, true);
+  assert.equal(limiter('ip:127.0.0.1').allowed, true);
+  assert.equal(limiter('ip:127.0.0.1').allowed, false);
+
+  now += 61_000;
+  assert.equal(limiter('ip:127.0.0.1').allowed, true);
 });
 
 test('createJsonResponse sends status and json payload', () => {

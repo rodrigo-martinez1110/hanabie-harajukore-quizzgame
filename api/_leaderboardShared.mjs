@@ -3,7 +3,17 @@ import { validateCountryCode } from '../src/leaderboard.mjs';
 export const SCORE_SELECT =
   'nickname,country_code,score,accuracy,max_combo,answered,rating,fan_rank,language,created_at';
 
+export const DEFAULT_JSON_BODY_LIMIT_BYTES = 8 * 1024;
+
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+export class PayloadTooLargeError extends Error {
+  constructor(message = 'Request body is too large.') {
+    super(message);
+    this.name = 'PayloadTooLargeError';
+    this.statusCode = 413;
+  }
+}
 
 export function buildLeaderboardQuery(url, now = new Date()) {
   const scope = url.searchParams.get('scope') || 'global';
@@ -53,10 +63,17 @@ export function mapScoreRow(row) {
   };
 }
 
-export async function parseJsonBody(request) {
+export async function parseJsonBody(request, options = {}) {
+  const maxBytes = options.maxBytes ?? DEFAULT_JSON_BODY_LIMIT_BYTES;
   const chunks = [];
+  let totalBytes = 0;
   for await (const chunk of request) {
-    chunks.push(Buffer.from(chunk));
+    const buffer = Buffer.from(chunk);
+    totalBytes += buffer.byteLength;
+    if (totalBytes > maxBytes) {
+      throw new PayloadTooLargeError();
+    }
+    chunks.push(buffer);
   }
 
   const rawBody = Buffer.concat(chunks).toString('utf8');
@@ -89,6 +106,40 @@ export function getSupabaseHeaders(serviceRoleKey, extra = {}) {
     Authorization: `Bearer ${serviceRoleKey}`,
     ...extra
   };
+}
+
+export function createRateLimiter(options = {}) {
+  const maxAttempts = options.maxAttempts ?? 12;
+  const windowMs = options.windowMs ?? 60_000;
+  const now = options.now ?? (() => Date.now());
+  const store = options.store ?? new Map();
+
+  return function rateLimit(key) {
+    const timestamp = now();
+    const record = store.get(key);
+    if (!record || timestamp >= record.resetAt) {
+      const nextRecord = { count: 1, resetAt: timestamp + windowMs };
+      store.set(key, nextRecord);
+      return { allowed: true, remaining: maxAttempts - 1, resetAt: nextRecord.resetAt };
+    }
+
+    record.count += 1;
+    if (record.count > maxAttempts) {
+      return { allowed: false, remaining: 0, resetAt: record.resetAt };
+    }
+
+    return { allowed: true, remaining: maxAttempts - record.count, resetAt: record.resetAt };
+  };
+}
+
+export function getRequestClientKey(request, fallback = 'unknown') {
+  const forwardedFor = request.headers?.['x-forwarded-for'] || request.headers?.['X-Forwarded-For'];
+  const realIp = request.headers?.['x-real-ip'] || request.headers?.['X-Real-Ip'];
+  const ip = String(forwardedFor || realIp || request.socket?.remoteAddress || fallback)
+    .split(',')[0]
+    .trim();
+
+  return ip || fallback;
 }
 
 function getPeriodStart(period, now) {

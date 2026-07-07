@@ -107,3 +107,13 @@ hanabie-player-country
 ```
 
 O jogador envia nickname e pais manualmente. A tela de ranking mostra Top 10 global/pais, filtros de hoje/semana/tudo, melhor score do navegador e a explicacao de cada rank tematico.
+
+### Checklist de seguranca do ranking
+
+- A tabela `leaderboard_scores` nao deve ficar legivel direto para `anon` ou `authenticated`.
+- O app le e grava scores apenas pelas rotas da Vercel em `api/`.
+- A rota de envio limita payloads grandes e muitas tentativas em pouco tempo.
+- Erros internos do Supabase sao logados no servidor, mas nao aparecem para jogadores.
+- O score ainda e um anti-cheat leve: alguem tecnico pode simular requests. Para ranking competitivo, use token de partida, seed de perguntas salvo no servidor e validacao server-side do resultado.
+
+Depois de mudar `supabase/leaderboard.sql`, rode o arquivo de novo no Supabase SQL Editor para aplicar as policies na producao.

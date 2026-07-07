@@ -19,11 +19,12 @@ create table if not exists public.leaderboard_scores (
 alter table public.leaderboard_scores enable row level security;
 
 drop policy if exists "Public leaderboard read" on public.leaderboard_scores;
-create policy "Public leaderboard read"
+drop policy if exists "No public leaderboard reads" on public.leaderboard_scores;
+create policy "No public leaderboard reads"
 on public.leaderboard_scores
 for select
 to anon, authenticated
-using (true);
+using (false);
 
 drop policy if exists "No public leaderboard writes" on public.leaderboard_scores;
 create policy "No public leaderboard writes"
@@ -60,3 +61,6 @@ select distinct on (player_id)
   created_at
 from public.leaderboard_scores
 order by player_id, score desc, accuracy desc, max_combo desc, created_at asc;
+
+revoke all on table public.leaderboard_scores from anon, authenticated;
+revoke all on table public.player_best_scores from anon, authenticated;

@@ -1,11 +1,19 @@
 import {
+  createRateLimiter,
   createJsonResponse,
+  getRequestClientKey,
   getSupabaseConfig,
   getSupabaseHeaders,
   mapScoreRow,
-  parseJsonBody
+  parseJsonBody,
+  PayloadTooLargeError
 } from './_leaderboardShared.mjs';
 import { validateScoreSubmission } from '../src/leaderboard.mjs';
+
+const scoreSubmissionLimiter = createRateLimiter({
+  maxAttempts: 8,
+  windowMs: 60_000
+});
 
 export default async function handler(request, response) {
   if (request.method !== 'POST') {
@@ -15,6 +23,15 @@ export default async function handler(request, response) {
 
   try {
     const rawPayload = await parseJsonBody(request);
+    const clientKey = getRequestClientKey(request);
+    const playerKey = typeof rawPayload.playerId === 'string' ? rawPayload.playerId : 'no-player';
+    const rateLimit = scoreSubmissionLimiter(`${clientKey}:${playerKey}`);
+    if (!rateLimit.allowed) {
+      response.setHeader('Retry-After', String(Math.ceil((rateLimit.resetAt - Date.now()) / 1000)));
+      createJsonResponse(response, 429, { error: 'Too many score submissions. Try again soon.' });
+      return;
+    }
+
     const validation = validateScoreSubmission(rawPayload);
     if (!validation.ok) {
       createJsonResponse(response, 400, { errors: validation.errors });
@@ -40,7 +57,18 @@ export default async function handler(request, response) {
     const [row] = await supabaseResponse.json();
     createJsonResponse(response, 201, { score: mapScoreRow(row) });
   } catch (error) {
-    createJsonResponse(response, 500, { error: error.message });
+    if (error instanceof PayloadTooLargeError) {
+      createJsonResponse(response, 413, { error: 'Request body is too large.' });
+      return;
+    }
+
+    if (error instanceof SyntaxError) {
+      createJsonResponse(response, 400, { error: 'Invalid JSON payload.' });
+      return;
+    }
+
+    console.error(error);
+    createJsonResponse(response, 500, { error: 'Could not submit score.' });
   }
 }
 
