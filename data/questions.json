@@ -1714,10 +1714,10 @@
     "category": "members",
     "difficulty": 5,
     "prompt": {
-      "pt-BR": "Entre as bateristas anteriores listadas, quem ficou mais tempo na banda?",
-      "en": "Among the listed former drummers, who stayed in the band the longest?",
-      "es": "Entre las ex bateristas listadas, quien estuvo mas tiempo en la banda?",
-      "ja": "記載された元ドラマーの中で、最も長く在籍したのは誰?"
+      "pt-BR": "Entre as bateristas listadas, quem esta ha mais tempo na banda?",
+      "en": "Among the listed drummers, who has been in the band the longest?",
+      "es": "Entre las bateristas listadas, quien lleva mas tiempo en la banda?",
+      "ja": "記載されているドラマーの中で、バンド在籍期間が最も長いのは?"
     },
     "choices": {
       "pt-BR": [
@@ -1745,12 +1745,12 @@
         "Chika"
       ]
     },
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": {
-      "pt-BR": "Considerando as datas listadas, Sae ficou de setembro de 2020 a abril de 2023.",
-      "en": "Based on the listed dates, Sae stayed from September 2020 to April 2023.",
-      "es": "Respuesta correcta: Sae.",
-      "ja": "正解は「Sae」です。"
+      "pt-BR": "Chika entrou oficialmente em maio de 2023 e segue na formacao atual; considerando a formacao atual, ela e a baterista ha mais tempo na banda.",
+      "en": "Chika officially joined in May 2023 and remains in the current lineup; considering the current lineup, she is the drummer who has been in the band the longest.",
+      "es": "Chika se unio oficialmente en mayo de 2023 y sigue en la formacion actual; considerando la formacion actual, es la baterista que lleva mas tiempo en la banda.",
+      "ja": "正解は「チカ」です。2023年5月に正式加入し、現在のラインナップに在籍しています。"
     },
     "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
   },
