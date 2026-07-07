@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  explainLeaderboardScore,
+  explainGameScore,
   getLeaderboardEntryClasses,
   getLeaderboardPositionLabel
 } from '../src/leaderboardPresentation.mjs';
@@ -21,34 +21,33 @@ test('getLeaderboardPositionLabel gives top three a stage label', () => {
   assert.equal(getLeaderboardPositionLabel(4), '#4');
 });
 
-test('explainLeaderboardScore breaks down the rating formula', () => {
-  const explanation = explainLeaderboardScore({
+test('explainGameScore explains the visible match score instead of rank rating', () => {
+  const explanation = explainGameScore({
     score: 24033,
     accuracy: 0.96,
     maxCombo: 5,
     answered: 25
   }, 'pt-BR');
 
-  assert.equal(explanation.rating, 26618);
-  assert.deepEqual(explanation.parts, {
-    score: 24033,
-    accuracy: 960,
-    combo: 1000,
-    answered: 625
-  });
-  assert.match(explanation.summary, /24033 \+ 960 \+ 1000 \+ 625 = 26618/);
-  assert.match(explanation.detail, /Score bruto/);
+  assert.equal(explanation.score, 24033);
+  assert.equal(explanation.formulaLabel, 'Como esse score foi feito');
+  assert.match(explanation.summary, /Score final: 24033/);
+  assert.match(explanation.detail, /acertos rapidos/i);
+  assert.match(explanation.detail, /dificuldade/i);
+  assert.match(explanation.detail, /combo/i);
+  assert.doesNotMatch(explanation.summary, /26618|rating/i);
 });
 
-test('explainLeaderboardScore localizes the explanation copy', () => {
-  const explanation = explainLeaderboardScore({
+test('explainGameScore localizes the score explanation copy', () => {
+  const explanation = explainGameScore({
     score: 5000,
     accuracy: 0.5,
     maxCombo: 3,
     answered: 10
   }, 'en');
 
-  assert.equal(explanation.rating, 6350);
-  assert.match(explanation.detail, /Raw score/);
-  assert.match(explanation.summary, /5000 \+ 500 \+ 600 \+ 250 = 6350/);
+  assert.equal(explanation.score, 5000);
+  assert.equal(explanation.formulaLabel, 'How this score happened');
+  assert.match(explanation.summary, /Final score: 5000/);
+  assert.match(explanation.detail, /fast correct answers/i);
 });

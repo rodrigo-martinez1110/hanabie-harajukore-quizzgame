@@ -219,16 +219,16 @@ const UI_COPY = {
     ja: 'ランキング'
   },
   leaderboardScoringTitle: {
-    'pt-BR': 'Como o rating e calculado',
-    en: 'How rating is calculated',
-    es: 'Como se calcula el rating',
-    ja: 'Rating calculation'
+    'pt-BR': 'Como o score e calculado',
+    en: 'How scoring works',
+    es: 'Como se calcula el score',
+    ja: 'How scoring works'
   },
   leaderboardScoringBody: {
-    'pt-BR': 'O score vem da partida. O rating do rank soma score + bonus de precisao + bonus de combo + bonus de respostas; abra um card para ver a conta.',
-    en: 'The score comes from the run. Rank rating adds score + accuracy bonus + combo bonus + answered bonus; open a card to see the math.',
-    es: 'El score viene de la partida. El rating suma score + bonus de precision + bonus de combo + bonus de respuestas; abre una tarjeta para ver la cuenta.',
-    ja: 'Score comes from the run. Rating adds score + accuracy bonus + combo bonus + answered bonus; open a card to see the math.'
+    'pt-BR': 'O numero grande e o score real da partida. Ele cresce com acertos rapidos, dificuldade, combo e fever; abra um card para ver os fatores.',
+    en: 'The big number is the real match score. It grows with fast correct answers, difficulty, combo, and fever; open a card to see the factors.',
+    es: 'El numero grande es el score real de la partida. Sube con aciertos rapidos, dificultad, combo y fever; abre una tarjeta para ver los factores.',
+    ja: 'The big number is the real match score. It grows with fast correct answers, difficulty, combo, and fever; open a card to see the factors.'
   },
   top10Tab: {
     'pt-BR': 'Top 10',

@@ -18,7 +18,7 @@ import {
   submitLeaderboardScore
 } from './leaderboardClient.mjs';
 import {
-  explainLeaderboardScore,
+  explainGameScore,
   getLeaderboardEntryClasses,
   getLeaderboardPositionLabel
 } from './leaderboardPresentation.mjs';
@@ -515,7 +515,7 @@ function renderScoreList(scores, list) {
 function getScoreCardMarkup(score, position, options = {}) {
   const showPodiumLabel = (options.showPodiumLabel ?? true) && position <= 3;
   const accuracy = Math.round(Number(score.accuracy || 0) * 100);
-  const explanation = explainLeaderboardScore(score, currentLanguage);
+  const explanation = explainGameScore(score, currentLanguage);
   const answeredLabel = t('answeredShort', currentLanguage);
   return `
     <span class="leaderboard-position">
@@ -534,7 +534,6 @@ function getScoreCardMarkup(score, position, options = {}) {
     <div class="leaderboard-score">
       <strong>${Number(score.score || 0)}</strong>
       <span>${accuracy}% &middot; x${Number(score.maxCombo || 1)} &middot; ${Number(score.answered || 0)} ${escapeHtml(answeredLabel)}</span>
-      <small>Rating ${explanation.rating}</small>
     </div>
   `;
 }

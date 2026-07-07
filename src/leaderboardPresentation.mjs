@@ -10,22 +10,26 @@ const PODIUM_LABELS = {
   3: 'Mosh Hero'
 };
 
-const EXPLANATION_COPY = {
+const SCORE_EXPLANATION_COPY = {
   'pt-BR': {
-    detail: 'Rating = Score bruto + bonus de precisao + bonus de combo + bonus de respostas. Precisao vale ate 1000 pontos, combo vale 200 por nivel e cada resposta vale 25.',
-    formulaLabel: 'Calculo do rating'
+    formulaLabel: 'Como esse score foi feito',
+    detail: 'Esse e o score final da partida. Ele cresce com acertos rapidos, dificuldade das perguntas, combo e fever. Como o ranking salva o resultado final e nao cada resposta, aqui mostramos os fatores da partida, nao uma divisao exata por pergunta.',
+    summaryLabel: 'Score final'
   },
   en: {
-    detail: 'Rating = Raw score + accuracy bonus + combo bonus + answered bonus. Accuracy is worth up to 1000 points, combo is worth 200 per level, and each answer is worth 25.',
-    formulaLabel: 'Rating calculation'
+    formulaLabel: 'How this score happened',
+    detail: 'This is the final match score. It grows from fast correct answers, question difficulty, combo, and fever. The leaderboard stores the final result, not each answer, so this shows the run factors, not an exact per-answer split.',
+    summaryLabel: 'Final score'
   },
   es: {
-    detail: 'Rating = score bruto + bonus de precision + bonus de combo + bonus de respuestas. La precision vale hasta 1000 puntos, el combo vale 200 por nivel y cada respuesta vale 25.',
-    formulaLabel: 'Calculo del rating'
+    formulaLabel: 'Como se hizo este score',
+    detail: 'Este es el score final de la partida. Sube con aciertos rapidos, dificultad de las preguntas, combo y fever. El ranking guarda el resultado final y no cada respuesta, asi que esto muestra los factores de la partida, no una division exacta por pregunta.',
+    summaryLabel: 'Score final'
   },
   ja: {
-    detail: 'Rating = Raw score + accuracy bonus + combo bonus + answered bonus. Accuracyは最大1000点、comboは1段階ごとに200点、回答数は1問ごとに25点です。',
-    formulaLabel: 'Rating calculation'
+    formulaLabel: 'How this score happened',
+    detail: 'This is the final match score. It grows from fast correct answers, question difficulty, combo, and fever. The leaderboard stores the final result, not each answer, so this shows the run factors, not an exact per-answer split.',
+    summaryLabel: 'Final score'
   }
 };
 
@@ -37,25 +41,21 @@ export function getLeaderboardPositionLabel(position) {
   return PODIUM_LABELS[position] || `#${position}`;
 }
 
-export function explainLeaderboardScore(score, language = 'pt-BR') {
-  const rawScore = clampInteger(score?.score, 0, 100_000);
-  const accuracyBonus = Math.round(clampNumber(score?.accuracy, 0, 1) * 1000);
-  const comboBonus = clampInteger(score?.maxCombo, 0, 5) * 200;
-  const answeredBonus = clampInteger(score?.answered, 0, 80) * 25;
-  const rating = rawScore + accuracyBonus + comboBonus + answeredBonus;
-  const copy = EXPLANATION_COPY[language] || EXPLANATION_COPY['pt-BR'];
+export function explainGameScore(score, language = 'pt-BR') {
+  const finalScore = clampInteger(score?.score, 0, 100_000);
+  const accuracy = Math.round(clampNumber(score?.accuracy, 0, 1) * 100);
+  const maxCombo = clampInteger(score?.maxCombo, 0, 5);
+  const answered = clampInteger(score?.answered, 0, 80);
+  const copy = SCORE_EXPLANATION_COPY[language] || SCORE_EXPLANATION_COPY['pt-BR'];
 
   return {
-    rating,
-    parts: {
-      score: rawScore,
-      accuracy: accuracyBonus,
-      combo: comboBonus,
-      answered: answeredBonus
-    },
+    score: finalScore,
+    accuracy,
+    maxCombo,
+    answered,
     formulaLabel: copy.formulaLabel,
     detail: copy.detail,
-    summary: `${rawScore} + ${accuracyBonus} + ${comboBonus} + ${answeredBonus} = ${rating}`
+    summary: `${copy.summaryLabel}: ${finalScore} (${accuracy}% / x${maxCombo} / ${answered})`
   };
 }
 
