@@ -38,6 +38,7 @@
             </label>
             <button class="file-action" id="demo-track-button" type="button" data-i18n="demoTrackButton">Tocar faixa demo</button>
             <button class="ghost-action" id="clear-audio-button" type="button" data-i18n="clearAudioButton">Remover musica</button>
+            <button class="ghost-action" id="leaderboard-button" type="button" data-i18n="leaderboardButton">Ranking</button>
             <button class="ghost-action" id="how-button" type="button" data-i18n="howButton">Como funciona</button>
             <p class="audio-status" id="audio-status" data-i18n="audioIdle">Audio local opcional. Nada e enviado.</p>
           </div>
@@ -97,10 +98,91 @@
             <div><span data-i18n="maxCombo">Max combo</span><strong id="result-combo">x1</strong></div>
             <div><span data-i18n="answered">Respondidas</span><strong id="result-answered">0</strong></div>
           </div>
+          <form class="score-submit" id="score-submit-form">
+            <label>
+              <span data-i18n="nicknameLabel">Nickname</span>
+              <input id="nickname-input" name="nickname" maxlength="18" autocomplete="nickname" placeholder="HanabieFan">
+            </label>
+            <label>
+              <span data-i18n="countryLabel">Pais</span>
+              <select id="country-select" name="country">
+                <option value="BR">Brasil</option>
+                <option value="JP">Japan</option>
+                <option value="US">United States</option>
+                <option value="MX">Mexico</option>
+                <option value="CL">Chile</option>
+                <option value="AR">Argentina</option>
+                <option value="PE">Peru</option>
+                <option value="ES">España</option>
+                <option value="PT">Portugal</option>
+                <option value="GB">United Kingdom</option>
+                <option value="DE">Deutschland</option>
+                <option value="FR">France</option>
+                <option value="CA">Canada</option>
+              </select>
+            </label>
+            <button class="primary-action" id="submit-score-button" type="submit" data-i18n="submitScoreButton">Enviar score</button>
+            <p class="submit-status" id="submit-status" data-i18n="submitScoreHint">Salve seu melhor resultado no ranking.</p>
+          </form>
           <div class="result-actions">
             <button class="primary-action" id="play-again-button" type="button" data-i18n="playAgainButton">Jogar de novo</button>
             <button class="ghost-action" id="result-menu-button" type="button" data-i18n="menuButton">Menu</button>
+            <button class="ghost-action" id="result-leaderboard-button" type="button" data-i18n="leaderboardButton">Ranking</button>
             <a class="ghost-link" href="https://hanabie.jp/" target="_blank" rel="noreferrer" data-i18n="officialLinks">Links oficiais</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-leaderboard" id="leaderboard-screen" aria-labelledby="leaderboard-title">
+        <div class="leaderboard-panel">
+          <div class="leaderboard-heading">
+            <div>
+              <p class="kicker" data-i18n="leaderboardKicker">Mosh Pit Board</p>
+              <h2 id="leaderboard-title" data-i18n="leaderboardTitle">Ranking</h2>
+            </div>
+            <button class="ghost-action" id="leaderboard-menu-button" type="button" data-i18n="menuButton">Menu</button>
+          </div>
+
+          <div class="leaderboard-tabs" role="tablist" aria-label="Ranking tabs">
+            <button class="leaderboard-tab is-active" type="button" data-board-tab="top10" data-i18n="top10Tab">Top 10</button>
+            <button class="leaderboard-tab" type="button" data-board-tab="mine" data-i18n="myBestTab">Meu melhor</button>
+            <button class="leaderboard-tab" type="button" data-board-tab="ranks" data-i18n="ranksTab">Ranks</button>
+          </div>
+
+          <div class="leaderboard-view is-active" id="leaderboard-top10-view">
+            <div class="leaderboard-filters">
+              <button class="filter-button is-active" type="button" data-board-scope="global" data-i18n="globalFilter">Global</button>
+              <button class="filter-button" type="button" data-board-scope="country" data-i18n="countryFilter">Pais</button>
+              <button class="filter-button" type="button" data-board-period="today" data-i18n="todayFilter">Hoje</button>
+              <button class="filter-button" type="button" data-board-period="week" data-i18n="weekFilter">Semana</button>
+              <button class="filter-button" type="button" data-board-period="all" data-i18n="allTimeFilter">Tudo</button>
+              <select class="leaderboard-country-select" id="leaderboard-country-select" aria-label="Country">
+                <option value="BR">Brasil</option>
+                <option value="JP">Japan</option>
+                <option value="US">United States</option>
+                <option value="MX">Mexico</option>
+                <option value="CL">Chile</option>
+                <option value="AR">Argentina</option>
+                <option value="PE">Peru</option>
+                <option value="ES">España</option>
+                <option value="PT">Portugal</option>
+                <option value="GB">United Kingdom</option>
+                <option value="DE">Deutschland</option>
+                <option value="FR">France</option>
+                <option value="CA">Canada</option>
+              </select>
+            </div>
+            <ol class="leaderboard-list" id="leaderboard-list"></ol>
+            <p class="leaderboard-status" id="leaderboard-status" data-i18n="leaderboardLoading">Carregando ranking...</p>
+          </div>
+
+          <div class="leaderboard-view" id="leaderboard-mine-view">
+            <div class="my-best-card" id="my-best-card"></div>
+            <p class="leaderboard-status" id="my-best-status" data-i18n="myBestHint">Seu melhor score usa o ID salvo neste navegador.</p>
+          </div>
+
+          <div class="leaderboard-view" id="leaderboard-ranks-view">
+            <div class="rank-grid" id="rank-grid"></div>
           </div>
         </div>
       </section>

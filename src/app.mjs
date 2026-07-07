@@ -9,6 +9,13 @@ import {
   localizeQuestion,
   t
 } from './i18n.mjs';
+import { FAN_RANK_TIERS, createUuid, getRankMeaning, sanitizeNickname } from './leaderboard.mjs';
+import {
+  fetchLeaderboard,
+  getPlayerProfile,
+  savePlayerProfile,
+  submitLeaderboardScore
+} from './leaderboardClient.mjs';
 import { normalizeQuestionBank } from './questionBank.mjs';
 import { shuffleQuestions } from './questionShuffle.mjs';
 import { calculateFanRank } from './scoring.mjs';
@@ -19,11 +26,13 @@ const app = document.querySelector('#app');
 const screens = {
   start: document.querySelector('#start-screen'),
   game: document.querySelector('#game-screen'),
-  results: document.querySelector('#results-screen')
+  results: document.querySelector('#results-screen'),
+  leaderboard: document.querySelector('#leaderboard-screen')
 };
 const startButton = document.querySelector('#start-button');
 const playAgainButton = document.querySelector('#play-again-button');
 const howButton = document.querySelector('#how-button');
+const leaderboardButton = document.querySelector('#leaderboard-button');
 const howDialog = document.querySelector('#how-dialog');
 const audioInput = document.querySelector('#audio-file-input');
 const audioStatus = document.querySelector('#audio-status');
@@ -33,6 +42,27 @@ const gameClearAudioButton = document.querySelector('#game-clear-audio-button');
 const menuButton = document.querySelector('#menu-button');
 const restartButton = document.querySelector('#restart-button');
 const resultMenuButton = document.querySelector('#result-menu-button');
+const resultLeaderboardButton = document.querySelector('#result-leaderboard-button');
+const leaderboardMenuButton = document.querySelector('#leaderboard-menu-button');
+const scoreSubmitForm = document.querySelector('#score-submit-form');
+const nicknameInput = document.querySelector('#nickname-input');
+const countrySelect = document.querySelector('#country-select');
+const submitScoreButton = document.querySelector('#submit-score-button');
+const submitStatus = document.querySelector('#submit-status');
+const leaderboardTabs = Array.from(document.querySelectorAll('[data-board-tab]'));
+const leaderboardViews = {
+  top10: document.querySelector('#leaderboard-top10-view'),
+  mine: document.querySelector('#leaderboard-mine-view'),
+  ranks: document.querySelector('#leaderboard-ranks-view')
+};
+const leaderboardList = document.querySelector('#leaderboard-list');
+const leaderboardStatus = document.querySelector('#leaderboard-status');
+const leaderboardCountrySelect = document.querySelector('#leaderboard-country-select');
+const myBestCard = document.querySelector('#my-best-card');
+const myBestStatus = document.querySelector('#my-best-status');
+const rankGrid = document.querySelector('#rank-grid');
+const scopeButtons = Array.from(document.querySelectorAll('[data-board-scope]'));
+const periodButtons = Array.from(document.querySelectorAll('[data-board-period]'));
 const languageButtons = Array.from(document.querySelectorAll('[data-language]'));
 const timerEl = document.querySelector('#timer');
 const scoreEl = document.querySelector('#score');
@@ -61,10 +91,15 @@ let audioAnalyser = null;
 let audioSpectrum = { bass: 0.22, mid: 0.22, treble: 0.22, pulse: 0.22 };
 let autoPulseTime = 0;
 let currentLanguage = getStoredLanguage();
+let lastScorePayload = null;
+let leaderboardScope = 'global';
+let leaderboardPeriod = 'all';
+const playerProfile = getPlayerProfile();
 
 startButton.addEventListener('click', startGame);
 playAgainButton.addEventListener('click', startGame);
 howButton.addEventListener('click', () => howDialog.showModal());
+leaderboardButton.addEventListener('click', () => showLeaderboard('top10'));
 audioInput.addEventListener('change', handleAudioSelection);
 demoTrackButton.addEventListener('click', handleDemoTrackSelection);
 clearAudioButton.addEventListener('click', clearAudio);
@@ -72,11 +107,30 @@ gameClearAudioButton.addEventListener('click', clearAudio);
 menuButton.addEventListener('click', returnToMenu);
 restartButton.addEventListener('click', startGame);
 resultMenuButton.addEventListener('click', returnToMenu);
+resultLeaderboardButton.addEventListener('click', () => showLeaderboard('top10'));
+leaderboardMenuButton.addEventListener('click', returnToMenu);
+scoreSubmitForm.addEventListener('submit', handleScoreSubmit);
 languageButtons.forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.language));
 });
+leaderboardTabs.forEach((button) => {
+  button.addEventListener('click', () => showLeaderboardTab(button.dataset.boardTab));
+});
+scopeButtons.forEach((button) => {
+  button.addEventListener('click', () => setLeaderboardScope(button.dataset.boardScope));
+});
+periodButtons.forEach((button) => {
+  button.addEventListener('click', () => setLeaderboardPeriod(button.dataset.boardPeriod));
+});
+leaderboardCountrySelect.addEventListener('change', () => {
+  playerProfile.countryCode = leaderboardCountrySelect.value;
+  countrySelect.value = playerProfile.countryCode;
+  savePlayerProfile(playerProfile);
+  loadLeaderboard();
+});
 
 applyLanguage();
+hydratePlayerForm();
 await boot();
 requestAnimationFrame(animateVisuals);
 
@@ -214,15 +268,61 @@ function endGame() {
   const rank = calculateFanRank({
     score: state?.score ?? 0,
     accuracy,
-    maxCombo: state?.maxCombo ?? 1
+    maxCombo: state?.maxCombo ?? 1,
+    answered
   });
 
+  lastScorePayload = {
+    playerId: playerProfile.playerId,
+    runId: createUuid(),
+    nickname: sanitizeNickname(nicknameInput.value || playerProfile.nickname),
+    countryCode: countrySelect.value || playerProfile.countryCode,
+    score: state?.score ?? 0,
+    accuracy,
+    maxCombo: state?.maxCombo ?? 1,
+    answered,
+    language: currentLanguage
+  };
+  submitScoreButton.disabled = false;
+  submitStatus.textContent = t('submitScoreHint', currentLanguage);
   resultRankEl.textContent = rank.label;
   resultScoreEl.textContent = String(state?.score ?? 0);
   resultAccuracyEl.textContent = `${Math.round(accuracy * 100)}%`;
   resultComboEl.textContent = `x${state?.maxCombo ?? 1}`;
   resultAnsweredEl.textContent = String(answered);
   setScreen('results');
+}
+
+async function handleScoreSubmit(event) {
+  event.preventDefault();
+  if (!lastScorePayload) {
+    return;
+  }
+
+  submitScoreButton.disabled = true;
+  submitStatus.textContent = t('submitScoreSending', currentLanguage);
+  const nextProfile = {
+    nickname: nicknameInput.value,
+    countryCode: countrySelect.value
+  };
+  savePlayerProfile(nextProfile);
+  playerProfile.nickname = sanitizeNickname(nextProfile.nickname);
+  playerProfile.countryCode = nextProfile.countryCode;
+
+  try {
+    const submitted = await submitLeaderboardScore({
+      ...lastScorePayload,
+      nickname: playerProfile.nickname,
+      countryCode: playerProfile.countryCode
+    });
+    submitStatus.textContent = t('submitScoreSuccess', currentLanguage, {
+      rank: submitted.fanRank
+    });
+    await loadLeaderboard();
+  } catch (error) {
+    submitScoreButton.disabled = false;
+    submitStatus.textContent = t('submitScoreError', currentLanguage, { message: error.message });
+  }
 }
 
 async function handleAudioSelection(event) {
@@ -278,6 +378,126 @@ function returnToMenu() {
   applyLanguage();
 }
 
+function hydratePlayerForm() {
+  nicknameInput.value = playerProfile.nickname;
+  countrySelect.value = playerProfile.countryCode;
+  leaderboardCountrySelect.value = playerProfile.countryCode;
+}
+
+function showLeaderboard(tab = 'top10') {
+  setScreen('leaderboard');
+  showLeaderboardTab(tab);
+}
+
+function showLeaderboardTab(tab) {
+  const activeTab = leaderboardViews[tab] ? tab : 'top10';
+  leaderboardTabs.forEach((button) => {
+    button.classList.toggle('is-active', button.dataset.boardTab === activeTab);
+  });
+  Object.entries(leaderboardViews).forEach(([key, view]) => {
+    view.classList.toggle('is-active', key === activeTab);
+  });
+
+  if (activeTab === 'top10') {
+    loadLeaderboard();
+  }
+  if (activeTab === 'mine') {
+    loadMyBest();
+  }
+  if (activeTab === 'ranks') {
+    renderRankGrid();
+  }
+}
+
+function setLeaderboardScope(scope) {
+  leaderboardScope = scope === 'country' ? 'country' : 'global';
+  scopeButtons.forEach((button) => {
+    button.classList.toggle('is-active', button.dataset.boardScope === leaderboardScope);
+  });
+  loadLeaderboard();
+}
+
+function setLeaderboardPeriod(period) {
+  leaderboardPeriod = ['today', 'week', 'all'].includes(period) ? period : 'all';
+  periodButtons.forEach((button) => {
+    button.classList.toggle('is-active', button.dataset.boardPeriod === leaderboardPeriod);
+  });
+  loadLeaderboard();
+}
+
+async function loadLeaderboard() {
+  leaderboardStatus.textContent = t('leaderboardLoading', currentLanguage);
+  leaderboardList.innerHTML = '';
+
+  try {
+    const scores = await fetchLeaderboard({
+      scope: leaderboardScope,
+      period: leaderboardPeriod,
+      countryCode: playerProfile.countryCode
+    });
+    renderScoreList(scores, leaderboardList);
+    leaderboardStatus.textContent = scores.length
+      ? t('leaderboardLoaded', currentLanguage)
+      : t('leaderboardEmpty', currentLanguage);
+  } catch (error) {
+    leaderboardStatus.textContent = t('leaderboardError', currentLanguage, { message: error.message });
+  }
+}
+
+async function loadMyBest() {
+  myBestStatus.textContent = t('leaderboardLoading', currentLanguage);
+  myBestCard.innerHTML = '';
+
+  try {
+    const [score] = await fetchLeaderboard({
+      scope: 'mine',
+      playerId: playerProfile.playerId
+    });
+    if (!score) {
+      myBestStatus.textContent = t('myBestEmpty', currentLanguage);
+      return;
+    }
+
+    myBestCard.innerHTML = getScoreCardMarkup(score, 1);
+    myBestStatus.textContent = t('myBestLoaded', currentLanguage);
+  } catch (error) {
+    myBestStatus.textContent = t('leaderboardError', currentLanguage, { message: error.message });
+  }
+}
+
+function renderScoreList(scores, list) {
+  list.innerHTML = scores.map((score, index) => `
+    <li class="leaderboard-entry">
+      ${getScoreCardMarkup(score, index + 1)}
+    </li>
+  `).join('');
+}
+
+function getScoreCardMarkup(score, position) {
+  const accuracy = Math.round(Number(score.accuracy || 0) * 100);
+  return `
+    <span class="leaderboard-position">#${position}</span>
+    <div class="leaderboard-player">
+      <strong>${escapeHtml(score.nickname)}</strong>
+      <span>${escapeHtml(score.countryCode)} · ${escapeHtml(score.fanRank)}</span>
+    </div>
+    <div class="leaderboard-score">
+      <strong>${Number(score.score || 0)}</strong>
+      <span>${accuracy}% · x${Number(score.maxCombo || 1)}</span>
+    </div>
+  `;
+}
+
+function renderRankGrid() {
+  rankGrid.innerHTML = FAN_RANK_TIERS.map((tier) => `
+    <article class="rank-card">
+      <strong>${escapeHtml(tier.label)}</strong>
+      <span>${tier.minRating}+ rating</span>
+      <p>${escapeHtml(getRankMeaning(tier, currentLanguage))}</p>
+    </article>
+  `).join('');
+}
+
 function setLanguage(language) {
   currentLanguage = getLanguage(language);
   localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
@@ -305,6 +525,7 @@ function applyLanguage() {
     categoryLabelEl.textContent = localizeCategory('music');
     feverLabelEl.textContent = t('feverReady', currentLanguage);
   }
+  renderRankGrid();
 }
 
 function getStoredLanguage() {
@@ -317,6 +538,15 @@ function getStoredLanguage() {
 
 function localizeCategory(category) {
   return CATEGORY_LABELS[category]?.[currentLanguage] || CATEGORY_LABELS[category]?.[DEFAULT_LANGUAGE] || category;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
 }
 
 function animateVisuals() {

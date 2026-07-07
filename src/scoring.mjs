@@ -1,3 +1,5 @@
+import { calculateLeaderboardRating, getFanRankTier } from './leaderboard.mjs';
+
 const BASE_POINTS = 100;
 const MAX_SPEED_BONUS = 50;
 const MAX_COMBO = 5;
@@ -38,25 +40,8 @@ export function calculateAnswerScore(input) {
 }
 
 export function calculateFanRank(stats) {
-  const score = Math.max(0, Number(stats?.score) || 0);
-  const accuracy = Math.max(0, Math.min(1, Number(stats?.accuracy) || 0));
-  const maxCombo = Math.max(0, Number(stats?.maxCombo) || 0);
-  const rating = score + accuracy * 1000 + maxCombo * 200;
+  const rating = calculateLeaderboardRating(stats);
+  const tier = getFanRankTier(rating);
 
-  if (rating >= 5000) {
-    return { label: 'True Harajuku-Core Maniac', rating };
-  }
-  if (rating >= 3800) {
-    return { label: 'Bucchigiri Fan', rating };
-  }
-  if (rating >= 3000) {
-    return { label: 'Mosh Pit Captain', rating };
-  }
-  if (rating >= 2100) {
-    return { label: 'Crowd Energy Riser', rating };
-  }
-  if (rating >= 1200) {
-    return { label: 'Harajuku-Core Rookie', rating };
-  }
-  return { label: 'First Show Curious', rating };
+  return { label: tier.label, rating };
 }

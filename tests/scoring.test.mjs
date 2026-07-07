@@ -47,7 +47,7 @@ test('calculateAnswerScore gives zero for wrong answers', () => {
 });
 
 test('calculateFanRank combines score accuracy and combo', () => {
-  assert.equal(calculateFanRank({ score: 250, accuracy: 0.35, maxCombo: 1 }).label, 'First Show Curious');
-  assert.equal(calculateFanRank({ score: 1600, accuracy: 0.75, maxCombo: 4 }).label, 'Mosh Pit Captain');
-  assert.equal(calculateFanRank({ score: 3800, accuracy: 0.92, maxCombo: 5 }).label, 'True Harajuku-Core Maniac');
+  assert.equal(calculateFanRank({ score: 250, accuracy: 0.35, maxCombo: 1 }).label, 'Sweet Rookie');
+  assert.equal(calculateFanRank({ score: 1600, accuracy: 0.75, maxCombo: 4 }).label, 'Bucchigiri Breaker');
+  assert.equal(calculateFanRank({ score: 3800, accuracy: 0.92, maxCombo: 5 }).label, 'Fever Headliner');
 });

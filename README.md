@@ -78,3 +78,32 @@ O botao `Carregar minha musica` usa um arquivo do proprio dispositivo do jogador
 ## Faixa demo original
 
 O botao `Tocar faixa demo` usa uma faixa instrumental original gerada em tempo real pelo Web Audio API. Ela nao depende de MP3 no repositorio e nao usa audio de terceiros. Isso evita expor um arquivo de musica baixavel, mas nao deve ser tratado como DRM para musicas reais.
+
+## Ranking com Supabase
+
+O ranking usa endpoints da Vercel em `api/` e uma tabela Supabase.
+
+1. No Supabase SQL Editor, rode:
+
+```text
+supabase/leaderboard.sql
+```
+
+2. No Vercel, configure as variaveis:
+
+```text
+SUPABASE_URL=https://seu-project-ref.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=sua-service-role-key
+```
+
+Nao coloque `SUPABASE_SERVICE_ROLE_KEY` no codigo, no GitHub ou no navegador. Ela deve ficar apenas nas Environment Variables do Vercel.
+
+3. O jogo salva localmente:
+
+```text
+hanabie-player-id
+hanabie-player-nickname
+hanabie-player-country
+```
+
+O jogador envia nickname e pais manualmente. A tela de ranking mostra Top 10 global/pais, filtros de hoje/semana/tudo, melhor score do navegador e a explicacao de cada rank tematico.

@@ -194,6 +194,156 @@ const UI_COPY = {
     es: 'Links oficiales',
     ja: '公式リンク'
   },
+  leaderboardButton: {
+    'pt-BR': 'Ranking',
+    en: 'Leaderboard',
+    es: 'Ranking',
+    ja: 'ランキング'
+  },
+  leaderboardKicker: {
+    'pt-BR': 'Mosh Pit Board',
+    en: 'Mosh Pit Board',
+    es: 'Mosh Pit Board',
+    ja: 'Mosh Pit Board'
+  },
+  leaderboardTitle: {
+    'pt-BR': 'Ranking',
+    en: 'Leaderboard',
+    es: 'Ranking',
+    ja: 'ランキング'
+  },
+  top10Tab: {
+    'pt-BR': 'Top 10',
+    en: 'Top 10',
+    es: 'Top 10',
+    ja: 'トップ10'
+  },
+  myBestTab: {
+    'pt-BR': 'Meu melhor',
+    en: 'My best',
+    es: 'Mi mejor',
+    ja: '自己ベスト'
+  },
+  ranksTab: {
+    'pt-BR': 'Ranks',
+    en: 'Ranks',
+    es: 'Rangos',
+    ja: 'ランク'
+  },
+  globalFilter: {
+    'pt-BR': 'Global',
+    en: 'Global',
+    es: 'Global',
+    ja: 'グローバル'
+  },
+  countryFilter: {
+    'pt-BR': 'Pais',
+    en: 'Country',
+    es: 'Pais',
+    ja: '国'
+  },
+  todayFilter: {
+    'pt-BR': 'Hoje',
+    en: 'Today',
+    es: 'Hoy',
+    ja: '今日'
+  },
+  weekFilter: {
+    'pt-BR': 'Semana',
+    en: 'Week',
+    es: 'Semana',
+    ja: '週間'
+  },
+  allTimeFilter: {
+    'pt-BR': 'Tudo',
+    en: 'All time',
+    es: 'Todo',
+    ja: '全期間'
+  },
+  leaderboardLoading: {
+    'pt-BR': 'Carregando ranking...',
+    en: 'Loading leaderboard...',
+    es: 'Cargando ranking...',
+    ja: 'ランキングを読み込み中...'
+  },
+  leaderboardLoaded: {
+    'pt-BR': 'Top 10 atualizado.',
+    en: 'Top 10 updated.',
+    es: 'Top 10 actualizado.',
+    ja: 'トップ10を更新しました。'
+  },
+  leaderboardEmpty: {
+    'pt-BR': 'Ainda nao ha scores nesse filtro.',
+    en: 'No scores in this filter yet.',
+    es: 'Todavia no hay scores en este filtro.',
+    ja: 'このフィルターにはまだスコアがありません。'
+  },
+  leaderboardError: {
+    'pt-BR': 'Ranking indisponivel: {message}',
+    en: 'Leaderboard unavailable: {message}',
+    es: 'Ranking no disponible: {message}',
+    ja: 'ランキングを使えません: {message}'
+  },
+  nicknameLabel: {
+    'pt-BR': 'Nickname',
+    en: 'Nickname',
+    es: 'Nickname',
+    ja: 'ニックネーム'
+  },
+  countryLabel: {
+    'pt-BR': 'Pais',
+    en: 'Country',
+    es: 'Pais',
+    ja: '国'
+  },
+  submitScoreButton: {
+    'pt-BR': 'Enviar score',
+    en: 'Submit score',
+    es: 'Enviar score',
+    ja: 'スコア送信'
+  },
+  submitScoreHint: {
+    'pt-BR': 'Salve seu melhor resultado no ranking.',
+    en: 'Save your best result to the leaderboard.',
+    es: 'Guarda tu mejor resultado en el ranking.',
+    ja: 'ベスト結果をランキングに保存しよう。'
+  },
+  submitScoreSending: {
+    'pt-BR': 'Enviando score...',
+    en: 'Submitting score...',
+    es: 'Enviando score...',
+    ja: 'スコア送信中...'
+  },
+  submitScoreSuccess: {
+    'pt-BR': 'Score enviado. Rank: {rank}',
+    en: 'Score submitted. Rank: {rank}',
+    es: 'Score enviado. Rango: {rank}',
+    ja: 'スコア送信完了。ランク: {rank}'
+  },
+  submitScoreError: {
+    'pt-BR': 'Nao consegui enviar: {message}',
+    en: 'Could not submit: {message}',
+    es: 'No se pudo enviar: {message}',
+    ja: '送信できません: {message}'
+  },
+  myBestHint: {
+    'pt-BR': 'Seu melhor score usa o ID salvo neste navegador.',
+    en: 'Your best score uses the ID saved in this browser.',
+    es: 'Tu mejor score usa el ID guardado en este navegador.',
+    ja: '自己ベストはこのブラウザに保存されたIDを使います。'
+  },
+  myBestLoaded: {
+    'pt-BR': 'Melhor score encontrado.',
+    en: 'Best score found.',
+    es: 'Mejor score encontrado.',
+    ja: '自己ベストが見つかりました。'
+  },
+  myBestEmpty: {
+    'pt-BR': 'Voce ainda nao enviou score neste navegador.',
+    en: 'You have not submitted a score from this browser yet.',
+    es: 'Todavia no enviaste score desde este navegador.',
+    ja: 'このブラウザからはまだスコア送信がありません。'
+  },
   howTitle: {
     'pt-BR': '90 segundos. Combo. Fever.',
     en: '90 seconds. Combo. Fever.',

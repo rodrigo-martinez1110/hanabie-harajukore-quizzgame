@@ -492,6 +492,207 @@ h1 span {
   margin-top: 22px;
 }
 
+.score-submit {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.score-submit label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.score-submit input,
+.score-submit select {
+  min-height: 54px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .08);
+  font: inherit;
+  font-weight: 850;
+}
+
+.score-submit select option {
+  color: #111;
+}
+
+.submit-status {
+  grid-column: 1 / -1;
+  min-height: 22px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.screen-leaderboard {
+  place-items: center;
+}
+
+.leaderboard-panel {
+  width: min(980px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(18px, 4vw, 34px);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.leaderboard-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+}
+
+.leaderboard-heading h2 {
+  margin: 0;
+  color: var(--yellow);
+  font-size: clamp(36px, 7vw, 76px);
+  line-height: .95;
+}
+
+.leaderboard-tabs,
+.leaderboard-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.leaderboard-tab,
+.filter-button,
+.leaderboard-country-select {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .08);
+  font-weight: 950;
+}
+
+.leaderboard-country-select option {
+  color: #111;
+}
+
+.leaderboard-tab.is-active,
+.filter-button.is-active {
+  color: #06110a;
+  background: var(--lime);
+  box-shadow: 0 0 22px rgba(118, 255, 92, .22);
+}
+
+.leaderboard-view {
+  display: none;
+  margin-top: 18px;
+}
+
+.leaderboard-view.is-active {
+  display: block;
+}
+
+.leaderboard-list {
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.leaderboard-entry,
+.my-best-card {
+  min-height: 72px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255, 255, 255, .07);
+}
+
+.leaderboard-position {
+  color: var(--cyan);
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.leaderboard-player,
+.leaderboard-score {
+  display: grid;
+  gap: 4px;
+}
+
+.leaderboard-player strong,
+.leaderboard-score strong {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.leaderboard-player span,
+.leaderboard-score span,
+.leaderboard-status {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.leaderboard-score {
+  text-align: right;
+}
+
+.leaderboard-status {
+  min-height: 24px;
+  margin: 14px 0 0;
+}
+
+.rank-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.rank-card {
+  min-height: 132px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  background: rgba(255, 255, 255, .07);
+}
+
+.rank-card strong {
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+.rank-card span {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.rank-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 dialog {
   width: min(520px, calc(100% - 32px));
   border: 1px solid var(--line);
@@ -535,6 +736,14 @@ dialog p {
   .results-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .score-submit {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -556,5 +765,19 @@ dialog p {
 
   .question-board h2 {
     font-size: 28px;
+  }
+
+  .leaderboard-heading,
+  .leaderboard-entry,
+  .my-best-card {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-heading {
+    display: grid;
+  }
+
+  .leaderboard-score {
+    text-align: left;
   }
 }
