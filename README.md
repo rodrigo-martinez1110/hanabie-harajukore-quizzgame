@@ -33,16 +33,22 @@ Cada pergunta usa este formato:
   "difficulty": 1,
   "prompt": {
     "pt-BR": "Sua pergunta aqui?",
-    "en": "Your question here?"
+    "en": "Your question here?",
+    "es": "Tu pregunta aqui?",
+    "ja": "ここに質問を書く?"
   },
   "choices": {
     "pt-BR": ["A", "B", "C", "D"],
-    "en": ["A", "B", "C", "D"]
+    "en": ["A", "B", "C", "D"],
+    "es": ["A", "B", "C", "D"],
+    "ja": ["A", "B", "C", "D"]
   },
   "answerIndex": 0,
   "explanation": {
     "pt-BR": "Explicacao curta.",
-    "en": "Short explanation."
+    "en": "Short explanation.",
+    "es": "Explicacion corta.",
+    "ja": "短い解説。"
   },
   "sourceUrl": "https://hanabie.jp/"
 }
@@ -59,7 +65,7 @@ Categorias validas:
 Regras importantes:
 
 - `choices` precisa ter exatamente 4 alternativas.
-- `prompt`, `choices` e `explanation` usam `pt-BR` e `en`.
+- `prompt`, `choices` e `explanation` usam `pt-BR`, `en`, `es` e `ja`.
 - `answerIndex` comeca em zero: `0` e a primeira alternativa, `1` a segunda, e assim por diante.
 - `difficulty` vai de `1` a `5`; use `4` e `5` para perguntas de fã mais específicas.
 - Use `tags: ["song-meaning"]` para perguntas sobre o tema de uma música.

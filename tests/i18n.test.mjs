@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {
   DEFAULT_LANGUAGE,
   getLanguage,
+  getDocumentLanguage,
   localizeQuestion,
   localizeText,
   t
@@ -11,8 +12,18 @@ import {
 
 test('getLanguage accepts supported languages and falls back to PT-BR', () => {
   assert.equal(getLanguage('en'), 'en');
+  assert.equal(getLanguage('es'), 'es');
+  assert.equal(getLanguage('ja'), 'ja');
   assert.equal(getLanguage('pt-BR'), 'pt-BR');
   assert.equal(getLanguage('fr'), DEFAULT_LANGUAGE);
+});
+
+test('getDocumentLanguage returns valid html lang values', () => {
+  assert.equal(getDocumentLanguage('pt-BR'), 'pt-BR');
+  assert.equal(getDocumentLanguage('en'), 'en');
+  assert.equal(getDocumentLanguage('es'), 'es');
+  assert.equal(getDocumentLanguage('ja'), 'ja');
+  assert.equal(getDocumentLanguage('fr'), DEFAULT_LANGUAGE);
 });
 
 test('localizeText reads localized values and falls back to PT-BR', () => {
@@ -46,8 +57,10 @@ test('localizeQuestion localizes prompt, choices, and explanation', () => {
   assert.equal(localized.answerIndex, 1);
 });
 
-test('t returns UI copy for both languages', () => {
+test('t returns UI copy for all supported languages', () => {
   assert.equal(t('startButton', 'pt-BR'), 'Jogar');
   assert.equal(t('startButton', 'en'), 'Play');
+  assert.equal(t('startButton', 'es'), 'Jugar');
+  assert.equal(t('startButton', 'ja'), 'プレイ');
   assert.equal(t('missing.key', 'en'), 'missing.key');
 });

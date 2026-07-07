@@ -1,7 +1,14 @@
 import { createGeneratedDemoAnalyser, createLocalAudioAnalyser, smoothSpectrum } from './audioReactive.mjs';
 import { answerCurrentQuestion, createGameSession, getTimeRemaining } from './gameEngine.mjs';
 import { formatAnswerFeedback, formatDifficultyLabel } from './feedback.mjs';
-import { CATEGORY_LABELS, DEFAULT_LANGUAGE, getLanguage, localizeQuestion, t } from './i18n.mjs';
+import {
+  CATEGORY_LABELS,
+  DEFAULT_LANGUAGE,
+  getDocumentLanguage,
+  getLanguage,
+  localizeQuestion,
+  t
+} from './i18n.mjs';
 import { normalizeQuestionBank } from './questionBank.mjs';
 import { shuffleQuestions } from './questionShuffle.mjs';
 import { calculateFanRank } from './scoring.mjs';
@@ -281,7 +288,7 @@ function setLanguage(language) {
 }
 
 function applyLanguage() {
-  document.documentElement.lang = currentLanguage === 'en' ? 'en' : 'pt-BR';
+  document.documentElement.lang = getDocumentLanguage(currentLanguage);
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     element.textContent = t(element.dataset.i18n, currentLanguage);
   });

@@ -95,16 +95,20 @@ test('seed question bank includes high-difficulty song meaning questions', async
   assert.ok(songMeaningQuestions.some((question) => question.difficulty >= 5));
 });
 
-test('seed question bank includes PT-BR and English text for every question', async () => {
+test('seed question bank includes complete localized text for every supported language', async () => {
   const filePath = join(__dirname, '..', 'data', 'questions.json');
   const raw = JSON.parse(await readFile(filePath, 'utf8'));
+  const languages = ['pt-BR', 'en', 'es', 'ja'];
 
   for (const question of raw) {
-    assert.equal(typeof question.prompt['pt-BR'], 'string', `${question.id} missing PT-BR prompt`);
-    assert.equal(typeof question.prompt.en, 'string', `${question.id} missing English prompt`);
-    assert.equal(question.choices['pt-BR'].length, 4, `${question.id} missing PT-BR choices`);
-    assert.equal(question.choices.en.length, 4, `${question.id} missing English choices`);
-    assert.equal(typeof question.explanation['pt-BR'], 'string', `${question.id} missing PT-BR explanation`);
-    assert.equal(typeof question.explanation.en, 'string', `${question.id} missing English explanation`);
+    for (const language of languages) {
+      assert.equal(typeof question.prompt[language], 'string', `${question.id} missing ${language} prompt`);
+      assert.equal(question.choices[language].length, 4, `${question.id} missing ${language} choices`);
+      assert.equal(
+        typeof question.explanation[language],
+        'string',
+        `${question.id} missing ${language} explanation`
+      );
+    }
   }
 });

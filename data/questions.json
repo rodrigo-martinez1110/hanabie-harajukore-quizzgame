@@ -5,7 +5,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Qual e o papel principal de Yukina na HANABIE.?",
-      "en": "What is Yukina's main role in HANABIE.?"
+      "en": "What is Yukina's main role in HANABIE.?",
+      "es": "Cual es el papel principal de Yukina en HANABIE.?",
+      "ja": "HANABIE.でのユキナの主な役割は?"
     },
     "choices": {
       "pt-BR": [
@@ -19,12 +21,26 @@
         "Vocals",
         "Drums",
         "Bass"
+      ],
+      "es": [
+        "Guitarra",
+        "Voz",
+        "Bateria",
+        "Bajo"
+      ],
+      "ja": [
+        "ギター",
+        "ボーカル",
+        "ドラム",
+        "ベース"
       ]
     },
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "Yukina e creditada como vocal principal.",
-      "en": "Yukina is credited as the main vocalist."
+      "en": "Yukina is credited as the main vocalist.",
+      "es": "Respuesta correcta: Voz.",
+      "ja": "正解は「ボーカル」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -34,7 +50,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Qual instrumento Matsuri toca na banda?",
-      "en": "Which instrument does Matsuri play in the band?"
+      "en": "Which instrument does Matsuri play in the band?",
+      "es": "Que instrumento toca Matsuri en la banda?",
+      "ja": "マツリはバンドでどの楽器を担当している?"
     },
     "choices": {
       "pt-BR": [
@@ -48,12 +66,26 @@
         "Bass",
         "Guitar",
         "Keyboard"
+      ],
+      "es": [
+        "Bateria",
+        "Bajo",
+        "Guitarra",
+        "Teclado"
+      ],
+      "ja": [
+        "ドラム",
+        "ベース",
+        "ギター",
+        "キーボード"
       ]
     },
     "answerIndex": 2,
     "explanation": {
       "pt-BR": "Matsuri e creditada como guitarrista e vocalista.",
-      "en": "Matsuri is credited as guitarist and vocalist."
+      "en": "Matsuri is credited as guitarist and vocalist.",
+      "es": "Respuesta correcta: Guitarra.",
+      "ja": "正解は「ギター」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -63,7 +95,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Qual e o instrumento de Hettsu?",
-      "en": "What is Hettsu's instrument?"
+      "en": "What is Hettsu's instrument?",
+      "es": "Cual es el instrumento de Hettsu?",
+      "ja": "ヘッツの担当楽器は?"
     },
     "choices": {
       "pt-BR": [
@@ -77,12 +111,26 @@
         "Drums",
         "Guitar",
         "Violin"
+      ],
+      "es": [
+        "Bajo",
+        "Bateria",
+        "Guitarra",
+        "Violin"
+      ],
+      "ja": [
+        "ベース",
+        "ドラム",
+        "ギター",
+        "バイオリン"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Hettsu toca baixo e faz backing vocals.",
-      "en": "Hettsu plays bass and does backing vocals."
+      "en": "Hettsu plays bass and does backing vocals.",
+      "es": "Respuesta correcta: Bajo.",
+      "ja": "正解は「ベース」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -92,7 +140,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Qual instrumento Chika toca na formacao atual?",
-      "en": "Which instrument does Chika play in the current lineup?"
+      "en": "Which instrument does Chika play in the current lineup?",
+      "es": "Que instrumento toca Chika en la formacion actual?",
+      "ja": "現在の編成でチカが担当する楽器は?"
     },
     "choices": {
       "pt-BR": [
@@ -106,12 +156,26 @@
         "Drums",
         "Guitar",
         "Sampler"
+      ],
+      "es": [
+        "Bajo",
+        "Bateria",
+        "Guitarra",
+        "Sampler"
+      ],
+      "ja": [
+        "ベース",
+        "ドラム",
+        "ギター",
+        "サンプラー"
       ]
     },
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "Chika e creditada como baterista.",
-      "en": "Chika is credited as the drummer."
+      "en": "Chika is credited as the drummer.",
+      "es": "Respuesta correcta: Bateria.",
+      "ja": "正解は「ドラム」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -121,7 +185,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Em que ano a HANABIE. foi formada?",
-      "en": "In which year was HANABIE. formed?"
+      "en": "In which year was HANABIE. formed?",
+      "es": "En que ano se formo HANABIE.?",
+      "ja": "HANABIE.は何年に結成された?"
     },
     "choices": {
       "pt-BR": [
@@ -131,6 +197,18 @@
         "2020"
       ],
       "en": [
+        "2012",
+        "2015",
+        "2018",
+        "2020"
+      ],
+      "es": [
+        "2012",
+        "2015",
+        "2018",
+        "2020"
+      ],
+      "ja": [
         "2012",
         "2015",
         "2018",
@@ -140,7 +218,9 @@
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "A banda foi formada em julho de 2015.",
-      "en": "The band was formed in July 2015."
+      "en": "The band was formed in July 2015.",
+      "es": "Respuesta correcta: 2015.",
+      "ja": "正解は「2015」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -150,7 +230,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Antes das musicas autorais, a HANABIE. comecou tocando covers de qual banda?",
-      "en": "Before original songs, HANABIE. started by covering which band?"
+      "en": "Before original songs, HANABIE. started by covering which band?",
+      "es": "Antes de sus canciones originales, HANABIE. empezo haciendo covers de que banda?",
+      "ja": "オリジナル曲の前に、HANABIE.はどのバンドのカバーから始まった?"
     },
     "choices": {
       "pt-BR": [
@@ -164,12 +246,26 @@
         "Babymetal",
         "X Japan",
         "Band-Maid"
+      ],
+      "es": [
+        "Maximum the Hormone",
+        "Babymetal",
+        "X Japan",
+        "Band-Maid"
+      ],
+      "ja": [
+        "Maximum the Hormone",
+        "Babymetal",
+        "X Japan",
+        "Band-Maid"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "O grupo comecou como uma banda cover de Maximum the Hormone.",
-      "en": "The group began as a Maximum the Hormone cover band."
+      "en": "The group began as a Maximum the Hormone cover band.",
+      "es": "Respuesta correcta: Maximum the Hormone.",
+      "ja": "正解は「Maximum the Hormone」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -179,7 +275,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "O nome Hanabie se refere a que ideia em japones?",
-      "en": "What idea does the name Hanabie refer to in Japanese?"
+      "en": "What idea does the name Hanabie refer to in Japanese?",
+      "es": "A que idea se refiere el nombre Hanabie en japones?",
+      "ja": "Hanabieという名前は日本語でどんな意味合いを指す?"
     },
     "choices": {
       "pt-BR": [
@@ -193,12 +291,26 @@
         "Cold returning in spring",
         "Autumn snow",
         "Metal flower"
+      ],
+      "es": [
+        "Calor de verano",
+        "Frio que vuelve en primavera",
+        "Nieve de otono",
+        "Flor de metal"
+      ],
+      "ja": [
+        "夏の暑さ",
+        "春に戻る寒さ",
+        "秋の雪",
+        "メタルの花"
       ]
     },
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "Hanabie se refere ao frio de inverno que retorna em um dia de primavera.",
-      "en": "Hanabie refers to winter cold returning on a spring day."
+      "en": "Hanabie refers to winter cold returning on a spring day.",
+      "es": "Respuesta correcta: Frio que vuelve en primavera.",
+      "ja": "正解は「春に戻る寒さ」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -208,7 +320,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Quem sugeriu o nome Hanabie, segundo a historia da banda?",
-      "en": "Who suggested the name Hanabie, according to the band history?"
+      "en": "Who suggested the name Hanabie, according to the band history?",
+      "es": "Quien sugirio el nombre Hanabie, segun la historia de la banda?",
+      "ja": "バンドの歴史によると、Hanabieという名前を提案したのは誰?"
     },
     "choices": {
       "pt-BR": [
@@ -218,6 +332,18 @@
         "Kaede"
       ],
       "en": [
+        "Yukina",
+        "Matsuri",
+        "Hettsu",
+        "Kaede"
+      ],
+      "es": [
+        "Yukina",
+        "Matsuri",
+        "Hettsu",
+        "Kaede"
+      ],
+      "ja": [
         "Yukina",
         "Matsuri",
         "Hettsu",
@@ -227,7 +353,9 @@
     "answerIndex": 3,
     "explanation": {
       "pt-BR": "O nome Hanabie foi sugerido por Kaede.",
-      "en": "The name Hanabie was suggested by Kaede."
+      "en": "The name Hanabie was suggested by Kaede.",
+      "es": "Respuesta correcta: Kaede.",
+      "ja": "正解は「Kaede」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -237,7 +365,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "O ponto final no nome HANABIE. e citado como uma referencia a qual grupo?",
-      "en": "The period in HANABIE. is cited as a reference to which group?"
+      "en": "The period in HANABIE. is cited as a reference to which group?",
+      "es": "El punto final en HANABIE. se cita como referencia a que grupo?",
+      "ja": "HANABIE.の末尾のピリオドは、どのグループへの言及とされている?"
     },
     "choices": {
       "pt-BR": [
@@ -247,6 +377,18 @@
         "Maximum the Hormone"
       ],
       "en": [
+        "Cocoa Otoko",
+        "Morning Musume",
+        "Perfume",
+        "Maximum the Hormone"
+      ],
+      "es": [
+        "Cocoa Otoko",
+        "Morning Musume",
+        "Perfume",
+        "Maximum the Hormone"
+      ],
+      "ja": [
         "Cocoa Otoko",
         "Morning Musume",
         "Perfume",
@@ -256,7 +398,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "O ponto final e citado como um aceno a Cocoa Otoko.",
-      "en": "The period is cited as a nod to Cocoa Otoko."
+      "en": "The period is cited as a nod to Cocoa Otoko.",
+      "es": "Respuesta correcta: Cocoa Otoko.",
+      "ja": "正解は「Cocoa Otoko」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -266,7 +410,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Em que ano a HANABIE. assinou com a Epic Records Japan/Sony Music Japan?",
-      "en": "In which year did HANABIE. sign with Epic Records Japan/Sony Music Japan?"
+      "en": "In which year did HANABIE. sign with Epic Records Japan/Sony Music Japan?",
+      "es": "En que ano firmo HANABIE. con Epic Records Japan/Sony Music Japan?",
+      "ja": "HANABIE.がEpic Records Japan/Sony Music Japanと契約した年は?"
     },
     "choices": {
       "pt-BR": [
@@ -276,6 +422,18 @@
         "2025"
       ],
       "en": [
+        "2020",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "es": [
+        "2020",
+        "2021",
+        "2023",
+        "2025"
+      ],
+      "ja": [
         "2020",
         "2021",
         "2023",
@@ -285,7 +443,9 @@
     "answerIndex": 2,
     "explanation": {
       "pt-BR": "A banda assinou com a Epic Records Japan, subsidiaria da Sony Music Japan, em 2023.",
-      "en": "The band signed with Epic Records Japan, a Sony Music Japan subsidiary, in 2023."
+      "en": "The band signed with Epic Records Japan, a Sony Music Japan subsidiary, in 2023.",
+      "es": "Respuesta correcta: 2023.",
+      "ja": "正解は「2023」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -295,7 +455,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Qual destes e o primeiro album de estudio da HANABIE.?",
-      "en": "Which of these is HANABIE.'s first studio album?"
+      "en": "Which of these is HANABIE.'s first studio album?",
+      "es": "Cual de estos es el primer album de estudio de HANABIE.?",
+      "ja": "次のうち、HANABIE.の最初のスタジオアルバムは?"
     },
     "choices": {
       "pt-BR": [
@@ -309,12 +471,26 @@
         "Reborn Superstar!",
         "Bucchigiri Tokyo",
         "Hot Topic"
+      ],
+      "es": [
+        "Girl's Reform Manifest",
+        "Reborn Superstar!",
+        "Bucchigiri Tokyo",
+        "Hot Topic"
+      ],
+      "ja": [
+        "Girl's Reform Manifest",
+        "Reborn Superstar!",
+        "Bucchigiri Tokyo",
+        "Hot Topic"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Girl's Reform Manifest e listado como album de estudio de 2021.",
-      "en": "Girl's Reform Manifest is listed as a 2021 studio album."
+      "en": "Girl's Reform Manifest is listed as a 2021 studio album.",
+      "es": "Respuesta correcta: Girl's Reform Manifest.",
+      "ja": "正解は「Girl's Reform Manifest」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -324,7 +500,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Em que mes/ano Reborn Superstar! foi lancado?",
-      "en": "In which month/year was Reborn Superstar! released?"
+      "en": "In which month/year was Reborn Superstar! released?",
+      "es": "En que mes/ano se lanzo Reborn Superstar!?",
+      "ja": "Reborn Superstar! がリリースされた年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -338,12 +516,26 @@
         "July 2023",
         "December 2024",
         "January 2025"
+      ],
+      "es": [
+        "Enero de 2021",
+        "Julio de 2023",
+        "Diciembre de 2024",
+        "Enero de 2025"
+      ],
+      "ja": [
+        "2021年1月",
+        "2023年7月",
+        "2024年12月",
+        "2025年1月"
       ]
     },
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "Reborn Superstar! foi lancado em julho de 2023.",
-      "en": "Reborn Superstar! was released in July 2023."
+      "en": "Reborn Superstar! was released in July 2023.",
+      "es": "Respuesta correcta: Julio de 2023.",
+      "ja": "正解は「2023年7月」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
   },
@@ -353,7 +545,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Reborn Superstar! e qual album de estudio da banda?",
-      "en": "Reborn Superstar! is which studio album by the band?"
+      "en": "Reborn Superstar! is which studio album by the band?",
+      "es": "Reborn Superstar! es que album de estudio de la banda?",
+      "ja": "Reborn Superstar! はバンドにとって何枚目のスタジオアルバム?"
     },
     "choices": {
       "pt-BR": [
@@ -367,12 +561,26 @@
         "Second",
         "Third",
         "Fourth"
+      ],
+      "es": [
+        "Primero",
+        "Segundo",
+        "Tercero",
+        "Cuarto"
+      ],
+      "ja": [
+        "1枚目",
+        "2枚目",
+        "3枚目",
+        "4枚目"
       ]
     },
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "Reborn Superstar! e o segundo album de estudio da HANABIE.",
-      "en": "Reborn Superstar! is HANABIE.'s second studio album."
+      "en": "Reborn Superstar! is HANABIE.'s second studio album.",
+      "es": "Respuesta correcta: Segundo.",
+      "ja": "正解は「2枚目」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
   },
@@ -382,7 +590,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Qual selo lancou Reborn Superstar!?",
-      "en": "Which label released Reborn Superstar!?"
+      "en": "Which label released Reborn Superstar!?",
+      "es": "Que sello lanzo Reborn Superstar!?",
+      "ja": "Reborn Superstar! をリリースしたレーベルは?"
     },
     "choices": {
       "pt-BR": [
@@ -396,12 +606,26 @@
         "Roadrunner Records",
         "Victor Entertainment",
         "Nuclear Blast"
+      ],
+      "es": [
+        "Epic Records Japan",
+        "Roadrunner Records",
+        "Victor Entertainment",
+        "Nuclear Blast"
+      ],
+      "ja": [
+        "Epic Records Japan",
+        "Roadrunner Records",
+        "Victor Entertainment",
+        "Nuclear Blast"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "O album foi lancado pela Epic Records Japan.",
-      "en": "The album was released by Epic Records Japan."
+      "en": "The album was released by Epic Records Japan.",
+      "es": "Respuesta correcta: Epic Records Japan.",
+      "ja": "正解は「Epic Records Japan」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
   },
@@ -411,7 +635,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Quais generos aparecem associados a Reborn Superstar!?",
-      "en": "Which genres are associated with Reborn Superstar!?"
+      "en": "Which genres are associated with Reborn Superstar!?",
+      "es": "Que generos se asocian con Reborn Superstar!?",
+      "ja": "Reborn Superstar! に関連づけられるジャンルは?"
     },
     "choices": {
       "pt-BR": [
@@ -425,12 +651,26 @@
         "Jazz fusion and city pop",
         "Ska punk and reggae",
         "Black metal and folk"
+      ],
+      "es": [
+        "Metalcore y electronicore",
+        "Jazz fusion y city pop",
+        "Ska punk y reggae",
+        "Black metal y folk"
+      ],
+      "ja": [
+        "メタルコアとエレクトロニコア",
+        "ジャズフュージョンとシティポップ",
+        "スカパンクとレゲエ",
+        "ブラックメタルとフォーク"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A pagina do album lista metalcore e electronicore.",
-      "en": "The album page lists metalcore and electronicore."
+      "en": "The album page lists metalcore and electronicore.",
+      "es": "Respuesta correcta: Metalcore y electronicore.",
+      "ja": "正解は「メタルコアとエレクトロニコア」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
   },
@@ -440,7 +680,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual foi o pico de Reborn Superstar! no ranking semanal de albums da Billboard Japan?",
-      "en": "What was Reborn Superstar!'s peak on the Billboard Japan weekly album chart?"
+      "en": "What was Reborn Superstar!'s peak on the Billboard Japan weekly album chart?",
+      "es": "Cual fue el pico de Reborn Superstar! en el ranking semanal de albumes de Billboard Japan?",
+      "ja": "Reborn Superstar! はBillboard Japan週間アルバムチャートで最高何位?"
     },
     "choices": {
       "pt-BR": [
@@ -454,12 +696,26 @@
         "#12",
         "#24",
         "#40"
+      ],
+      "es": [
+        "#3",
+        "#12",
+        "#24",
+        "#40"
+      ],
+      "ja": [
+        "#3",
+        "#12",
+        "#24",
+        "#40"
       ]
     },
     "answerIndex": 2,
     "explanation": {
       "pt-BR": "O album chegou ao numero 24 na Billboard Japan weekly album charts.",
-      "en": "The album reached number 24 on the Billboard Japan weekly album charts."
+      "en": "The album reached number 24 on the Billboard Japan weekly album charts.",
+      "es": "Respuesta correcta: #24.",
+      "ja": "正解は「#24」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
   },
@@ -469,7 +725,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Em que mes/ano o EP Bucchigiri Tokyo foi lancado?",
-      "en": "In which month/year was the EP Bucchigiri Tokyo released?"
+      "en": "In which month/year was the EP Bucchigiri Tokyo released?",
+      "es": "En que mes/ano se lanzo el EP Bucchigiri Tokyo?",
+      "ja": "EP Bucchigiri Tokyo がリリースされた年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -483,12 +741,26 @@
         "August 2024",
         "December 2024",
         "January 2025"
+      ],
+      "es": [
+        "Enero de 2024",
+        "Agosto de 2024",
+        "Diciembre de 2024",
+        "Enero de 2025"
+      ],
+      "ja": [
+        "2024年1月",
+        "2024年8月",
+        "2024年12月",
+        "2025年1月"
       ]
     },
     "answerIndex": 2,
     "explanation": {
       "pt-BR": "Bucchigiri Tokyo foi lancado em dezembro de 2024.",
-      "en": "Bucchigiri Tokyo was released in December 2024."
+      "en": "Bucchigiri Tokyo was released in December 2024.",
+      "es": "Respuesta correcta: Diciembre de 2024.",
+      "ja": "正解は「2024年12月」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
   },
@@ -498,7 +770,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Bucchigiri Tokyo e que tipo de lancamento?",
-      "en": "What type of release is Bucchigiri Tokyo?"
+      "en": "What type of release is Bucchigiri Tokyo?",
+      "es": "Que tipo de lanzamiento es Bucchigiri Tokyo?",
+      "ja": "Bucchigiri Tokyo はどんな種類のリリース?"
     },
     "choices": {
       "pt-BR": [
@@ -512,12 +786,26 @@
         "Live album",
         "Standalone single",
         "Soundtrack"
+      ],
+      "es": [
+        "EP",
+        "Album en vivo",
+        "Single independiente",
+        "Banda sonora"
+      ],
+      "ja": [
+        "EP",
+        "ライブアルバム",
+        "単独シングル",
+        "サウンドトラック"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Bucchigiri Tokyo e listado como EP.",
-      "en": "Bucchigiri Tokyo is listed as an EP."
+      "en": "Bucchigiri Tokyo is listed as an EP.",
+      "es": "Respuesta correcta: EP.",
+      "ja": "正解は「EP」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
   },
@@ -527,7 +815,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Bucchigiri Tokyo marcou qual detalhe envolvendo Chika?",
-      "en": "What detail involving Chika is linked to Bucchigiri Tokyo?"
+      "en": "What detail involving Chika is linked to Bucchigiri Tokyo?",
+      "es": "Que detalle sobre Chika esta ligado a Bucchigiri Tokyo?",
+      "ja": "Bucchigiri Tokyo とチカに関するポイントは?"
     },
     "choices": {
       "pt-BR": [
@@ -541,12 +831,26 @@
         "Chika's first solo show",
         "Last record with Chika",
         "Chika's first lead vocal"
+      ],
+      "es": [
+        "Primer disco coescrito con Chika",
+        "Primer show solista de Chika",
+        "Ultimo disco con Chika",
+        "Primer vocal principal de Chika"
+      ],
+      "ja": [
+        "チカと共作した初の音源",
+        "チカ初のソロ公演",
+        "チカ参加の最後の音源",
+        "チカ初のリードボーカル"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "O EP e citado como o primeiro disco que a banda coescreveu com a baterista Chika.",
-      "en": "The EP is cited as the first record the band co-wrote with drummer Chika."
+      "en": "The EP is cited as the first record the band co-wrote with drummer Chika.",
+      "es": "Respuesta correcta: Primer disco coescrito con Chika.",
+      "ja": "正解は「チカと共作した初の音源」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
   },
@@ -556,7 +860,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Bucchigiri Tokyo chegou a qual posicao na parada semanal de albums de rock da Oricon?",
-      "en": "What position did Bucchigiri Tokyo reach on Oricon's weekly rock album chart?"
+      "en": "What position did Bucchigiri Tokyo reach on Oricon's weekly rock album chart?",
+      "es": "A que posicion llego Bucchigiri Tokyo en la lista semanal de albumes de rock de Oricon?",
+      "ja": "Bucchigiri Tokyo はオリコン週間ロックアルバムチャートで何位になった?"
     },
     "choices": {
       "pt-BR": [
@@ -570,12 +876,26 @@
         "#3",
         "#12",
         "#33"
+      ],
+      "es": [
+        "#1",
+        "#3",
+        "#12",
+        "#33"
+      ],
+      "ja": [
+        "#1",
+        "#3",
+        "#12",
+        "#33"
       ]
     },
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "O EP chegou ao numero 3 na parada semanal de albums de rock da Oricon.",
-      "en": "The EP reached number 3 on Oricon's weekly rock album chart."
+      "en": "The EP reached number 3 on Oricon's weekly rock album chart.",
+      "es": "Respuesta correcta: #3.",
+      "ja": "正解は「#3」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
   },
@@ -585,7 +905,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Em que mes/ano Tasty Survivor foi lancado?",
-      "en": "In which month/year was Tasty Survivor released?"
+      "en": "In which month/year was Tasty Survivor released?",
+      "es": "En que mes/ano se lanzo Tasty Survivor?",
+      "ja": "Tasty Survivor がリリースされた年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -599,12 +921,26 @@
         "March 2025",
         "December 2024",
         "July 2023"
+      ],
+      "es": [
+        "Enero de 2025",
+        "Marzo de 2025",
+        "Diciembre de 2024",
+        "Julio de 2023"
+      ],
+      "ja": [
+        "2025年1月",
+        "2025年3月",
+        "2024年12月",
+        "2023年7月"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Tasty Survivor foi lancado em janeiro de 2025.",
-      "en": "Tasty Survivor was released in January 2025."
+      "en": "Tasty Survivor was released in January 2025.",
+      "es": "Respuesta correcta: Enero de 2025.",
+      "ja": "正解は「2025年1月」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Tasty_Survivor"
   },
@@ -614,7 +950,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Tasty Survivor foi tema de abertura de qual anime?",
-      "en": "Tasty Survivor was the opening theme for which anime?"
+      "en": "Tasty Survivor was the opening theme for which anime?",
+      "es": "Tasty Survivor fue el tema de apertura de que anime?",
+      "ja": "Tasty Survivor はどのアニメのオープニングテーマ?"
     },
     "choices": {
       "pt-BR": [
@@ -628,12 +966,26 @@
         "Chainsaw Man",
         "Bocchi the Rock!",
         "Dandadan"
+      ],
+      "es": [
+        "Momentary Lily",
+        "Chainsaw Man",
+        "Bocchi the Rock!",
+        "Dandadan"
+      ],
+      "ja": [
+        "Momentary Lily",
+        "Chainsaw Man",
+        "Bocchi the Rock!",
+        "Dandadan"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Tasty Survivor serviu como abertura de Momentary Lily.",
-      "en": "Tasty Survivor served as the opening theme for Momentary Lily."
+      "en": "Tasty Survivor served as the opening theme for Momentary Lily.",
+      "es": "Respuesta correcta: Momentary Lily.",
+      "ja": "正解は「Momentary Lily」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Tasty_Survivor"
   },
@@ -643,7 +995,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Quem escreveu musica e letra de Tasty Survivor, segundo a fonte?",
-      "en": "Who wrote the music and lyrics for Tasty Survivor, according to the source?"
+      "en": "Who wrote the music and lyrics for Tasty Survivor, according to the source?",
+      "es": "Quien escribio la musica y la letra de Tasty Survivor, segun la fuente?",
+      "ja": "情報源によると、Tasty Survivor の作詞作曲は誰?"
     },
     "choices": {
       "pt-BR": [
@@ -657,12 +1011,26 @@
         "Hettsu and Chika",
         "Yukina and Kaede",
         "Megmetal and Sae"
+      ],
+      "es": [
+        "Matsuri y Yukina",
+        "Hettsu y Chika",
+        "Yukina y Kaede",
+        "Megmetal y Sae"
+      ],
+      "ja": [
+        "マツリとユキナ",
+        "ヘッツとチカ",
+        "ユキナとカエデ",
+        "MegmetalとSae"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A fonte credita musica e letra de Tasty Survivor a Matsuri e Yukina.",
-      "en": "The source credits the music and lyrics of Tasty Survivor to Matsuri and Yukina."
+      "en": "The source credits the music and lyrics of Tasty Survivor to Matsuri and Yukina.",
+      "es": "Respuesta correcta: Matsuri y Yukina.",
+      "ja": "正解は「マツリとユキナ」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Tasty_Survivor"
   },
@@ -672,7 +1040,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Qual faixa combina com a pista: caos de escritorio, pedido de licenca e energia de breakdown?",
-      "en": "Which track matches this clue: office chaos, asking to leave, and breakdown energy?"
+      "en": "Which track matches this clue: office chaos, asking to leave, and breakdown energy?",
+      "es": "Que cancion encaja con esta pista: caos de oficina, pedir permiso para irse y energia de breakdown?",
+      "ja": "「オフィスの混乱、退勤したい気持ち、ブレイクダウン感」というヒントに合う曲は?"
     },
     "choices": {
       "pt-BR": [
@@ -682,6 +1052,18 @@
         "Otaku Lovely Densetsu"
       ],
       "en": [
+        "Pardon Me, I Have to Go Now",
+        "Tasty Survivor",
+        "NEET GAME",
+        "Otaku Lovely Densetsu"
+      ],
+      "es": [
+        "Pardon Me, I Have to Go Now",
+        "Tasty Survivor",
+        "NEET GAME",
+        "Otaku Lovely Densetsu"
+      ],
+      "ja": [
         "Pardon Me, I Have to Go Now",
         "Tasty Survivor",
         "NEET GAME",
@@ -691,7 +1073,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A pista referencia o conceito popularmente associado ao clipe de Pardon Me, I Have to Go Now.",
-      "en": "The clue references the concept popularly associated with the Pardon Me, I Have to Go Now video."
+      "en": "The clue references the concept popularly associated with the Pardon Me, I Have to Go Now video.",
+      "es": "Respuesta correcta: Pardon Me, I Have to Go Now.",
+      "ja": "正解は「Pardon Me, I Have to Go Now」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
   },
@@ -701,7 +1085,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "NEET GAME aparece associado a qual album?",
-      "en": "NEET GAME is associated with which album?"
+      "en": "NEET GAME is associated with which album?",
+      "es": "NEET GAME esta asociada con que album?",
+      "ja": "NEET GAME はどのアルバムに関連している?"
     },
     "choices": {
       "pt-BR": [
@@ -711,6 +1097,18 @@
         "Cherry Blossoms Are Blooming"
       ],
       "en": [
+        "Girl's Reform Manifest",
+        "Reborn Superstar!",
+        "Bucchigiri Tokyo",
+        "Cherry Blossoms Are Blooming"
+      ],
+      "es": [
+        "Girl's Reform Manifest",
+        "Reborn Superstar!",
+        "Bucchigiri Tokyo",
+        "Cherry Blossoms Are Blooming"
+      ],
+      "ja": [
         "Girl's Reform Manifest",
         "Reborn Superstar!",
         "Bucchigiri Tokyo",
@@ -720,7 +1118,9 @@
     "answerIndex": 1,
     "explanation": {
       "pt-BR": "NEET GAME aparece listado entre os singles ligados a Reborn Superstar!.",
-      "en": "NEET GAME appears among the singles linked to Reborn Superstar!."
+      "en": "NEET GAME appears among the singles linked to Reborn Superstar!.",
+      "es": "Respuesta correcta: Reborn Superstar!.",
+      "ja": "正解は「Reborn Superstar!」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -730,7 +1130,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Em que ano Otaku Lovely Densetsu foi lancada como single?",
-      "en": "In which year was Otaku Lovely Densetsu released as a single?"
+      "en": "In which year was Otaku Lovely Densetsu released as a single?",
+      "es": "En que ano se lanzo Otaku Lovely Densetsu como single?",
+      "ja": "Otaku Lovely Densetsu がシングルとしてリリースされた年は?"
     },
     "choices": {
       "pt-BR": [
@@ -740,6 +1142,18 @@
         "2024"
       ],
       "en": [
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "es": [
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "ja": [
         "2021",
         "2022",
         "2023",
@@ -749,7 +1163,9 @@
     "answerIndex": 3,
     "explanation": {
       "pt-BR": "Otaku Lovely Densetsu foi lancada em 2024.",
-      "en": "Otaku Lovely Densetsu was released in 2024."
+      "en": "Otaku Lovely Densetsu was released in 2024.",
+      "es": "Respuesta correcta: 2024.",
+      "ja": "正解は「2024」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -759,7 +1175,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Metamorphose! foi lancada em qual ano?",
-      "en": "In which year was Metamorphose! released?"
+      "en": "In which year was Metamorphose! released?",
+      "es": "En que ano se lanzo Metamorphose!?",
+      "ja": "Metamorphose! がリリースされた年は?"
     },
     "choices": {
       "pt-BR": [
@@ -769,6 +1187,18 @@
         "2025"
       ],
       "en": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "es": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "ja": [
         "2022",
         "2023",
         "2024",
@@ -778,7 +1208,9 @@
     "answerIndex": 2,
     "explanation": {
       "pt-BR": "Metamorphose! foi lancada como single em 2024.",
-      "en": "Metamorphose! was released as a single in 2024."
+      "en": "Metamorphose! was released as a single in 2024.",
+      "es": "Respuesta correcta: 2024.",
+      "ja": "正解は「2024」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
   },
@@ -788,7 +1220,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Em 2024, a HANABIE. chamou atencao por aparecer no palco principal de qual festival?",
-      "en": "In 2024, HANABIE. drew attention by appearing on the main stage of which festival?"
+      "en": "In 2024, HANABIE. drew attention by appearing on the main stage of which festival?",
+      "es": "En 2024, HANABIE. llamo la atencion al aparecer en el escenario principal de que festival?",
+      "ja": "2024年、HANABIE.はどのフェスのメインステージ出演で注目された?"
     },
     "choices": {
       "pt-BR": [
@@ -798,6 +1232,18 @@
         "Fuji Rock"
       ],
       "en": [
+        "Lollapalooza",
+        "Glastonbury",
+        "Coachella",
+        "Fuji Rock"
+      ],
+      "es": [
+        "Lollapalooza",
+        "Glastonbury",
+        "Coachella",
+        "Fuji Rock"
+      ],
+      "ja": [
         "Lollapalooza",
         "Glastonbury",
         "Coachella",
@@ -807,7 +1253,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A fonte cita a aparicao da banda no palco principal do Lollapalooza em 2024.",
-      "en": "The source cites the band's main stage appearance at Lollapalooza in 2024."
+      "en": "The source cites the band's main stage appearance at Lollapalooza in 2024.",
+      "es": "Respuesta correcta: Lollapalooza.",
+      "ja": "正解は「Lollapalooza」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -817,7 +1265,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Qual destas integrantes e listada como baterista anterior da banda?",
-      "en": "Which of these members is listed as a former drummer of the band?"
+      "en": "Which of these members is listed as a former drummer of the band?",
+      "es": "Cual de estas integrantes figura como ex baterista de la banda?",
+      "ja": "次のうち、元ドラマーとして記載されているメンバーは?"
     },
     "choices": {
       "pt-BR": [
@@ -831,12 +1281,26 @@
         "Aina",
         "Miku",
         "Kanami"
+      ],
+      "es": [
+        "Sae",
+        "Aina",
+        "Miku",
+        "Kanami"
+      ],
+      "ja": [
+        "Sae",
+        "Aina",
+        "Miku",
+        "Kanami"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Sae e listada como baterista anterior da HANABIE.",
-      "en": "Sae is listed as a former drummer of HANABIE."
+      "en": "Sae is listed as a former drummer of HANABIE.",
+      "es": "Respuesta correcta: Sae.",
+      "ja": "正解は「Sae」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -846,7 +1310,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual era o instrumento de Kaede na formacao inicial?",
-      "en": "Which instrument did Kaede play in the original lineup?"
+      "en": "Which instrument did Kaede play in the original lineup?",
+      "es": "Que instrumento tocaba Kaede en la formacion original?",
+      "ja": "初期編成でカエデが担当していた楽器は?"
     },
     "choices": {
       "pt-BR": [
@@ -860,12 +1326,26 @@
         "Guitar",
         "Drums",
         "Vocals"
+      ],
+      "es": [
+        "Bajo",
+        "Guitarra",
+        "Bateria",
+        "Voz"
+      ],
+      "ja": [
+        "ベース",
+        "ギター",
+        "ドラム",
+        "ボーカル"
       ]
     },
     "answerIndex": 2,
     "explanation": {
       "pt-BR": "Kaede foi baterista na formacao inicial.",
-      "en": "Kaede was the drummer in the original lineup."
+      "en": "Kaede was the drummer in the original lineup.",
+      "es": "Respuesta correcta: Bateria.",
+      "ja": "正解は「ドラム」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -875,7 +1355,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Quais nomes aparecem como primeiras musicas autorais escritas pela banda em 2016?",
-      "en": "Which names appear as the first original songs written by the band in 2016?"
+      "en": "Which names appear as the first original songs written by the band in 2016?",
+      "es": "Que nombres aparecen como las primeras canciones originales escritas por la banda en 2016?",
+      "ja": "2016年に書かれた最初のオリジナル曲として挙げられる曲名は?"
     },
     "choices": {
       "pt-BR": [
@@ -889,12 +1371,26 @@
         "NEET GAME and Run Away",
         "Tasty Survivor and Spicy Queen",
         "Metamorphose! and Girl's Talk"
+      ],
+      "es": [
+        "Crash Over y Sweet Killer",
+        "NEET GAME y Run Away",
+        "Tasty Survivor y Spicy Queen",
+        "Metamorphose! y Girl's Talk"
+      ],
+      "ja": [
+        "Crash Over と Sweet Killer",
+        "NEET GAME と Run Away",
+        "Tasty Survivor と Spicy Queen",
+        "Metamorphose! と Girl's Talk"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A historia cita Crash Over e Sweet Killer como primeiras musicas escritas em 2016.",
-      "en": "The history cites Crash Over and Sweet Killer as the first songs written in 2016."
+      "en": "The history cites Crash Over and Sweet Killer as the first songs written in 2016.",
+      "es": "Respuesta correcta: Crash Over y Sweet Killer.",
+      "ja": "正解は「Crash Over と Sweet Killer」です。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
   },
@@ -904,7 +1400,9 @@
     "difficulty": 1,
     "prompt": {
       "pt-BR": "Qual expressao a banda usa para definir sua mistura de som pesado com cultura KAWAii?",
-      "en": "What phrase does the band use for its mix of heavy sound and KAWAii culture?"
+      "en": "What phrase does the band use for its mix of heavy sound and KAWAii culture?",
+      "es": "Que frase usa la banda para su mezcla de sonido pesado y cultura KAWAii?",
+      "ja": "重いサウンドとKAWAii文化のミックスを、バンドは何と呼んでいる?"
     },
     "choices": {
       "pt-BR": [
@@ -914,6 +1412,18 @@
         "Kawaii Doom"
       ],
       "en": [
+        "Harajuku Core",
+        "Neo Visual Pop",
+        "Tokyo Grind Idol",
+        "Kawaii Doom"
+      ],
+      "es": [
+        "Harajuku Core",
+        "Neo Visual Pop",
+        "Tokyo Grind Idol",
+        "Kawaii Doom"
+      ],
+      "ja": [
         "Harajuku Core",
         "Neo Visual Pop",
         "Tokyo Grind Idol",
@@ -923,7 +1433,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A propria banda usa Harajuku Core para essa mistura de peso, gritos e cultura kawaii.",
-      "en": "The band uses Harajuku Core for this mix of heaviness, screams, and kawaii culture."
+      "en": "The band uses Harajuku Core for this mix of heaviness, screams, and kawaii culture.",
+      "es": "Respuesta correcta: Harajuku Core.",
+      "ja": "正解は「Harajuku Core」です。"
     },
     "sourceUrl": "https://cocotame.jp/en/series/102848/"
   },
@@ -933,7 +1445,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Qual musica ajudou a banda a perceber interesse internacional por causa de videos de reacao?",
-      "en": "Which song helped the band notice overseas interest because of reaction videos?"
+      "en": "Which song helped the band notice overseas interest because of reaction videos?",
+      "es": "Que cancion ayudo a la banda a notar interes internacional gracias a videos de reaccion?",
+      "ja": "リアクション動画を通じて海外の反応に気づくきっかけになった曲は?"
     },
     "choices": {
       "pt-BR": [
@@ -947,12 +1461,26 @@
         "Spicy Queen",
         "GIRL'S TALK",
         "Run Away"
+      ],
+      "es": [
+        "WE LOVE SWEETS",
+        "Spicy Queen",
+        "GIRL'S TALK",
+        "Run Away"
+      ],
+      "ja": [
+        "WE LOVE SWEETS",
+        "Spicy Queen",
+        "GIRL'S TALK",
+        "Run Away"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A entrevista cita WE LOVE SWEETS como ponto de atencao internacional via comentarios e reacoes.",
-      "en": "The interview cites WE LOVE SWEETS as a point of overseas attention through comments and reactions."
+      "en": "The interview cites WE LOVE SWEETS as a point of overseas attention through comments and reactions.",
+      "es": "Respuesta correcta: WE LOVE SWEETS.",
+      "ja": "正解は「WE LOVE SWEETS」です。"
     },
     "sourceUrl": "https://cocotame.jp/en/series/102848/"
   },
@@ -962,7 +1490,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Em que mes/ano Chika entrou oficialmente na HANABIE.?",
-      "en": "In which month/year did Chika officially join HANABIE.?"
+      "en": "In which month/year did Chika officially join HANABIE.?",
+      "es": "En que mes/ano Chika se unio oficialmente a HANABIE.?",
+      "ja": "チカがHANABIE.に正式加入した年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -976,12 +1506,26 @@
         "April 2022",
         "September 2020",
         "January 2024"
+      ],
+      "es": [
+        "Mayo de 2023",
+        "Abril de 2022",
+        "Septiembre de 2020",
+        "Enero de 2024"
+      ],
+      "ja": [
+        "2023年5月",
+        "2022年4月",
+        "2020年9月",
+        "2024年1月"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Chika entrou oficialmente em maio de 2023.",
-      "en": "Chika officially joined in May 2023."
+      "en": "Chika officially joined in May 2023.",
+      "es": "Respuesta correcta: Mayo de 2023.",
+      "ja": "正解は「2023年5月」です。"
     },
     "sourceUrl": "https://cocotame.jp/en/series/102848/"
   },
@@ -991,7 +1535,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Qual sequencia resume as bateristas da HANABIE. ate a formacao atual?",
-      "en": "Which sequence summarizes HANABIE.'s drummers up to the current lineup?"
+      "en": "Which sequence summarizes HANABIE.'s drummers up to the current lineup?",
+      "es": "Que secuencia resume las bateristas de HANABIE. hasta la formacion actual?",
+      "ja": "現在までのHANABIE.のドラマーの流れを表す順番は?"
     },
     "choices": {
       "pt-BR": [
@@ -1005,12 +1551,26 @@
         "Sae, Kaede, Chika, Boa",
         "Boa, Chika, Kaede, Sae",
         "Chika, Sae, Boa, Kaede"
+      ],
+      "es": [
+        "Kaede, Boa, Sae, Chika",
+        "Sae, Kaede, Chika, Boa",
+        "Boa, Chika, Kaede, Sae",
+        "Chika, Sae, Boa, Kaede"
+      ],
+      "ja": [
+        "カエデ、Boa、Sae、チカ",
+        "Sae、カエデ、チカ、Boa",
+        "Boa、チカ、カエデ、Sae",
+        "チカ、Sae、Boa、カエデ"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A linha do tempo de bateristas vai de Kaede para Boa, depois Sae e Chika.",
-      "en": "The drummer timeline goes from Kaede to Boa, then Sae and Chika."
+      "en": "The drummer timeline goes from Kaede to Boa, then Sae and Chika.",
+      "es": "Respuesta correcta: Kaede, Boa, Sae, Chika.",
+      "ja": "正解は「カエデ、Boa、Sae、チカ」です。"
     },
     "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
   },
@@ -1020,7 +1580,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Em que mes/ano Kaede saiu da banda?",
-      "en": "In which month/year did Kaede leave the band?"
+      "en": "In which month/year did Kaede leave the band?",
+      "es": "En que mes/ano Kaede dejo la banda?",
+      "ja": "カエデがバンドを離れた年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -1034,12 +1596,26 @@
         "July 2017",
         "September 2018",
         "April 2023"
+      ],
+      "es": [
+        "Diciembre de 2016",
+        "Julio de 2017",
+        "Septiembre de 2018",
+        "Abril de 2023"
+      ],
+      "ja": [
+        "2016年12月",
+        "2017年7月",
+        "2018年9月",
+        "2023年4月"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Kaede e listada como integrante original que saiu em dezembro de 2016.",
-      "en": "Kaede is listed as an original member who left in December 2016."
+      "en": "Kaede is listed as an original member who left in December 2016.",
+      "es": "Respuesta correcta: Diciembre de 2016.",
+      "ja": "正解は「2016年12月」です。"
     },
     "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
   },
@@ -1049,7 +1625,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Em que mes/ano Boa saiu da banda?",
-      "en": "In which month/year did Boa leave the band?"
+      "en": "In which month/year did Boa leave the band?",
+      "es": "En que mes/ano Boa dejo la banda?",
+      "ja": "Boaがバンドを離れた年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -1063,12 +1641,26 @@
         "December 2016",
         "May 2023",
         "August 2024"
+      ],
+      "es": [
+        "Septiembre de 2018",
+        "Diciembre de 2016",
+        "Mayo de 2023",
+        "Agosto de 2024"
+      ],
+      "ja": [
+        "2018年9月",
+        "2016年12月",
+        "2023年5月",
+        "2024年8月"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Boa e listada como baterista que saiu em setembro de 2018.",
-      "en": "Boa is listed as a drummer who left in September 2018."
+      "en": "Boa is listed as a drummer who left in September 2018.",
+      "es": "Respuesta correcta: Septiembre de 2018.",
+      "ja": "正解は「2018年9月」です。"
     },
     "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
   },
@@ -1078,7 +1670,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Em que mes/ano Sae saiu da banda?",
-      "en": "In which month/year did Sae leave the band?"
+      "en": "In which month/year did Sae leave the band?",
+      "es": "En que mes/ano Sae dejo la banda?",
+      "ja": "Saeがバンドを離れた年月は?"
     },
     "choices": {
       "pt-BR": [
@@ -1092,12 +1686,26 @@
         "September 2020",
         "January 2025",
         "December 2016"
+      ],
+      "es": [
+        "Abril de 2023",
+        "Septiembre de 2020",
+        "Enero de 2025",
+        "Diciembre de 2016"
+      ],
+      "ja": [
+        "2023年4月",
+        "2020年9月",
+        "2025年1月",
+        "2016年12月"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Sae saiu em abril de 2023, pouco antes da entrada oficial de Chika.",
-      "en": "Sae left in April 2023, shortly before Chika officially joined."
+      "en": "Sae left in April 2023, shortly before Chika officially joined.",
+      "es": "Respuesta correcta: Abril de 2023.",
+      "ja": "正解は「2023年4月」です。"
     },
     "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
   },
@@ -1107,7 +1715,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Entre as bateristas anteriores listadas, quem ficou mais tempo na banda?",
-      "en": "Among the listed former drummers, who stayed in the band the longest?"
+      "en": "Among the listed former drummers, who stayed in the band the longest?",
+      "es": "Entre las ex bateristas listadas, quien estuvo mas tiempo en la banda?",
+      "ja": "記載された元ドラマーの中で、最も長く在籍したのは誰?"
     },
     "choices": {
       "pt-BR": [
@@ -1117,6 +1727,18 @@
         "Chika"
       ],
       "en": [
+        "Sae",
+        "Kaede",
+        "Boa",
+        "Chika"
+      ],
+      "es": [
+        "Sae",
+        "Kaede",
+        "Boa",
+        "Chika"
+      ],
+      "ja": [
         "Sae",
         "Kaede",
         "Boa",
@@ -1126,7 +1748,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Considerando as datas listadas, Sae ficou de setembro de 2020 a abril de 2023.",
-      "en": "Based on the listed dates, Sae stayed from September 2020 to April 2023."
+      "en": "Based on the listed dates, Sae stayed from September 2020 to April 2023.",
+      "es": "Respuesta correcta: Sae.",
+      "ja": "正解は「Sae」です。"
     },
     "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
   },
@@ -1136,7 +1760,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Qual EP da HANABIE. foi anunciado para janeiro de 2026 com cinco faixas?",
-      "en": "Which HANABIE. EP was announced for January 2026 with five tracks?"
+      "en": "Which HANABIE. EP was announced for January 2026 with five tracks?",
+      "es": "Que EP de HANABIE. fue anunciado para enero de 2026 con cinco canciones?",
+      "ja": "2026年1月に5曲入りとして発表されたHANABIE.のEPは?"
     },
     "choices": {
       "pt-BR": [
@@ -1146,6 +1772,18 @@
         "Girl's Reform Manifest"
       ],
       "en": [
+        "HOT TOPIC",
+        "Bucchigiri Tokyo",
+        "Reborn Superstar!",
+        "Girl's Reform Manifest"
+      ],
+      "es": [
+        "HOT TOPIC",
+        "Bucchigiri Tokyo",
+        "Reborn Superstar!",
+        "Girl's Reform Manifest"
+      ],
+      "ja": [
         "HOT TOPIC",
         "Bucchigiri Tokyo",
         "Reborn Superstar!",
@@ -1155,7 +1793,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "HOT TOPIC e o EP de cinco faixas anunciado para janeiro de 2026.",
-      "en": "HOT TOPIC is the five-track EP announced for January 2026."
+      "en": "HOT TOPIC is the five-track EP announced for January 2026.",
+      "es": "Respuesta correcta: HOT TOPIC.",
+      "ja": "正解は「HOT TOPIC」です。"
     },
     "sourceUrl": "https://rocksound.tv/news/hanabie-announce-new-ep-hot-topic"
   },
@@ -1165,7 +1805,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual faixa saiu como pre-release de HOT TOPIC?",
-      "en": "Which track was released as a pre-release from HOT TOPIC?"
+      "en": "Which track was released as a pre-release from HOT TOPIC?",
+      "es": "Que cancion salio como pre-lanzamiento de HOT TOPIC?",
+      "ja": "HOT TOPIC から先行リリースされた曲は?"
     },
     "choices": {
       "pt-BR": [
@@ -1175,6 +1817,18 @@
         "Run Away"
       ],
       "en": [
+        "ICONIC",
+        "WE LOVE SWEETS",
+        "NEET GAME",
+        "Run Away"
+      ],
+      "es": [
+        "ICONIC",
+        "WE LOVE SWEETS",
+        "NEET GAME",
+        "Run Away"
+      ],
+      "ja": [
         "ICONIC",
         "WE LOVE SWEETS",
         "NEET GAME",
@@ -1184,7 +1838,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "ICONIC saiu antes do EP HOT TOPIC como single de antecipacao.",
-      "en": "ICONIC came out before the HOT TOPIC EP as an advance single."
+      "en": "ICONIC came out before the HOT TOPIC EP as an advance single.",
+      "es": "Respuesta correcta: ICONIC.",
+      "ja": "正解は「ICONIC」です。"
     },
     "sourceUrl": "https://rocksound.tv/news/hanabie-announce-new-ep-hot-topic"
   },
@@ -1194,7 +1850,9 @@
     "difficulty": 2,
     "prompt": {
       "pt-BR": "Quantas faixas tem o EP HOT TOPIC?",
-      "en": "How many tracks are on the HOT TOPIC EP?"
+      "en": "How many tracks are on the HOT TOPIC EP?",
+      "es": "Cuantas canciones tiene el EP HOT TOPIC?",
+      "ja": "EP HOT TOPIC の収録曲数は?"
     },
     "choices": {
       "pt-BR": [
@@ -1204,6 +1862,18 @@
         "10"
       ],
       "en": [
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "es": [
+        "5",
+        "6",
+        "8",
+        "10"
+      ],
+      "ja": [
         "5",
         "6",
         "8",
@@ -1213,7 +1883,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "HOT TOPIC tem cinco faixas.",
-      "en": "HOT TOPIC has five tracks."
+      "en": "HOT TOPIC has five tracks.",
+      "es": "Respuesta correcta: 5.",
+      "ja": "正解は「5」です。"
     },
     "sourceUrl": "https://music.apple.com/us/album/hot-topic-ep/1869291992"
   },
@@ -1223,7 +1895,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual e a faixa mais curta de HOT TOPIC na listagem da Apple Music?",
-      "en": "Which is the shortest track on HOT TOPIC in the Apple Music listing?"
+      "en": "Which is the shortest track on HOT TOPIC in the Apple Music listing?",
+      "es": "Cual es la cancion mas corta de HOT TOPIC en la lista de Apple Music?",
+      "ja": "Apple Musicのリストで、HOT TOPIC の最も短い曲は?"
     },
     "choices": {
       "pt-BR": [
@@ -1233,6 +1907,18 @@
         "Spicy Queen"
       ],
       "en": [
+        "Theme of hanabienchan.",
+        "GIRL'S TALK",
+        "ICONIC",
+        "Spicy Queen"
+      ],
+      "es": [
+        "Theme of hanabienchan.",
+        "GIRL'S TALK",
+        "ICONIC",
+        "Spicy Queen"
+      ],
+      "ja": [
         "Theme of hanabienchan.",
         "GIRL'S TALK",
         "ICONIC",
@@ -1242,7 +1928,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Theme of hanabienchan. aparece como a faixa mais curta da listagem.",
-      "en": "Theme of hanabienchan. appears as the shortest track in the listing."
+      "en": "Theme of hanabienchan. appears as the shortest track in the listing.",
+      "es": "Respuesta correcta: Theme of hanabienchan..",
+      "ja": "正解は「Theme of hanabienchan.」です。"
     },
     "sourceUrl": "https://music.apple.com/us/album/hot-topic-ep/1869291992"
   },
@@ -1252,7 +1940,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "O Blu-ray limitado de HOT TOPIC inclui show de qual local da Bucchigiri Japan Tour 2024?",
-      "en": "The limited HOT TOPIC Blu-ray includes a show from which Bucchigiri Japan Tour 2024 venue?"
+      "en": "The limited HOT TOPIC Blu-ray includes a show from which Bucchigiri Japan Tour 2024 venue?",
+      "es": "El Blu-ray limitado de HOT TOPIC incluye un show de que sede de la Bucchigiri Japan Tour 2024?",
+      "ja": "HOT TOPIC 限定Blu-rayには、Bucchigiri Japan Tour 2024のどの会場のライブが入っている?"
     },
     "choices": {
       "pt-BR": [
@@ -1262,6 +1952,18 @@
         "Makuhari Messe"
       ],
       "en": [
+        "Zepp Shinjuku Tokyo",
+        "Tokyo Dome",
+        "Budokan",
+        "Makuhari Messe"
+      ],
+      "es": [
+        "Zepp Shinjuku Tokyo",
+        "Tokyo Dome",
+        "Budokan",
+        "Makuhari Messe"
+      ],
+      "ja": [
         "Zepp Shinjuku Tokyo",
         "Tokyo Dome",
         "Budokan",
@@ -1271,7 +1973,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A edicao limitada e associada ao show no Zepp Shinjuku Tokyo.",
-      "en": "The limited edition is associated with the show at Zepp Shinjuku Tokyo."
+      "en": "The limited edition is associated with the show at Zepp Shinjuku Tokyo.",
+      "es": "Respuesta correcta: Zepp Shinjuku Tokyo.",
+      "ja": "正解は「Zepp Shinjuku Tokyo」です。"
     },
     "sourceUrl": "https://www.cdjapan.co.jp/product/ESCL-6155"
   },
@@ -1281,7 +1985,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Segundo a EN.CORE ROCKS, quantos gigs a US Tour 2023 da HANABIE. teve?",
-      "en": "According to EN.CORE ROCKS, how many gigs did HANABIE.'s 2023 US Tour have?"
+      "en": "According to EN.CORE ROCKS, how many gigs did HANABIE.'s 2023 US Tour have?",
+      "es": "Segun EN.CORE ROCKS, cuantos conciertos tuvo la US Tour 2023 de HANABIE.?",
+      "ja": "EN.CORE ROCKSによると、HANABIE.の2023年US Tourは何公演だった?"
     },
     "choices": {
       "pt-BR": [
@@ -1295,12 +2001,26 @@
         "12",
         "27",
         "8"
+      ],
+      "es": [
+        "20",
+        "12",
+        "27",
+        "8"
+      ],
+      "ja": [
+        "20",
+        "12",
+        "27",
+        "8"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A materia descreve a rota americana de 2023 como 20 gigs.",
-      "en": "The article describes the 2023 US route as 20 gigs."
+      "en": "The article describes the 2023 US route as 20 gigs.",
+      "es": "Respuesta correcta: 20.",
+      "ja": "正解は「20」です。"
     },
     "sourceUrl": "https://en-core.rocks/2023/09/21/hanabie-us-tour-after-captivating-europe/"
   },
@@ -1310,7 +2030,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Quais festivais dos EUA estavam ligados a rota de 2023?",
-      "en": "Which US festivals were tied to the 2023 route?"
+      "en": "Which US festivals were tied to the 2023 route?",
+      "es": "Que festivales de Estados Unidos estaban ligados a la ruta de 2023?",
+      "ja": "2023年のルートに関連していたアメリカのフェスは?"
     },
     "choices": {
       "pt-BR": [
@@ -1324,12 +2046,26 @@
         "Coachella, Bonnaroo, and Riot Fest",
         "Sick New World, Warped Tour, and Download",
         "Fuji Rock, Summer Sonic, and Knotfest Japan"
+      ],
+      "es": [
+        "Blue Ridge, Louder Than Life y Aftershock",
+        "Coachella, Bonnaroo y Riot Fest",
+        "Sick New World, Warped Tour y Download",
+        "Fuji Rock, Summer Sonic y Knotfest Japan"
+      ],
+      "ja": [
+        "Blue Ridge、Louder Than Life、Aftershock",
+        "Coachella、Bonnaroo、Riot Fest",
+        "Sick New World、Warped Tour、Download",
+        "Fuji Rock、Summer Sonic、Knotfest Japan"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A cobertura da tour cita Blue Ridge Rock Fest, Louder Than Life e Aftershock nessa fase.",
-      "en": "The tour coverage cites Blue Ridge Rock Fest, Louder Than Life, and Aftershock in that phase."
+      "en": "The tour coverage cites Blue Ridge Rock Fest, Louder Than Life, and Aftershock in that phase.",
+      "es": "Respuesta correcta: Blue Ridge, Louder Than Life y Aftershock.",
+      "ja": "正解は「Blue Ridge、Louder Than Life、Aftershock」です。"
     },
     "sourceUrl": "https://en-core.rocks/2023/09/21/hanabie-us-tour-after-captivating-europe/"
   },
@@ -1339,7 +2075,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Na US Tour 2023, a HANABIE. fez parte da rota como suporte de qual banda em seis shows?",
-      "en": "On the 2023 US Tour, HANABIE. appeared as support for which band on six shows?"
+      "en": "On the 2023 US Tour, HANABIE. appeared as support for which band on six shows?",
+      "es": "En la US Tour 2023, HANABIE. participo como soporte de que banda en seis shows?",
+      "ja": "2023年US Tourで、HANABIE.は6公演でどのバンドのサポートを務めた?"
     },
     "choices": {
       "pt-BR": [
@@ -1349,6 +2087,18 @@
         "Nekrogoblikon"
       ],
       "en": [
+        "Galactic Empire",
+        "Jinjer",
+        "Kim Dracula",
+        "Nekrogoblikon"
+      ],
+      "es": [
+        "Galactic Empire",
+        "Jinjer",
+        "Kim Dracula",
+        "Nekrogoblikon"
+      ],
+      "ja": [
         "Galactic Empire",
         "Jinjer",
         "Kim Dracula",
@@ -1358,7 +2108,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A EN.CORE ROCKS cita seis shows como suporte para Galactic Empire.",
-      "en": "EN.CORE ROCKS cites six shows as support for Galactic Empire."
+      "en": "EN.CORE ROCKS cites six shows as support for Galactic Empire.",
+      "es": "Respuesta correcta: Galactic Empire.",
+      "ja": "正解は「Galactic Empire」です。"
     },
     "sourceUrl": "https://en-core.rocks/2023/09/21/hanabie-us-tour-after-captivating-europe/"
   },
@@ -1368,7 +2120,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Em 2025, a HANABIE. fez co-headline nos EUA com qual artista?",
-      "en": "In 2025, HANABIE. co-headlined in the US with which artist?"
+      "en": "In 2025, HANABIE. co-headlined in the US with which artist?",
+      "es": "En 2025, HANABIE. hizo co-headline en Estados Unidos con que artista?",
+      "ja": "2025年、HANABIE.はアメリカでどのアーティストと共同ヘッドライナーを務めた?"
     },
     "choices": {
       "pt-BR": [
@@ -1382,12 +2136,26 @@
         "Poppy",
         "Spiritbox",
         "Bring Me the Horizon"
+      ],
+      "es": [
+        "Kim Dracula",
+        "Poppy",
+        "Spiritbox",
+        "Bring Me the Horizon"
+      ],
+      "ja": [
+        "Kim Dracula",
+        "Poppy",
+        "Spiritbox",
+        "Bring Me the Horizon"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A rota foi anunciada como co-headline de Kim Dracula e HANABIE.",
-      "en": "The route was announced as a Kim Dracula and HANABIE. co-headline."
+      "en": "The route was announced as a Kim Dracula and HANABIE. co-headline.",
+      "es": "Respuesta correcta: Kim Dracula.",
+      "ja": "正解は「Kim Dracula」です。"
     },
     "sourceUrl": "https://hanabie.jp/en/live/in.html?liveid=53164"
   },
@@ -1397,7 +2165,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Quais supports foram anunciados para a tour de 2025 com Kim Dracula?",
-      "en": "Which supports were announced for the 2025 tour with Kim Dracula?"
+      "en": "Which supports were announced for the 2025 tour with Kim Dracula?",
+      "es": "Que bandas soporte fueron anunciadas para la gira de 2025 con Kim Dracula?",
+      "ja": "2025年のKim Draculaとのツアーで発表されたサポートは?"
     },
     "choices": {
       "pt-BR": [
@@ -1411,12 +2181,26 @@
         "Fox Lake and Dropout Kings",
         "Nekrogoblikon and Enterprise Earth",
         "Born of Osiris and Jinjer"
+      ],
+      "es": [
+        "Crystal Lake y Kaonashi",
+        "Fox Lake y Dropout Kings",
+        "Nekrogoblikon y Enterprise Earth",
+        "Born of Osiris y Jinjer"
+      ],
+      "ja": [
+        "Crystal Lake と Kaonashi",
+        "Fox Lake と Dropout Kings",
+        "Nekrogoblikon と Enterprise Earth",
+        "Born of Osiris と Jinjer"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A pagina oficial listou Crystal Lake como direct support e Kaonashi como opener.",
-      "en": "The official page listed Crystal Lake as direct support and Kaonashi as opener."
+      "en": "The official page listed Crystal Lake as direct support and Kaonashi as opener.",
+      "es": "Respuesta correcta: Crystal Lake y Kaonashi.",
+      "ja": "正解は「Crystal Lake と Kaonashi」です。"
     },
     "sourceUrl": "https://hanabie.jp/en/live/in.html?liveid=53164"
   },
@@ -1426,7 +2210,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Quais bandas foram anunciadas como suporte da North America Tour 2026?",
-      "en": "Which bands were announced as support for the 2026 North America Tour?"
+      "en": "Which bands were announced as support for the 2026 North America Tour?",
+      "es": "Que bandas fueron anunciadas como soporte de la North America Tour 2026?",
+      "ja": "2026年North America Tourのサポートとして発表されたバンドは?"
     },
     "choices": {
       "pt-BR": [
@@ -1440,12 +2226,26 @@
         "Crystal Lake and Kaonashi",
         "Fox Lake and Dropout Kings",
         "Galactic Empire and Jinjer"
+      ],
+      "es": [
+        "Nekrogoblikon y Enterprise Earth",
+        "Crystal Lake y Kaonashi",
+        "Fox Lake y Dropout Kings",
+        "Galactic Empire y Jinjer"
+      ],
+      "ja": [
+        "Nekrogoblikon と Enterprise Earth",
+        "Crystal Lake と Kaonashi",
+        "Fox Lake と Dropout Kings",
+        "Galactic Empire と Jinjer"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A Live Nation anunciou Nekrogoblikon e Enterprise Earth como suportes da tour.",
-      "en": "Live Nation announced Nekrogoblikon and Enterprise Earth as tour supports."
+      "en": "Live Nation announced Nekrogoblikon and Enterprise Earth as tour supports.",
+      "es": "Respuesta correcta: Nekrogoblikon y Enterprise Earth.",
+      "ja": "正解は「Nekrogoblikon と Enterprise Earth」です。"
     },
     "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
   },
@@ -1455,7 +2255,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Quantas datas tinha a North America Tour 2026 anunciada pela Live Nation?",
-      "en": "How many dates did the 2026 North America Tour announced by Live Nation have?"
+      "en": "How many dates did the 2026 North America Tour announced by Live Nation have?",
+      "es": "Cuantas fechas tenia la North America Tour 2026 anunciada por Live Nation?",
+      "ja": "Live Nationが発表した2026年North America Tourは何公演?"
     },
     "choices": {
       "pt-BR": [
@@ -1465,6 +2267,18 @@
         "30"
       ],
       "en": [
+        "21",
+        "12",
+        "18",
+        "30"
+      ],
+      "es": [
+        "21",
+        "12",
+        "18",
+        "30"
+      ],
+      "ja": [
         "21",
         "12",
         "18",
@@ -1474,7 +2288,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "O anuncio da Live Nation descreve uma tour norte-americana de 21 datas.",
-      "en": "The Live Nation announcement describes a 21-date North American tour."
+      "en": "The Live Nation announcement describes a 21-date North American tour.",
+      "es": "Respuesta correcta: 21.",
+      "ja": "正解は「21」です。"
     },
     "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
   },
@@ -1484,7 +2300,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Em qual cidade comecava a North America Tour 2026 anunciada pela Live Nation?",
-      "en": "In which city did the 2026 North America Tour announced by Live Nation start?"
+      "en": "In which city did the 2026 North America Tour announced by Live Nation start?",
+      "es": "En que ciudad empezaba la North America Tour 2026 anunciada por Live Nation?",
+      "ja": "Live Nation発表の2026年North America Tourはどの都市から始まる?"
     },
     "choices": {
       "pt-BR": [
@@ -1494,6 +2312,18 @@
         "Toronto"
       ],
       "en": [
+        "Boston",
+        "Los Angeles",
+        "Chicago",
+        "Toronto"
+      ],
+      "es": [
+        "Boston",
+        "Los Angeles",
+        "Chicago",
+        "Toronto"
+      ],
+      "ja": [
         "Boston",
         "Los Angeles",
         "Chicago",
@@ -1503,7 +2333,9 @@
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "O anuncio lista Boston como a primeira cidade da rota.",
-      "en": "The announcement lists Boston as the first city on the route."
+      "en": "The announcement lists Boston as the first city on the route.",
+      "es": "Respuesta correcta: Boston.",
+      "ja": "正解は「Boston」です。"
     },
     "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
   },
@@ -1513,7 +2345,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Em qual cidade terminava a rota original da North America Tour 2026?",
-      "en": "In which city did the original 2026 North America Tour route end?"
+      "en": "In which city did the original 2026 North America Tour route end?",
+      "es": "En que ciudad terminaba la ruta original de la North America Tour 2026?",
+      "ja": "2026年North America Tourの当初ルートはどの都市で終わる?"
     },
     "choices": {
       "pt-BR": [
@@ -1527,12 +2361,26 @@
         "Boston",
         "Atlanta",
         "Montreal"
+      ],
+      "es": [
+        "Los Angeles",
+        "Boston",
+        "Atlanta",
+        "Montreal"
+      ],
+      "ja": [
+        "Los Angeles",
+        "Boston",
+        "Atlanta",
+        "Montreal"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A rota original anunciada terminava em Los Angeles.",
-      "en": "The original announced route ended in Los Angeles."
+      "en": "The original announced route ended in Los Angeles.",
+      "es": "Respuesta correcta: Los Angeles.",
+      "ja": "正解は「Los Angeles」です。"
     },
     "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
   },
@@ -1542,7 +2390,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Em 2024, a HANABIE. foi citada como a primeira banda japonesa feminina a tocar em que palco do Lollapalooza Chicago?",
-      "en": "In 2024, HANABIE. was cited as the first Japanese female band to play which Lollapalooza Chicago stage?"
+      "en": "In 2024, HANABIE. was cited as the first Japanese female band to play which Lollapalooza Chicago stage?",
+      "es": "En 2024, HANABIE. fue citada como la primera banda japonesa femenina en tocar que escenario de Lollapalooza Chicago?",
+      "ja": "2024年、HANABIE.はLollapalooza Chicagoのどのステージに出演した初の日本人女性バンドとされた?"
     },
     "choices": {
       "pt-BR": [
@@ -1556,12 +2406,26 @@
         "Kids stage",
         "Acoustic stage",
         "DJ stage"
+      ],
+      "es": [
+        "Escenario principal",
+        "Escenario infantil",
+        "Escenario acustico",
+        "Escenario de DJs"
+      ],
+      "ja": [
+        "メインステージ",
+        "キッズステージ",
+        "アコースティックステージ",
+        "DJステージ"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A Live Nation destaca a aparicao no palco principal do Lollapalooza Chicago em 2024.",
-      "en": "Live Nation highlights the band's main stage appearance at Lollapalooza Chicago in 2024."
+      "en": "Live Nation highlights the band's main stage appearance at Lollapalooza Chicago in 2024.",
+      "es": "Respuesta correcta: Escenario principal.",
+      "ja": "正解は「メインステージ」です。"
     },
     "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
   },
@@ -1571,7 +2435,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual tema combina melhor com Pardon Me, I Have to Go Now?",
-      "en": "Which theme best fits Pardon Me, I Have to Go Now?"
+      "en": "Which theme best fits Pardon Me, I Have to Go Now?",
+      "es": "Que tema encaja mejor con Pardon Me, I Have to Go Now?",
+      "ja": "Pardon Me, I Have to Go Now に一番合うテーマは?"
     },
     "choices": {
       "pt-BR": [
@@ -1585,12 +2451,26 @@
         "A space race against aliens",
         "A tribute to vintage instruments",
         "A story about learning drums"
+      ],
+      "es": [
+        "Cansancio laboral y ganas de escapar con educacion",
+        "Una carrera espacial contra alienigenas",
+        "Un homenaje a instrumentos vintage",
+        "Una historia sobre aprender bateria"
+      ],
+      "ja": [
+        "仕事疲れと丁寧に逃げ出したい気持ち",
+        "宇宙人との宇宙レース",
+        "ビンテージ楽器へのトリビュート",
+        "ドラムを学ぶ物語"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A leitura mais direta junta caos de trabalho, pressa e fuga educada do expediente.",
-      "en": "The most direct reading mixes work chaos, urgency, and politely escaping the office."
+      "en": "The most direct reading mixes work chaos, urgency, and politely escaping the office.",
+      "es": "Respuesta correcta: Cansancio laboral y ganas de escapar con educacion.",
+      "ja": "正解は「仕事疲れと丁寧に逃げ出したい気持ち」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=fuFbQ-Mewfw",
     "tags": [
@@ -1603,7 +2483,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual frase resume melhor WE LOVE SWEETS?",
-      "en": "Which phrase best sums up WE LOVE SWEETS?"
+      "en": "Which phrase best sums up WE LOVE SWEETS?",
+      "es": "Que frase resume mejor WE LOVE SWEETS?",
+      "ja": "WE LOVE SWEETS を一番よく表すフレーズは?"
     },
     "choices": {
       "pt-BR": [
@@ -1617,12 +2499,26 @@
         "A sad ballad about the end of a tour",
         "A protest about public transportation",
         "A nostalgic letter to school"
+      ],
+      "es": [
+        "Una celebracion hiperactiva de dulces y energia kawaii pesada",
+        "Una balada triste sobre el final de una gira",
+        "Una protesta sobre transporte publico",
+        "Una carta nostalgica a la escuela"
+      ],
+      "ja": [
+        "スイーツと重いkawaiiエネルギーのハイテンションな祝祭",
+        "ツアー終わりの悲しいバラード",
+        "公共交通への抗議",
+        "学校へのノスタルジックな手紙"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A faixa usa o imaginario de doces como motor de energia colorida e pesada.",
-      "en": "The track uses sweets as fuel for colorful, heavy energy."
+      "en": "The track uses sweets as fuel for colorful, heavy energy.",
+      "es": "Respuesta correcta: Una celebracion hiperactiva de dulces y energia kawaii pesada.",
+      "ja": "正解は「スイーツと重いkawaiiエネルギーのハイテンションな祝祭」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=G18yyvPCiTM",
     "tags": [
@@ -1635,7 +2531,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual tema combina com OTAKU Lovely Densetsu?",
-      "en": "Which theme fits OTAKU Lovely Densetsu?"
+      "en": "Which theme fits OTAKU Lovely Densetsu?",
+      "es": "Que tema encaja con OTAKU Lovely Densetsu?",
+      "ja": "OTAKU Lovely Densetsu に合うテーマは?"
     },
     "choices": {
       "pt-BR": [
@@ -1649,12 +2547,26 @@
         "A traditional cooking contest",
         "A quiet walk in the snow",
         "A space horror story"
+      ],
+      "es": [
+        "Orgullo fandom y cultura otaku en modo maximalista",
+        "Un concurso de cocina tradicional",
+        "Un paseo silencioso en la nieve",
+        "Una historia de terror espacial"
+      ],
+      "ja": [
+        "ファンダムの誇りとオタク文化を全開にしたテーマ",
+        "伝統料理コンテスト",
+        "雪の中の静かな散歩",
+        "宇宙ホラーの物語"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A musica funciona como uma explosao de orgulho otaku e identidade de fa.",
-      "en": "The song works as an explosion of otaku pride and fan identity."
+      "en": "The song works as an explosion of otaku pride and fan identity.",
+      "es": "Respuesta correcta: Orgullo fandom y cultura otaku en modo maximalista.",
+      "ja": "正解は「ファンダムの誇りとオタク文化を全開にしたテーマ」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=Awx5vfb_aSY",
     "tags": [
@@ -1667,7 +2579,9 @@
     "difficulty": 3,
     "prompt": {
       "pt-BR": "Qual interpretacao combina melhor com Tasty Survivor?",
-      "en": "Which interpretation best fits Tasty Survivor?"
+      "en": "Which interpretation best fits Tasty Survivor?",
+      "es": "Que interpretacion encaja mejor con Tasty Survivor?",
+      "ja": "Tasty Survivor に一番合う解釈は?"
     },
     "choices": {
       "pt-BR": [
@@ -1681,12 +2595,26 @@
         "An acoustic farewell to a career",
         "A drum mixing tutorial",
         "A letter to a historical character"
+      ],
+      "es": [
+        "Sobrevivir con apetito, energia y espiritu de lucha",
+        "Una despedida acustica de una carrera",
+        "Un tutorial de mezcla de bateria",
+        "Una carta a un personaje historico"
+      ],
+      "ja": [
+        "食欲、エネルギー、闘志で生き抜くこと",
+        "キャリアへのアコースティックな別れ",
+        "ドラムミックスのチュートリアル",
+        "歴史上の人物への手紙"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Como abertura de anime, a faixa puxa energia de sobrevivencia, fome e impulso de luta.",
-      "en": "As an anime opening, the track pulls survival energy, hunger, and fighting drive."
+      "en": "As an anime opening, the track pulls survival energy, hunger, and fighting drive.",
+      "es": "Respuesta correcta: Sobrevivir con apetito, energia y espiritu de lucha.",
+      "ja": "正解は「食欲、エネルギー、闘志で生き抜くこと」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=rxx-0sZlb1c",
     "tags": [
@@ -1699,7 +2627,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual tema combina melhor com NEET GAME?",
-      "en": "Which theme best fits NEET GAME?"
+      "en": "Which theme best fits NEET GAME?",
+      "es": "Que tema encaja mejor con NEET GAME?",
+      "ja": "NEET GAME に一番合うテーマは?"
     },
     "choices": {
       "pt-BR": [
@@ -1713,12 +2643,26 @@
         "Gym routine and physical training",
         "A romantic train trip",
         "A direct homage to 1950s jazz"
+      ],
+      "es": [
+        "Escapismo, vida de cuarto y energia de videojuego",
+        "Rutina de gimnasio y entrenamiento fisico",
+        "Un viaje romantico en tren",
+        "Un homenaje directo al jazz de los anos 50"
+      ],
+      "ja": [
+        "逃避、部屋生活、ゲーム的エネルギー",
+        "ジム習慣とフィジカルトレーニング",
+        "ロマンチックな列車旅行",
+        "1950年代ジャズへの直接的オマージュ"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A faixa brinca com isolamento, jogo e escapismo digital em chave caotica.",
-      "en": "The track plays with isolation, gaming, and digital escapism in a chaotic key."
+      "en": "The track plays with isolation, gaming, and digital escapism in a chaotic key.",
+      "es": "Respuesta correcta: Escapismo, vida de cuarto y energia de videojuego.",
+      "ja": "正解は「逃避、部屋生活、ゲーム的エネルギー」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=PLfZ54FUG5w",
     "tags": [
@@ -1731,7 +2675,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual frase representa melhor Be the GAL - Early Summer ver.?",
-      "en": "Which phrase best represents Be the GAL - Early Summer ver.?"
+      "en": "Which phrase best represents Be the GAL - Early Summer ver.?",
+      "es": "Que frase representa mejor Be the GAL - Early Summer ver.?",
+      "ja": "Be the GAL - Early Summer ver. を一番よく表すフレーズは?"
     },
     "choices": {
       "pt-BR": [
@@ -1745,12 +2691,26 @@
         "A serious account of tour bookkeeping",
         "A medieval story about knights",
         "A critique of competitive online games"
+      ],
+      "es": [
+        "Autoexpresion gyaru, verano y convertirse en otra version de uno mismo",
+        "Un relato serio sobre la contabilidad de una gira",
+        "Una historia medieval sobre caballeros",
+        "Una critica a los juegos online competitivos"
+      ],
+      "ja": [
+        "ギャル的自己表現、夏、自分を変えること",
+        "ツアー会計についての真面目な話",
+        "騎士についての中世物語",
+        "対戦オンラインゲームへの批評"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A faixa usa estetica gyaru e clima de verao para falar de autoexpressao e transformacao.",
-      "en": "The track uses gyaru aesthetics and summer mood to talk about self-expression and transformation."
+      "en": "The track uses gyaru aesthetics and summer mood to talk about self-expression and transformation.",
+      "es": "Respuesta correcta: Autoexpresion gyaru, verano y convertirse en otra version de uno mismo.",
+      "ja": "正解は「ギャル的自己表現、夏、自分を変えること」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=hTuPwVYHc_M",
     "tags": [
@@ -1763,7 +2723,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual tema combina melhor com Metamorphose!?",
-      "en": "Which theme best fits Metamorphose!?"
+      "en": "Which theme best fits Metamorphose!?",
+      "es": "Que tema encaja mejor con Metamorphose!?",
+      "ja": "Metamorphose! に一番合うテーマは?"
     },
     "choices": {
       "pt-BR": [
@@ -1777,12 +2739,26 @@
         "A minimalist piano farewell",
         "A fishing diary",
         "A lesson about music theory"
+      ],
+      "es": [
+        "Transformacion visual, identidad y energia exagerada",
+        "Una despedida minimalista al piano",
+        "Un diario de pesca",
+        "Una clase sobre teoria musical"
+      ],
+      "ja": [
+        "ビジュアル変身、アイデンティティ、過剰なエネルギー",
+        "ミニマルなピアノの別れ",
+        "釣り日記",
+        "音楽理論の授業"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A ideia de metamorfose aponta para transformacao, visual forte e identidade em movimento.",
-      "en": "The idea of metamorphosis points to transformation, strong visuals, and identity in motion."
+      "en": "The idea of metamorphosis points to transformation, strong visuals, and identity in motion.",
+      "es": "Respuesta correcta: Transformacion visual, identidad y energia exagerada.",
+      "ja": "正解は「ビジュアル変身、アイデンティティ、過剰なエネルギー」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=St7am7VjzJk",
     "tags": [
@@ -1795,7 +2771,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual tema combina melhor com GIRL'S TALK?",
-      "en": "Which theme best fits GIRL'S TALK?"
+      "en": "Which theme best fits GIRL'S TALK?",
+      "es": "Que tema encaja mejor con GIRL'S TALK?",
+      "ja": "GIRL'S TALK に一番合うテーマは?"
     },
     "choices": {
       "pt-BR": [
@@ -1809,12 +2787,26 @@
         "Silent loneliness in a forest",
         "A futuristic naval battle",
         "A tribute to classic doom metal bands"
+      ],
+      "es": [
+        "Conversacion entre amigas, chismes y energia social rapida",
+        "Soledad silenciosa en un bosque",
+        "Una batalla naval futurista",
+        "Un homenaje a bandas clasicas de doom metal"
+      ],
+      "ja": [
+        "友達同士の会話、噂話、速い社交エネルギー",
+        "森の中の静かな孤独",
+        "未来的な海戦",
+        "クラシックなドゥームメタルバンドへのトリビュート"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A faixa gira em torno da energia de conversa, cumplicidade e caos social.",
-      "en": "The track revolves around conversation energy, closeness, and social chaos."
+      "en": "The track revolves around conversation energy, closeness, and social chaos.",
+      "es": "Respuesta correcta: Conversacion entre amigas, chismes y energia social rapida.",
+      "ja": "正解は「友達同士の会話、噂話、速い社交エネルギー」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=vdZFDaCjQ0w",
     "tags": [
@@ -1827,7 +2819,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual frase representa melhor Spicy Queen?",
-      "en": "Which phrase best represents Spicy Queen?"
+      "en": "Which phrase best represents Spicy Queen?",
+      "es": "Que frase representa mejor Spicy Queen?",
+      "ja": "Spicy Queen を一番よく表すフレーズは?"
     },
     "choices": {
       "pt-BR": [
@@ -1841,12 +2835,26 @@
         "A song about saving money",
         "A folk lament about winter",
         "A school graduation story"
+      ],
+      "es": [
+        "Confianza explosiva y actitud de reina picante",
+        "Una cancion sobre ahorrar dinero",
+        "Un lamento folk sobre el invierno",
+        "Una historia de graduacion escolar"
+      ],
+      "ja": [
+        "爆発的な自信とスパイシーな女王感",
+        "節約についての曲",
+        "冬についてのフォーク調の嘆き",
+        "学校の卒業物語"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A faixa vende uma persona confiante, picante e teatral.",
-      "en": "The track sells a confident, spicy, theatrical persona."
+      "en": "The track sells a confident, spicy, theatrical persona.",
+      "es": "Respuesta correcta: Confianza explosiva y actitud de reina picante.",
+      "ja": "正解は「爆発的な自信とスパイシーな女王感」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=dcKxYScvUsU",
     "tags": [
@@ -1859,7 +2867,9 @@
     "difficulty": 4,
     "prompt": {
       "pt-BR": "Qual tema combina melhor com ICONIC?",
-      "en": "Which theme best fits ICONIC?"
+      "en": "Which theme best fits ICONIC?",
+      "es": "Que tema encaja mejor con ICONIC?",
+      "ja": "ICONIC に一番合うテーマは?"
     },
     "choices": {
       "pt-BR": [
@@ -1873,12 +2883,26 @@
         "Narrating an old drummer change",
         "Describing a traditional Japanese recipe",
         "Talking about sleeping after class"
+      ],
+      "es": [
+        "Reclamar una identidad impactante e inolvidable",
+        "Narrar un antiguo cambio de baterista",
+        "Describir una receta tradicional japonesa",
+        "Hablar de dormir despues de clase"
+      ],
+      "ja": [
+        "強烈で忘れられない存在感を示すこと",
+        "昔のドラマー交代を語ること",
+        "伝統的な日本料理の説明",
+        "放課後に寝る話"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "A propria ideia de ICONIC aponta para presenca, identidade e impacto.",
-      "en": "The idea of ICONIC points to presence, identity, and impact."
+      "en": "The idea of ICONIC points to presence, identity, and impact.",
+      "es": "Respuesta correcta: Reclamar una identidad impactante e inolvidable.",
+      "ja": "正解は「強烈で忘れられない存在感を示すこと」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=JT_NgMk9n-4",
     "tags": [
@@ -1891,7 +2915,9 @@
     "difficulty": 5,
     "prompt": {
       "pt-BR": "Qual frase representa melhor Tokimeki about you?",
-      "en": "Which phrase best represents Tokimeki about you?"
+      "en": "Which phrase best represents Tokimeki about you?",
+      "es": "Que frase representa mejor Tokimeki about you?",
+      "ja": "Tokimeki about you を一番よく表すフレーズは?"
     },
     "choices": {
       "pt-BR": [
@@ -1905,12 +2931,26 @@
         "A technical route plan for an international tour",
         "A battle between school bands",
         "A dark tale about a zombie apocalypse"
+      ],
+      "es": [
+        "Amor nervioso, brillo de crush y corazon acelerado",
+        "Un plan tecnico de ruta para una gira internacional",
+        "Una batalla entre bandas escolares",
+        "Un cuento oscuro sobre un apocalipsis zombie"
+      ],
+      "ja": [
+        "緊張する恋、きらめく片思い、高鳴る心",
+        "海外ツアーの技術的なルート計画",
+        "学校バンド同士のバトル",
+        "ゾンビ終末のダークな物語"
       ]
     },
     "answerIndex": 0,
     "explanation": {
       "pt-BR": "Tokimeki sugere aquele frio de empolgacao romantica, aqui em chave pop-metal acelerada.",
-      "en": "Tokimeki suggests romantic excitement, here in a fast pop-metal key."
+      "en": "Tokimeki suggests romantic excitement, here in a fast pop-metal key.",
+      "es": "Respuesta correcta: Amor nervioso, brillo de crush y corazon acelerado.",
+      "ja": "正解は「緊張する恋、きらめく片思い、高鳴る心」です。"
     },
     "sourceUrl": "https://www.youtube.com/watch?v=sptBJO3Isgs",
     "tags": [
