@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HANABIE. Mosh Pit Quiz</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main id="app" class="app-shell" style="--audio-pulse: 0; --fever-pulse: 0;">
+      <section class="screen screen-start is-active" id="start-screen" aria-labelledby="game-title">
+        <div class="stage-grid">
+          <div class="brand-zone" aria-label="HANABIE fan quiz">
+            <p class="kicker">Fan quiz nao oficial</p>
+            <h1 id="game-title">HANABIE.<span>Mosh Pit Quiz</span></h1>
+            <p class="jp">花冷え。 / Harajuku-Core Rush</p>
+            <div class="pulse-rig" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="start-panel">
+            <div class="start-stats">
+              <span>90s</span>
+              <span>Combo x5</span>
+              <span>Fever</span>
+            </div>
+            <button class="primary-action" id="start-button" type="button">Jogar</button>
+            <label class="file-action">
+              <input id="audio-file-input" type="file" accept="audio/*">
+              <span>Carregar minha musica</span>
+            </label>
+            <button class="ghost-action" id="how-button" type="button">Como funciona</button>
+            <p class="audio-status" id="audio-status">Audio local opcional. Nada e enviado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-game" id="game-screen" aria-live="polite">
+        <header class="hud">
+          <div class="hud-cell">
+            <span class="hud-label">Tempo</span>
+            <strong id="timer">01:30</strong>
+          </div>
+          <div class="hud-cell">
+            <span class="hud-label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="hud-cell combo-cell">
+            <span class="hud-label">Combo</span>
+            <strong id="combo">x1</strong>
+          </div>
+          <div class="hud-cell">
+            <span class="hud-label">Crowd</span>
+            <div class="meter" aria-hidden="true"><span id="crowd-meter"></span></div>
+          </div>
+        </header>
+
+        <div class="category-row">
+          <span id="category-label">Discography</span>
+          <span id="difficulty-label">Nivel 1/5</span>
+          <span id="fever-label">Fever ready</span>
+        </div>
+
+        <section class="question-board">
+          <p class="round-label" id="round-label">Round 01</p>
+          <h2 id="question-text">Carregando pergunta...</h2>
+          <div class="answers" id="answers"></div>
+          <p class="feedback" id="feedback"></p>
+        </section>
+
+        <canvas id="visualizer" width="640" height="96" aria-hidden="true"></canvas>
+        <audio id="local-audio" crossorigin="anonymous"></audio>
+      </section>
+
+      <section class="screen screen-results" id="results-screen" aria-labelledby="rank-title">
+        <div class="results-panel">
+          <p class="kicker">Resultado</p>
+          <h2 id="rank-title">First Show Curious</h2>
+          <div class="results-grid">
+            <div><span>Score</span><strong id="result-score">0</strong></div>
+            <div><span>Precisao</span><strong id="result-accuracy">0%</strong></div>
+            <div><span>Max combo</span><strong id="result-combo">x1</strong></div>
+            <div><span>Respondidas</span><strong id="result-answered">0</strong></div>
+          </div>
+          <div class="result-actions">
+            <button class="primary-action" id="play-again-button" type="button">Jogar de novo</button>
+            <a class="ghost-link" href="https://hanabie.jp/" target="_blank" rel="noreferrer">Links oficiais</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="how-dialog">
+      <form method="dialog">
+        <h2>90 segundos. Combo. Fever.</h2>
+        <p>Responda rapido, mantenha a sequencia e suba a Crowd Energy. O audio local, se carregado, anima a tela e fica so no seu dispositivo.</p>
+        <button class="primary-action" type="submit">Fechar</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="./src/app.mjs"></script>
+  </body>
+</html>

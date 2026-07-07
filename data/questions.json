@@ -1,0 +1,663 @@
+[
+  {
+    "id": "members-yukina-role",
+    "category": "members",
+    "difficulty": 1,
+    "prompt": "Qual e o papel principal de Yukina na HANABIE.?",
+    "choices": ["Guitarra", "Vocal", "Bateria", "Baixo"],
+    "answerIndex": 1,
+    "explanation": "Yukina e creditada como vocal principal.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "members-matsuri-role",
+    "category": "members",
+    "difficulty": 1,
+    "prompt": "Qual instrumento Matsuri toca na banda?",
+    "choices": ["Bateria", "Baixo", "Guitarra", "Teclado"],
+    "answerIndex": 2,
+    "explanation": "Matsuri e creditada como guitarrista e vocalista.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "members-hettsu-role",
+    "category": "members",
+    "difficulty": 1,
+    "prompt": "Qual e o instrumento de Hettsu?",
+    "choices": ["Baixo", "Bateria", "Guitarra", "Violino"],
+    "answerIndex": 0,
+    "explanation": "Hettsu toca baixo e faz backing vocals.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "members-chika-role",
+    "category": "members",
+    "difficulty": 1,
+    "prompt": "Qual instrumento Chika toca na formacao atual?",
+    "choices": ["Baixo", "Bateria", "Guitarra", "Sampler"],
+    "answerIndex": 1,
+    "explanation": "Chika e creditada como baterista.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-formation-year",
+    "category": "history",
+    "difficulty": 1,
+    "prompt": "Em que ano a HANABIE. foi formada?",
+    "choices": ["2012", "2015", "2018", "2020"],
+    "answerIndex": 1,
+    "explanation": "A banda foi formada em julho de 2015.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-origin-cover-band",
+    "category": "history",
+    "difficulty": 2,
+    "prompt": "Antes das musicas autorais, a HANABIE. comecou tocando covers de qual banda?",
+    "choices": ["Maximum the Hormone", "Babymetal", "X Japan", "Band-Maid"],
+    "answerIndex": 0,
+    "explanation": "O grupo comecou como uma banda cover de Maximum the Hormone.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-name-meaning",
+    "category": "history",
+    "difficulty": 2,
+    "prompt": "O nome Hanabie se refere a que ideia em japones?",
+    "choices": ["Calor de verao", "Frio que retorna na primavera", "Neve de outono", "Flor de metal"],
+    "answerIndex": 1,
+    "explanation": "Hanabie se refere ao frio de inverno que retorna em um dia de primavera.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-name-suggested-by",
+    "category": "history",
+    "difficulty": 3,
+    "prompt": "Quem sugeriu o nome Hanabie, segundo a historia da banda?",
+    "choices": ["Yukina", "Matsuri", "Hettsu", "Kaede"],
+    "answerIndex": 3,
+    "explanation": "O nome Hanabie foi sugerido por Kaede.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-dot-reference",
+    "category": "history",
+    "difficulty": 3,
+    "prompt": "O ponto final no nome HANABIE. e citado como uma referencia a qual grupo?",
+    "choices": ["Cocoa Otoko", "Morning Musume", "Perfume", "Maximum the Hormone"],
+    "answerIndex": 0,
+    "explanation": "O ponto final e citado como um aceno a Cocoa Otoko.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-major-label-year",
+    "category": "history",
+    "difficulty": 2,
+    "prompt": "Em que ano a HANABIE. assinou com a Epic Records Japan/Sony Music Japan?",
+    "choices": ["2020", "2021", "2023", "2025"],
+    "answerIndex": 2,
+    "explanation": "A banda assinou com a Epic Records Japan, subsidiaria da Sony Music Japan, em 2023.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "music-first-album-title",
+    "category": "music",
+    "difficulty": 1,
+    "prompt": "Qual destes e o primeiro album de estudio da HANABIE.?",
+    "choices": ["Girl's Reform Manifest", "Reborn Superstar!", "Bucchigiri Tokyo", "Hot Topic"],
+    "answerIndex": 0,
+    "explanation": "Girl's Reform Manifest e listado como album de estudio de 2021.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "music-reborn-release-date",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Em que mes/ano Reborn Superstar! foi lancado?",
+    "choices": ["Janeiro de 2021", "Julho de 2023", "Dezembro de 2024", "Janeiro de 2025"],
+    "answerIndex": 1,
+    "explanation": "Reborn Superstar! foi lancado em julho de 2023.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
+  },
+  {
+    "id": "music-reborn-album-number",
+    "category": "music",
+    "difficulty": 1,
+    "prompt": "Reborn Superstar! e qual album de estudio da banda?",
+    "choices": ["Primeiro", "Segundo", "Terceiro", "Quarto"],
+    "answerIndex": 1,
+    "explanation": "Reborn Superstar! e o segundo album de estudio da HANABIE.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
+  },
+  {
+    "id": "music-reborn-label",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Qual selo lancou Reborn Superstar!?",
+    "choices": ["Epic Records Japan", "Roadrunner Records", "Victor Entertainment", "Nuclear Blast"],
+    "answerIndex": 0,
+    "explanation": "O album foi lancado pela Epic Records Japan.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
+  },
+  {
+    "id": "music-reborn-genre",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Quais generos aparecem associados a Reborn Superstar!?",
+    "choices": ["Metalcore e electronicore", "Jazz fusion e city pop", "Ska punk e reggae", "Black metal e folk"],
+    "answerIndex": 0,
+    "explanation": "A pagina do album lista metalcore e electronicore.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
+  },
+  {
+    "id": "music-reborn-billboard-peak",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Qual foi o pico de Reborn Superstar! no ranking semanal de albums da Billboard Japan?",
+    "choices": ["#3", "#12", "#24", "#40"],
+    "answerIndex": 2,
+    "explanation": "O album chegou ao numero 24 na Billboard Japan weekly album charts.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
+  },
+  {
+    "id": "music-bucchigiri-release-date",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Em que mes/ano o EP Bucchigiri Tokyo foi lancado?",
+    "choices": ["Janeiro de 2024", "Agosto de 2024", "Dezembro de 2024", "Janeiro de 2025"],
+    "answerIndex": 2,
+    "explanation": "Bucchigiri Tokyo foi lancado em dezembro de 2024.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "music-bucchigiri-type",
+    "category": "music",
+    "difficulty": 1,
+    "prompt": "Bucchigiri Tokyo e que tipo de lancamento?",
+    "choices": ["EP", "Album ao vivo", "Single avulso", "Trilha sonora"],
+    "answerIndex": 0,
+    "explanation": "Bucchigiri Tokyo e listado como EP.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "music-bucchigiri-chika",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Bucchigiri Tokyo marcou qual detalhe envolvendo Chika?",
+    "choices": ["Primeiro disco coescrito com Chika", "Primeiro show solo de Chika", "Ultimo disco com Chika", "Primeiro vocal principal de Chika"],
+    "answerIndex": 0,
+    "explanation": "O EP e citado como o primeiro disco que a banda coescreveu com a baterista Chika.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "music-bucchigiri-oricon-rock",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Bucchigiri Tokyo chegou a qual posicao na parada semanal de albums de rock da Oricon?",
+    "choices": ["#1", "#3", "#12", "#33"],
+    "answerIndex": 1,
+    "explanation": "O EP chegou ao numero 3 na parada semanal de albums de rock da Oricon.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "music-tasty-survivor-release",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Em que mes/ano Tasty Survivor foi lancado?",
+    "choices": ["Janeiro de 2025", "Marco de 2025", "Dezembro de 2024", "Julho de 2023"],
+    "answerIndex": 0,
+    "explanation": "Tasty Survivor foi lancado em janeiro de 2025.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tasty_Survivor"
+  },
+  {
+    "id": "music-tasty-survivor-anime",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Tasty Survivor foi tema de abertura de qual anime?",
+    "choices": ["Momentary Lily", "Chainsaw Man", "Bocchi the Rock!", "Dandadan"],
+    "answerIndex": 0,
+    "explanation": "Tasty Survivor serviu como abertura de Momentary Lily.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tasty_Survivor"
+  },
+  {
+    "id": "music-tasty-survivor-writers",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Quem escreveu musica e letra de Tasty Survivor, segundo a fonte?",
+    "choices": ["Matsuri e Yukina", "Hettsu e Chika", "Yukina e Kaede", "Megmetal e Sae"],
+    "answerIndex": 0,
+    "explanation": "A fonte credita musica e letra de Tasty Survivor a Matsuri e Yukina.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tasty_Survivor"
+  },
+  {
+    "id": "video-pardon-me-clue",
+    "category": "video",
+    "difficulty": 2,
+    "prompt": "Qual faixa combina com a pista: caos de escritorio, pedido de licenca e energia de breakdown?",
+    "choices": ["Pardon Me, I Have to Go Now", "Tasty Survivor", "NEET GAME", "Otaku Lovely Densetsu"],
+    "answerIndex": 0,
+    "explanation": "A pista referencia o conceito popularmente associado ao clipe de Pardon Me, I Have to Go Now.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Reborn_Superstar%21"
+  },
+  {
+    "id": "music-neet-game-album",
+    "category": "music",
+    "difficulty": 1,
+    "prompt": "NEET GAME aparece associado a qual album?",
+    "choices": ["Girl's Reform Manifest", "Reborn Superstar!", "Bucchigiri Tokyo", "Cherry Blossoms Are Blooming"],
+    "answerIndex": 1,
+    "explanation": "NEET GAME aparece listado entre os singles ligados a Reborn Superstar!.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "music-otaku-lovely-year",
+    "category": "music",
+    "difficulty": 1,
+    "prompt": "Em que ano Otaku Lovely Densetsu foi lancada como single?",
+    "choices": ["2021", "2022", "2023", "2024"],
+    "answerIndex": 3,
+    "explanation": "Otaku Lovely Densetsu foi lancada em 2024.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "music-metamorphose-release",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Metamorphose! foi lancada em qual ano?",
+    "choices": ["2022", "2023", "2024", "2025"],
+    "answerIndex": 2,
+    "explanation": "Metamorphose! foi lancada como single em 2024.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Bucchigiri_Tokyo"
+  },
+  {
+    "id": "hardcore-lollapalooza-2024",
+    "category": "hardcore",
+    "difficulty": 3,
+    "prompt": "Em 2024, a HANABIE. chamou atencao por aparecer no palco principal de qual festival?",
+    "choices": ["Lollapalooza", "Glastonbury", "Coachella", "Fuji Rock"],
+    "answerIndex": 0,
+    "explanation": "A fonte cita a aparicao da banda no palco principal do Lollapalooza em 2024.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "members-past-drummer-sae",
+    "category": "members",
+    "difficulty": 2,
+    "prompt": "Qual destas integrantes e listada como baterista anterior da banda?",
+    "choices": ["Sae", "Aina", "Miku", "Kanami"],
+    "answerIndex": 0,
+    "explanation": "Sae e listada como baterista anterior da HANABIE.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "members-founding-member-kaede-role",
+    "category": "members",
+    "difficulty": 3,
+    "prompt": "Qual era o instrumento de Kaede na formacao inicial?",
+    "choices": ["Baixo", "Guitarra", "Bateria", "Vocal"],
+    "answerIndex": 2,
+    "explanation": "Kaede foi baterista na formacao inicial.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-original-songs-2016",
+    "category": "history",
+    "difficulty": 3,
+    "prompt": "Quais nomes aparecem como primeiras musicas autorais escritas pela banda em 2016?",
+    "choices": ["Crash Over e Sweet Killer", "NEET GAME e Run Away", "Tasty Survivor e Spicy Queen", "Metamorphose! e Girl's Talk"],
+    "answerIndex": 0,
+    "explanation": "A historia cita Crash Over e Sweet Killer como primeiras musicas escritas em 2016.",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "history-harajuku-core-concept",
+    "category": "history",
+    "difficulty": 1,
+    "prompt": "Qual expressao a banda usa para definir sua mistura de som pesado com cultura KAWAii?",
+    "choices": ["Harajuku Core", "Neo Visual Pop", "Tokyo Grind Idol", "Kawaii Doom"],
+    "answerIndex": 0,
+    "explanation": "A propria banda usa Harajuku Core para essa mistura de peso, gritos e cultura kawaii.",
+    "sourceUrl": "https://cocotame.jp/en/series/102848/"
+  },
+  {
+    "id": "history-we-love-sweets-overseas",
+    "category": "history",
+    "difficulty": 2,
+    "prompt": "Qual musica ajudou a banda a perceber interesse internacional por causa de videos de reacao?",
+    "choices": ["WE LOVE SWEETS", "Spicy Queen", "GIRL'S TALK", "Run Away"],
+    "answerIndex": 0,
+    "explanation": "A entrevista cita WE LOVE SWEETS como ponto de atencao internacional via comentarios e reacoes.",
+    "sourceUrl": "https://cocotame.jp/en/series/102848/"
+  },
+  {
+    "id": "members-chika-joined-month",
+    "category": "members",
+    "difficulty": 2,
+    "prompt": "Em que mes/ano Chika entrou oficialmente na HANABIE.?",
+    "choices": ["Maio de 2023", "Abril de 2022", "Setembro de 2020", "Janeiro de 2024"],
+    "answerIndex": 0,
+    "explanation": "Chika entrou oficialmente em maio de 2023.",
+    "sourceUrl": "https://cocotame.jp/en/series/102848/"
+  },
+  {
+    "id": "members-drummer-sequence",
+    "category": "members",
+    "difficulty": 5,
+    "prompt": "Qual sequencia resume as bateristas da HANABIE. ate a formacao atual?",
+    "choices": ["Kaede, Boa, Sae, Chika", "Sae, Kaede, Chika, Boa", "Boa, Chika, Kaede, Sae", "Chika, Sae, Boa, Kaede"],
+    "answerIndex": 0,
+    "explanation": "A linha do tempo de bateristas vai de Kaede para Boa, depois Sae e Chika.",
+    "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
+  },
+  {
+    "id": "members-kaede-left-month",
+    "category": "members",
+    "difficulty": 4,
+    "prompt": "Em que mes/ano Kaede saiu da banda?",
+    "choices": ["Dezembro de 2016", "Julho de 2017", "Setembro de 2018", "Abril de 2023"],
+    "answerIndex": 0,
+    "explanation": "Kaede e listada como integrante original que saiu em dezembro de 2016.",
+    "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
+  },
+  {
+    "id": "members-boa-left-month",
+    "category": "members",
+    "difficulty": 4,
+    "prompt": "Em que mes/ano Boa saiu da banda?",
+    "choices": ["Setembro de 2018", "Dezembro de 2016", "Maio de 2023", "Agosto de 2024"],
+    "answerIndex": 0,
+    "explanation": "Boa e listada como baterista que saiu em setembro de 2018.",
+    "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
+  },
+  {
+    "id": "members-sae-left-month",
+    "category": "members",
+    "difficulty": 4,
+    "prompt": "Em que mes/ano Sae saiu da banda?",
+    "choices": ["Abril de 2023", "Setembro de 2020", "Janeiro de 2025", "Dezembro de 2016"],
+    "answerIndex": 0,
+    "explanation": "Sae saiu em abril de 2023, pouco antes da entrada oficial de Chika.",
+    "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
+  },
+  {
+    "id": "members-longest-former-drummer",
+    "category": "members",
+    "difficulty": 5,
+    "prompt": "Entre as bateristas anteriores listadas, quem ficou mais tempo na banda?",
+    "choices": ["Sae", "Kaede", "Boa", "Chika"],
+    "answerIndex": 0,
+    "explanation": "Considerando as datas listadas, Sae ficou de setembro de 2020 a abril de 2023.",
+    "sourceUrl": "https://jpop.fandom.com/wiki/HANABIE."
+  },
+  {
+    "id": "music-hot-topic-title",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Qual EP da HANABIE. foi anunciado para janeiro de 2026 com cinco faixas?",
+    "choices": ["HOT TOPIC", "Bucchigiri Tokyo", "Reborn Superstar!", "Girl's Reform Manifest"],
+    "answerIndex": 0,
+    "explanation": "HOT TOPIC e o EP de cinco faixas anunciado para janeiro de 2026.",
+    "sourceUrl": "https://rocksound.tv/news/hanabie-announce-new-ep-hot-topic"
+  },
+  {
+    "id": "music-hot-topic-pre-release",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Qual faixa saiu como pre-release de HOT TOPIC?",
+    "choices": ["ICONIC", "WE LOVE SWEETS", "NEET GAME", "Run Away"],
+    "answerIndex": 0,
+    "explanation": "ICONIC saiu antes do EP HOT TOPIC como single de antecipacao.",
+    "sourceUrl": "https://rocksound.tv/news/hanabie-announce-new-ep-hot-topic"
+  },
+  {
+    "id": "music-hot-topic-track-count",
+    "category": "music",
+    "difficulty": 2,
+    "prompt": "Quantas faixas tem o EP HOT TOPIC?",
+    "choices": ["5", "6", "8", "10"],
+    "answerIndex": 0,
+    "explanation": "HOT TOPIC tem cinco faixas.",
+    "sourceUrl": "https://music.apple.com/us/album/hot-topic-ep/1869291992"
+  },
+  {
+    "id": "music-hot-topic-shortest-track",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual e a faixa mais curta de HOT TOPIC na listagem da Apple Music?",
+    "choices": ["Theme of hanabienchan.", "GIRL'S TALK", "ICONIC", "Spicy Queen"],
+    "answerIndex": 0,
+    "explanation": "Theme of hanabienchan. aparece como a faixa mais curta da listagem.",
+    "sourceUrl": "https://music.apple.com/us/album/hot-topic-ep/1869291992"
+  },
+  {
+    "id": "music-hot-topic-live-bluray",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "O Blu-ray limitado de HOT TOPIC inclui show de qual local da Bucchigiri Japan Tour 2024?",
+    "choices": ["Zepp Shinjuku Tokyo", "Tokyo Dome", "Budokan", "Makuhari Messe"],
+    "answerIndex": 0,
+    "explanation": "A edicao limitada e associada ao show no Zepp Shinjuku Tokyo.",
+    "sourceUrl": "https://www.cdjapan.co.jp/product/ESCL-6155"
+  },
+  {
+    "id": "hardcore-us-tour-2023-gigs",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Segundo a EN.CORE ROCKS, quantos gigs a US Tour 2023 da HANABIE. teve?",
+    "choices": ["20", "12", "27", "8"],
+    "answerIndex": 0,
+    "explanation": "A materia descreve a rota americana de 2023 como 20 gigs.",
+    "sourceUrl": "https://en-core.rocks/2023/09/21/hanabie-us-tour-after-captivating-europe/"
+  },
+  {
+    "id": "hardcore-us-tour-2023-festivals",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Quais festivais dos EUA estavam ligados a rota de 2023?",
+    "choices": ["Blue Ridge, Louder Than Life e Aftershock", "Coachella, Bonnaroo e Riot Fest", "Sick New World, Warped Tour e Download", "Fuji Rock, Summer Sonic e Knotfest Japan"],
+    "answerIndex": 0,
+    "explanation": "A cobertura da tour cita Blue Ridge Rock Fest, Louder Than Life e Aftershock nessa fase.",
+    "sourceUrl": "https://en-core.rocks/2023/09/21/hanabie-us-tour-after-captivating-europe/"
+  },
+  {
+    "id": "hardcore-us-tour-2023-galactic",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": "Na US Tour 2023, a HANABIE. fez parte da rota como suporte de qual banda em seis shows?",
+    "choices": ["Galactic Empire", "Jinjer", "Kim Dracula", "Nekrogoblikon"],
+    "answerIndex": 0,
+    "explanation": "A EN.CORE ROCKS cita seis shows como suporte para Galactic Empire.",
+    "sourceUrl": "https://en-core.rocks/2023/09/21/hanabie-us-tour-after-captivating-europe/"
+  },
+  {
+    "id": "hardcore-kim-dracula-2025",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": "Em 2025, a HANABIE. fez co-headline nos EUA com qual artista?",
+    "choices": ["Kim Dracula", "Poppy", "Spiritbox", "Bring Me the Horizon"],
+    "answerIndex": 0,
+    "explanation": "A rota foi anunciada como co-headline de Kim Dracula e HANABIE.",
+    "sourceUrl": "https://hanabie.jp/en/live/in.html?liveid=53164"
+  },
+  {
+    "id": "hardcore-kim-dracula-supports-2025",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Quais supports foram anunciados para a tour de 2025 com Kim Dracula?",
+    "choices": ["Crystal Lake e Kaonashi", "Fox Lake e Dropout Kings", "Nekrogoblikon e Enterprise Earth", "Born of Osiris e Jinjer"],
+    "answerIndex": 0,
+    "explanation": "A pagina oficial listou Crystal Lake como direct support e Kaonashi como opener.",
+    "sourceUrl": "https://hanabie.jp/en/live/in.html?liveid=53164"
+  },
+  {
+    "id": "hardcore-na-tour-2026-supports",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": "Quais bandas foram anunciadas como suporte da North America Tour 2026?",
+    "choices": ["Nekrogoblikon e Enterprise Earth", "Crystal Lake e Kaonashi", "Fox Lake e Dropout Kings", "Galactic Empire e Jinjer"],
+    "answerIndex": 0,
+    "explanation": "A Live Nation anunciou Nekrogoblikon e Enterprise Earth como suportes da tour.",
+    "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
+  },
+  {
+    "id": "hardcore-na-tour-2026-date-count",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Quantas datas tinha a North America Tour 2026 anunciada pela Live Nation?",
+    "choices": ["21", "12", "18", "30"],
+    "answerIndex": 0,
+    "explanation": "O anuncio da Live Nation descreve uma tour norte-americana de 21 datas.",
+    "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
+  },
+  {
+    "id": "hardcore-na-tour-2026-start-city",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Em qual cidade comecava a North America Tour 2026 anunciada pela Live Nation?",
+    "choices": ["Boston", "Los Angeles", "Chicago", "Toronto"],
+    "answerIndex": 0,
+    "explanation": "O anuncio lista Boston como a primeira cidade da rota.",
+    "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
+  },
+  {
+    "id": "hardcore-na-tour-2026-end-city",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Em qual cidade terminava a rota original da North America Tour 2026?",
+    "choices": ["Los Angeles", "Boston", "Atlanta", "Montreal"],
+    "answerIndex": 0,
+    "explanation": "A rota original anunciada terminava em Los Angeles.",
+    "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
+  },
+  {
+    "id": "hardcore-lollapalooza-main-stage-first",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": "Em 2024, a HANABIE. foi citada como a primeira banda japonesa feminina a tocar em que palco do Lollapalooza Chicago?",
+    "choices": ["Palco principal", "Palco infantil", "Palco acustico", "Palco de DJs"],
+    "answerIndex": 0,
+    "explanation": "A Live Nation destaca a aparicao no palco principal do Lollapalooza Chicago em 2024.",
+    "sourceUrl": "https://newsroom.livenation.com/news/hanabie-announce-spring-2026-north-american-headliner/"
+  },
+  {
+    "id": "song-meaning-pardon-me",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Qual tema combina melhor com Pardon Me, I Have to Go Now?",
+    "choices": ["Cansaco do expediente e vontade de escapar com educacao", "Uma corrida espacial contra alienigenas", "Uma homenagem a instrumentos vintage", "Uma historia sobre aprender bateria"],
+    "answerIndex": 0,
+    "explanation": "A leitura mais direta junta caos de trabalho, pressa e fuga educada do expediente.",
+    "sourceUrl": "https://www.youtube.com/watch?v=fuFbQ-Mewfw",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-we-love-sweets",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Qual frase resume melhor WE LOVE SWEETS?",
+    "choices": ["Uma celebracao hiperativa de doces e energia kawaii pesada", "Uma balada triste sobre despedida de tour", "Um protesto sobre transporte publico", "Uma carta nostalgica para a escola"],
+    "answerIndex": 0,
+    "explanation": "A faixa usa o imaginario de doces como motor de energia colorida e pesada.",
+    "sourceUrl": "https://www.youtube.com/watch?v=G18yyvPCiTM",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-otaku-lovely-densetsu",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Qual tema combina com OTAKU Lovely Densetsu?",
+    "choices": ["Orgulho de fandom e cultura otaku em modo maximalista", "Uma disputa de culinaria tradicional", "Uma caminhada silenciosa na neve", "Uma historia de terror espacial"],
+    "answerIndex": 0,
+    "explanation": "A musica funciona como uma explosao de orgulho otaku e identidade de fa.",
+    "sourceUrl": "https://www.youtube.com/watch?v=Awx5vfb_aSY",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-tasty-survivor",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": "Qual interpretacao combina melhor com Tasty Survivor?",
+    "choices": ["Sobreviver com apetite, energia e espirito de batalha", "Uma despedida acustica de fim de carreira", "Um tutorial de mixagem de bateria", "Uma carta para um personagem historico"],
+    "answerIndex": 0,
+    "explanation": "Como abertura de anime, a faixa puxa energia de sobrevivencia, fome e impulso de luta.",
+    "sourceUrl": "https://www.youtube.com/watch?v=rxx-0sZlb1c",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-neet-game",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual tema combina melhor com NEET GAME?",
+    "choices": ["Escapismo, vida de quarto e energia de videogame", "Rotina de academia e preparo fisico", "Viagem romantica de trem", "Homenagem direta ao jazz dos anos 50"],
+    "answerIndex": 0,
+    "explanation": "A faixa brinca com isolamento, jogo e escapismo digital em chave caotica.",
+    "sourceUrl": "https://www.youtube.com/watch?v=PLfZ54FUG5w",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-be-the-gal",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual frase representa melhor Be the GAL - Early Summer ver.?",
+    "choices": ["Autoexpressao gyaru, verao e vontade de virar outra versao de si", "Um relato serio sobre contabilidade de tour", "Uma historia medieval de cavaleiros", "Uma critica a jogos online competitivos"],
+    "answerIndex": 0,
+    "explanation": "A faixa usa estetica gyaru e clima de verao para falar de autoexpressao e transformacao.",
+    "sourceUrl": "https://www.youtube.com/watch?v=hTuPwVYHc_M",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-metamorphose",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual tema combina melhor com Metamorphose!?",
+    "choices": ["Transformacao visual, identidade e energia exagerada", "Uma despedida minimalista ao piano", "Um diario de pescaria", "Uma aula sobre teoria musical"],
+    "answerIndex": 0,
+    "explanation": "A ideia de metamorfose aponta para transformacao, visual forte e identidade em movimento.",
+    "sourceUrl": "https://www.youtube.com/watch?v=St7am7VjzJk",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-girls-talk",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual tema combina melhor com GIRL'S TALK?",
+    "choices": ["Conversa entre amigas, fofoca e energia social acelerada", "Solidao silenciosa em uma floresta", "Uma batalha naval futurista", "Um tributo a bandas de doom metal classico"],
+    "answerIndex": 0,
+    "explanation": "A faixa gira em torno da energia de conversa, cumplicidade e caos social.",
+    "sourceUrl": "https://www.youtube.com/watch?v=vdZFDaCjQ0w",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-spicy-queen",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual frase representa melhor Spicy Queen?",
+    "choices": ["Autoconfianca explosiva e atitude de rainha apimentada", "Uma cancao sobre economizar dinheiro", "Um lamento folk sobre inverno", "Uma historia de formatura escolar"],
+    "answerIndex": 0,
+    "explanation": "A faixa vende uma persona confiante, picante e teatral.",
+    "sourceUrl": "https://www.youtube.com/watch?v=dcKxYScvUsU",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-iconic",
+    "category": "music",
+    "difficulty": 4,
+    "prompt": "Qual tema combina melhor com ICONIC?",
+    "choices": ["Afirmar uma identidade marcante e inesquecivel", "Narrar uma mudanca de bateria antiga", "Descrever uma receita tradicional japonesa", "Falar sobre dormir depois da aula"],
+    "answerIndex": 0,
+    "explanation": "A propria ideia de ICONIC aponta para presenca, identidade e impacto.",
+    "sourceUrl": "https://www.youtube.com/watch?v=JT_NgMk9n-4",
+    "tags": ["song-meaning"]
+  },
+  {
+    "id": "song-meaning-tokimeki-about-you",
+    "category": "music",
+    "difficulty": 5,
+    "prompt": "Qual frase representa melhor Tokimeki about you?",
+    "choices": ["Paixao nervosa, brilho de crush e coracao acelerado", "Um roteiro tecnico de turne internacional", "Uma disputa entre bandas de escola", "Um conto sombrio sobre apocalipse zumbi"],
+    "answerIndex": 0,
+    "explanation": "Tokimeki sugere aquele frio de empolgacao romantica, aqui em chave pop-metal acelerada.",
+    "sourceUrl": "https://www.youtube.com/watch?v=sptBJO3Isgs",
+    "tags": ["song-meaning"]
+  }
+]
