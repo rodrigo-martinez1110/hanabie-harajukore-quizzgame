@@ -368,6 +368,12 @@ const UI_COPY = {
     es: 'Cada acierto vale 100 puntos base + hasta 50 puntos por velocidad.',
     ja: '正解は100ベースポイント + 最大50の速度ボーナス。'
   },
+  scoreRuleDifficulty: {
+    'pt-BR': 'A dificuldade multiplica esse valor: nivel 1 = x1.0, nivel 5 = x1.7.',
+    en: 'Difficulty multiplies that value: level 1 = x1.0, level 5 = x1.7.',
+    es: 'La dificultad multiplica ese valor: nivel 1 = x1.0, nivel 5 = x1.7.',
+    ja: '難易度でさらに倍率がかかります: レベル1 = x1.0、レベル5 = x1.7。'
+  },
   scoreRuleCombo: {
     'pt-BR': 'Acertos seguidos sobem o combo de x1 ate x5 e multiplicam os pontos.',
     en: 'Correct streaks raise combo from x1 to x5 and multiply your points.',

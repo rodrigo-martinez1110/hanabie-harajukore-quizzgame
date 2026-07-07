@@ -44,7 +44,8 @@ export function answerCurrentQuestion(state, answerIndex, answeredAtMs) {
     answerTimeMs,
     questionTimeLimitMs: state.questionTimeLimitMs,
     combo: nextCombo,
-    feverActive
+    feverActive,
+    difficulty: currentQuestion.difficulty
   });
 
   const nextQuestionIndex = (state.questionIndex + 1) % state.questions.length;

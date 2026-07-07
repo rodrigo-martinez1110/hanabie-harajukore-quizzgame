@@ -32,6 +32,30 @@ test('calculateAnswerScore applies base, speed, combo, and fever multipliers', (
   assert.equal(result.points, 828);
 });
 
+test('calculateAnswerScore rewards higher difficulty questions', () => {
+  const easy = calculateAnswerScore({
+    isCorrect: true,
+    answerTimeMs: 0,
+    questionTimeLimitMs: 10000,
+    combo: 1,
+    feverActive: false,
+    difficulty: 1
+  });
+  const hard = calculateAnswerScore({
+    isCorrect: true,
+    answerTimeMs: 0,
+    questionTimeLimitMs: 10000,
+    combo: 1,
+    feverActive: false,
+    difficulty: 5
+  });
+
+  assert.equal(easy.difficultyMultiplier, 1);
+  assert.equal(hard.difficultyMultiplier, 1.7);
+  assert.equal(easy.points, 150);
+  assert.equal(hard.points, 255);
+});
+
 test('calculateAnswerScore gives zero for wrong answers', () => {
   const result = calculateAnswerScore({
     isCorrect: false,

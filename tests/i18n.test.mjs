@@ -69,6 +69,7 @@ test('scoring explanation copy exists for every supported language', () => {
   for (const language of ['pt-BR', 'en', 'es', 'ja']) {
     assert.notEqual(t('scoreRulesTitle', language), 'scoreRulesTitle');
     assert.match(t('scoreRuleBase', language), /100/);
+    assert.match(t('scoreRuleDifficulty', language), /1\.0|1,0|1|1\.7|1,7|5/);
     assert.match(t('scoreRuleCombo', language), /x5|5/);
     assert.match(t('scoreRuleFever', language), /2x|x2|2/);
     assert.notEqual(t('scoreRuleRank', language), 'scoreRuleRank');
