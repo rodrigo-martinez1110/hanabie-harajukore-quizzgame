@@ -1,4 +1,4 @@
-# HANABIE. Mosh Pit Quiz
+# HANABIE. HarajuQuizz
 
 Fan quiz estatico e nao oficial sobre HANABIE.
 
