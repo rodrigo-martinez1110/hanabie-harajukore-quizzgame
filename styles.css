@@ -288,7 +288,7 @@ h1 span {
 }
 
 .screen-game {
-  grid-template-rows: auto auto minmax(300px, 1fr) auto;
+  grid-template-rows: auto auto auto minmax(300px, 1fr) auto;
   gap: 14px;
 }
 
@@ -359,6 +359,16 @@ h1 span {
   color: #110713;
   background: var(--yellow);
   box-shadow: 0 0 30px rgba(255, 232, 84, .45);
+}
+
+.game-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.game-controls .ghost-action {
+  min-height: 44px;
 }
 
 .question-board {
@@ -535,6 +545,7 @@ dialog p {
   .start-stats,
   .answers,
   .hud,
+  .game-controls,
   .results-grid {
     grid-template-columns: 1fr;
   }

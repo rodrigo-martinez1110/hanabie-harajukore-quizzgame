@@ -1,4 +1,4 @@
-import { createLocalAudioAnalyser, smoothSpectrum } from './audioReactive.mjs';
+import { createGeneratedDemoAnalyser, createLocalAudioAnalyser, smoothSpectrum } from './audioReactive.mjs';
 import { answerCurrentQuestion, createGameSession, getTimeRemaining } from './gameEngine.mjs';
 import { formatAnswerFeedback, formatDifficultyLabel } from './feedback.mjs';
 import { CATEGORY_LABELS, DEFAULT_LANGUAGE, getLanguage, localizeQuestion, t } from './i18n.mjs';
@@ -20,6 +20,12 @@ const howButton = document.querySelector('#how-button');
 const howDialog = document.querySelector('#how-dialog');
 const audioInput = document.querySelector('#audio-file-input');
 const audioStatus = document.querySelector('#audio-status');
+const demoTrackButton = document.querySelector('#demo-track-button');
+const clearAudioButton = document.querySelector('#clear-audio-button');
+const gameClearAudioButton = document.querySelector('#game-clear-audio-button');
+const menuButton = document.querySelector('#menu-button');
+const restartButton = document.querySelector('#restart-button');
+const resultMenuButton = document.querySelector('#result-menu-button');
 const languageButtons = Array.from(document.querySelectorAll('[data-language]'));
 const timerEl = document.querySelector('#timer');
 const scoreEl = document.querySelector('#score');
@@ -53,6 +59,12 @@ startButton.addEventListener('click', startGame);
 playAgainButton.addEventListener('click', startGame);
 howButton.addEventListener('click', () => howDialog.showModal());
 audioInput.addEventListener('change', handleAudioSelection);
+demoTrackButton.addEventListener('click', handleDemoTrackSelection);
+clearAudioButton.addEventListener('click', clearAudio);
+gameClearAudioButton.addEventListener('click', clearAudio);
+menuButton.addEventListener('click', returnToMenu);
+restartButton.addEventListener('click', startGame);
+resultMenuButton.addEventListener('click', returnToMenu);
 languageButtons.forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.language));
 });
@@ -213,7 +225,7 @@ async function handleAudioSelection(event) {
   }
 
   try {
-    audioAnalyser?.dispose();
+    disposeAudioAnalyser();
     const nextAudioElement = new Audio();
     audioAnalyser = await createLocalAudioAnalyser(file, nextAudioElement);
     await audioAnalyser.play();
@@ -222,6 +234,41 @@ async function handleAudioSelection(event) {
     audioAnalyser = null;
     audioStatus.textContent = t('audioUnavailable', currentLanguage, { message: error.message });
   }
+}
+
+async function handleDemoTrackSelection() {
+  try {
+    disposeAudioAnalyser();
+    audioInput.value = '';
+    audioAnalyser = await createGeneratedDemoAnalyser();
+    await audioAnalyser.play();
+    audioStatus.textContent = t('demoPlaying', currentLanguage, { name: audioAnalyser.title });
+  } catch (error) {
+    audioAnalyser = null;
+    audioStatus.textContent = t('audioUnavailable', currentLanguage, { message: error.message });
+  }
+}
+
+function clearAudio() {
+  disposeAudioAnalyser();
+  audioInput.value = '';
+  audioStatus.textContent = t('audioCleared', currentLanguage);
+}
+
+function disposeAudioAnalyser() {
+  audioAnalyser?.dispose();
+  audioAnalyser = null;
+}
+
+function returnToMenu() {
+  clearInterval(timerHandle);
+  clearTimeout(feedbackHandle);
+  state = null;
+  answersEl.innerHTML = '';
+  feedbackEl.textContent = '';
+  questionTextEl.textContent = t('loadingQuestion', currentLanguage);
+  setScreen('start');
+  applyLanguage();
 }
 
 function setLanguage(language) {

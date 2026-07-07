@@ -18,6 +18,22 @@ const UI_COPY = {
     'pt-BR': 'Carregar minha musica',
     en: 'Load my music'
   },
+  demoTrackButton: {
+    'pt-BR': 'Tocar faixa demo',
+    en: 'Play demo track'
+  },
+  clearAudioButton: {
+    'pt-BR': 'Remover musica',
+    en: 'Remove music'
+  },
+  menuButton: {
+    'pt-BR': 'Menu',
+    en: 'Menu'
+  },
+  restartButton: {
+    'pt-BR': 'Reiniciar',
+    en: 'Restart'
+  },
   howButton: {
     'pt-BR': 'Como funciona',
     en: 'How it works'
@@ -33,6 +49,14 @@ const UI_COPY = {
   audioPlaying: {
     'pt-BR': '{name} tocando localmente. Nada e enviado.',
     en: '{name} playing locally. Nothing is uploaded.'
+  },
+  demoPlaying: {
+    'pt-BR': '{name} tocando em tempo real. Sem arquivo MP3 no app.',
+    en: '{name} playing in real time. No MP3 file in the app.'
+  },
+  audioCleared: {
+    'pt-BR': 'Musica removida. Animacao automatica ativada.',
+    en: 'Music removed. Automatic animation enabled.'
   },
   audioUnavailable: {
     'pt-BR': 'Audio local indisponivel: {message}',

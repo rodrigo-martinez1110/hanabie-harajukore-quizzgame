@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
+  createDemoTrackPattern,
   calculateSpectrumFromFrequencyData,
   calculatePulseFromFrequencyData,
   smoothSpectrum,
@@ -39,4 +40,16 @@ test('smoothSpectrum rises faster than it falls', () => {
   );
 
   assert.deepEqual(result, { bass: 0.6, mid: 0.15, treble: 0.3, pulse: 0.5 });
+});
+
+test('createDemoTrackPattern exposes an original looping track structure', () => {
+  const pattern = createDemoTrackPattern();
+
+  assert.equal(pattern.id, 'neon-matsuri-rush');
+  assert.equal(pattern.bpm, 150);
+  assert.equal(pattern.steps, 32);
+  assert.equal(pattern.bass.length, 32);
+  assert.equal(pattern.lead.length, 32);
+  assert.ok(pattern.kicks.length > 0);
+  assert.ok(pattern.snares.length > 0);
 });

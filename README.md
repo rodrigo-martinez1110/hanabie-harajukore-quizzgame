@@ -68,3 +68,7 @@ Regras importantes:
 ## Audio local
 
 O botao `Carregar minha musica` usa um arquivo do proprio dispositivo do jogador. O app toca esse arquivo localmente no navegador e usa o sinal para animar a interface. O arquivo nao e enviado, salvo ou redistribuido pelo jogo.
+
+## Faixa demo original
+
+O botao `Tocar faixa demo` usa uma faixa instrumental original gerada em tempo real pelo Web Audio API. Ela nao depende de MP3 no repositorio e nao usa audio de terceiros. Isso evita expor um arquivo de musica baixavel, mas nao deve ser tratado como DRM para musicas reais.
