@@ -3454,5 +3454,437 @@
       "ja": "ボーカロイドとニコニコ動画の電子音楽も影響として挙げられています。"
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/Hanabie."
+  },
+  {
+    "id": "setlist-most-played-ware-amatou",
+    "category": "music",
+    "difficulty": 3,
+    "prompt": {
+      "pt-BR": "Segundo o setlist.fm, qual musica da HANABIE. aparece como a mais tocada ao vivo?",
+      "en": "According to setlist.fm, which HANABIE. song appears as their most-played live song?",
+      "es": "Segun setlist.fm, que cancion de HANABIE. aparece como la mas tocada en vivo?",
+      "ja": "setlist.fmによると、HANABIE.のライブで最も多く演奏されている曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Ware Amatou",
+        "NEET GAME",
+        "O•TA•KU Lovely Densetsu",
+        "Spicy Queen"
+      ],
+      "en": [
+        "Ware Amatou",
+        "NEET GAME",
+        "O•TA•KU Lovely Densetsu",
+        "Spicy Queen"
+      ],
+      "es": [
+        "Ware Amatou",
+        "NEET GAME",
+        "O•TA•KU Lovely Densetsu",
+        "Spicy Queen"
+      ],
+      "ja": [
+        "Ware Amatou",
+        "NEET GAME",
+        "O•TA•KU Lovely Densetsu",
+        "Spicy Queen"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Nas estatisticas gerais do setlist.fm, Ware Amatou aparece no topo da lista de musicas mais tocadas.",
+      "en": "In setlist.fm's overall statistics, Ware Amatou appears at the top of the most-played songs list.",
+      "es": "En las estadisticas generales de setlist.fm, Ware Amatou aparece al inicio de la lista de canciones mas tocadas.",
+      "ja": "setlist.fmの総合統計では、Ware Amatouが最も多く演奏された曲として表示されています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/stats/hanabie-2bf264fa.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-euuk-2025-madrid-barcelona-opener",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Na EU&UK 2025, qual musica abre tanto o setlist de Madrid quanto o de Barcelona no setlist.fm?",
+      "en": "On the EU&UK 2025 tour, which song opens both the Madrid and Barcelona setlists on setlist.fm?",
+      "es": "En la gira EU&UK 2025, que cancion abre tanto el setlist de Madrid como el de Barcelona en setlist.fm?",
+      "ja": "EU&UK 2025で、setlist.fm上のマドリード公演とバルセロナ公演の両方を始める曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "O•TA•KU Lovely Densetsu",
+        "Ware Amatou",
+        "Today's Good Day & So Epic",
+        "L.C.G"
+      ],
+      "en": [
+        "O•TA•KU Lovely Densetsu",
+        "Ware Amatou",
+        "Today's Good Day & So Epic",
+        "L.C.G"
+      ],
+      "es": [
+        "O•TA•KU Lovely Densetsu",
+        "Ware Amatou",
+        "Today's Good Day & So Epic",
+        "L.C.G"
+      ],
+      "ja": [
+        "O•TA•KU Lovely Densetsu",
+        "Ware Amatou",
+        "Today's Good Day & So Epic",
+        "L.C.G"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Os setlists de Madrid e Barcelona da EU&UK 2025 mostram O•TA•KU Lovely Densetsu como a primeira musica.",
+      "en": "The Madrid and Barcelona EU&UK 2025 setlists show O•TA•KU Lovely Densetsu as the first song.",
+      "es": "Los setlists de Madrid y Barcelona de la EU&UK 2025 muestran O•TA•KU Lovely Densetsu como primera cancion.",
+      "ja": "EU&UK 2025のマドリード公演とバルセロナ公演では、O•TA•KU Lovely Densetsuが1曲目に載っています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/setlist/hanabie/2025/mon-live-madrid-spain-535aef25.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-na-2026-neet-game-opener",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "Na amostra recente da North America Tour 2026, qual musica abre shows em San Francisco e Los Angeles?",
+      "en": "In the recent 2026 North America Tour sample, which song opens shows in San Francisco and Los Angeles?",
+      "es": "En la muestra reciente de la North America Tour 2026, que cancion abre shows en San Francisco y Los Angeles?",
+      "ja": "2026 North America Tourの最近の記録で、サンフランシスコ公演とロサンゼルス公演を始める曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "NEET GAME",
+        "SUNRISE Miso-SOUP",
+        "Spicy Queen",
+        "Bucchigiri Tokyo"
+      ],
+      "en": [
+        "NEET GAME",
+        "SUNRISE Miso-SOUP",
+        "Spicy Queen",
+        "Bucchigiri Tokyo"
+      ],
+      "es": [
+        "NEET GAME",
+        "SUNRISE Miso-SOUP",
+        "Spicy Queen",
+        "Bucchigiri Tokyo"
+      ],
+      "ja": [
+        "NEET GAME",
+        "SUNRISE Miso-SOUP",
+        "Spicy Queen",
+        "Bucchigiri Tokyo"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Nos setlists mostrados para San Francisco e Los Angeles em 2026, NEET GAME aparece como faixa de abertura.",
+      "en": "In the displayed 2026 San Francisco and Los Angeles setlists, NEET GAME appears as the opening track.",
+      "es": "En los setlists mostrados de San Francisco y Los Angeles en 2026, NEET GAME aparece como tema de apertura.",
+      "ja": "2026年のサンフランシスコ公演とロサンゼルス公演の表示では、NEET GAMEがオープニング曲になっています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/setlists/hanabie-2bf264fa.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-anime-friends-2026-after-opening-se",
+    "category": "hardcore",
+    "difficulty": 3,
+    "prompt": {
+      "pt-BR": "No Anime Friends 2026, qual musica veio logo depois de OPENING SE?",
+      "en": "At Anime Friends 2026, which song came right after OPENING SE?",
+      "es": "En Anime Friends 2026, que cancion vino justo despues de OPENING SE?",
+      "ja": "Anime Friends 2026で、OPENING SEの直後に演奏された曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "O•TA•KU Lovely Densetsu",
+        "Tasty Survivor",
+        "We love sweets",
+        "Karu Garu Everyday!!"
+      ],
+      "en": [
+        "O•TA•KU Lovely Densetsu",
+        "Tasty Survivor",
+        "We love sweets",
+        "Karu Garu Everyday!!"
+      ],
+      "es": [
+        "O•TA•KU Lovely Densetsu",
+        "Tasty Survivor",
+        "We love sweets",
+        "Karu Garu Everyday!!"
+      ],
+      "ja": [
+        "O•TA•KU Lovely Densetsu",
+        "Tasty Survivor",
+        "We love sweets",
+        "Karu Garu Everyday!!"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "O setlist do Anime Friends 2026 lista OPENING SE em primeiro e O•TA•KU Lovely Densetsu em segundo.",
+      "en": "The Anime Friends 2026 setlist lists OPENING SE first and O•TA•KU Lovely Densetsu second.",
+      "es": "El setlist de Anime Friends 2026 lista OPENING SE primero y O•TA•KU Lovely Densetsu segundo.",
+      "ja": "Anime Friends 2026のセットリストでは、1曲目がOPENING SE、2曲目がO•TA•KU Lovely Densetsuです。"
+    },
+    "sourceUrl": "https://www.setlist.fm/setlists/hanabie-2bf264fa.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-madrid-2025-encore-closer",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "No show de Madrid da EU&UK 2025, qual musica fechou o encore?",
+      "en": "At the Madrid EU&UK 2025 show, which song closed the encore?",
+      "es": "En el show de Madrid de la EU&UK 2025, que cancion cerro el encore?",
+      "ja": "EU&UK 2025のマドリード公演で、アンコールを締めた曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Today's Good Day & So Epic",
+        "Kotoshi koso Gal~Shoka ver.~",
+        "TOUSOU",
+        "Osaki ni Shitsurei Shimasu."
+      ],
+      "en": [
+        "Today's Good Day & So Epic",
+        "Kotoshi koso Gal~Shoka ver.~",
+        "TOUSOU",
+        "Osaki ni Shitsurei Shimasu."
+      ],
+      "es": [
+        "Today's Good Day & So Epic",
+        "Kotoshi koso Gal~Shoka ver.~",
+        "TOUSOU",
+        "Osaki ni Shitsurei Shimasu."
+      ],
+      "ja": [
+        "Today's Good Day & So Epic",
+        "Kotoshi koso Gal~Shoka ver.~",
+        "TOUSOU",
+        "Osaki ni Shitsurei Shimasu."
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Em Madrid, o encore teve Kotoshi koso Gal~Shoka ver.~ e depois Today's Good Day & So Epic.",
+      "en": "In Madrid, the encore had Kotoshi koso Gal~Shoka ver.~ followed by Today's Good Day & So Epic.",
+      "es": "En Madrid, el encore tuvo Kotoshi koso Gal~Shoka ver.~ y despues Today's Good Day & So Epic.",
+      "ja": "マドリード公演のアンコールはKotoshi koso Gal~Shoka ver.~の後にToday's Good Day & So Epicが演奏されています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/setlist/hanabie/2025/mon-live-madrid-spain-535aef25.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-barcelona-2025-encore-closer",
+    "category": "hardcore",
+    "difficulty": 4,
+    "prompt": {
+      "pt-BR": "No show de Barcelona da EU&UK 2025, qual musica fechou o encore?",
+      "en": "At the Barcelona EU&UK 2025 show, which song closed the encore?",
+      "es": "En el show de Barcelona de la EU&UK 2025, que cancion cerro el encore?",
+      "ja": "EU&UK 2025のバルセロナ公演で、アンコールを締めた曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Sentimental☆Heroine",
+        "L.C.G",
+        "Today's Good Day & So Epic",
+        "Ware Amatou"
+      ],
+      "en": [
+        "Sentimental☆Heroine",
+        "L.C.G",
+        "Today's Good Day & So Epic",
+        "Ware Amatou"
+      ],
+      "es": [
+        "Sentimental☆Heroine",
+        "L.C.G",
+        "Today's Good Day & So Epic",
+        "Ware Amatou"
+      ],
+      "ja": [
+        "Sentimental☆Heroine",
+        "L.C.G",
+        "Today's Good Day & So Epic",
+        "Ware Amatou"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Em Barcelona, o encore aparece com L.C.G e depois Sentimental☆Heroine.",
+      "en": "In Barcelona, the encore is listed with L.C.G followed by Sentimental☆Heroine.",
+      "es": "En Barcelona, el encore aparece con L.C.G y despues Sentimental☆Heroine.",
+      "ja": "バルセロナ公演のアンコールはL.C.Gの後にSentimental☆Heroineが演奏されています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/setlist/hanabie/2025/la-2-de-apolo-barcelona-spain-5b5aef20.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-comparison-ware-neet-iconic-tasty",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": {
+      "pt-BR": "Entre Ware Amatou, NEET GAME, ICONIC e Tasty Survivor, qual tem mais plays ao vivo no setlist.fm?",
+      "en": "Between Ware Amatou, NEET GAME, ICONIC, and Tasty Survivor, which has the most live plays on setlist.fm?",
+      "es": "Entre Ware Amatou, NEET GAME, ICONIC y Tasty Survivor, cual tiene mas plays en vivo en setlist.fm?",
+      "ja": "Ware Amatou、NEET GAME、ICONIC、Tasty Survivorの中で、setlist.fm上のライブ演奏回数が最も多い曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Ware Amatou",
+        "NEET GAME",
+        "ICONIC",
+        "Tasty Survivor"
+      ],
+      "en": [
+        "Ware Amatou",
+        "NEET GAME",
+        "ICONIC",
+        "Tasty Survivor"
+      ],
+      "es": [
+        "Ware Amatou",
+        "NEET GAME",
+        "ICONIC",
+        "Tasty Survivor"
+      ],
+      "ja": [
+        "Ware Amatou",
+        "NEET GAME",
+        "ICONIC",
+        "Tasty Survivor"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Ware Amatou lidera essa comparacao nas estatisticas de musicas tocadas do setlist.fm.",
+      "en": "Ware Amatou leads this comparison in setlist.fm's song performance statistics.",
+      "es": "Ware Amatou lidera esta comparacion en las estadisticas de canciones tocadas de setlist.fm.",
+      "ja": "setlist.fmの演奏統計では、この比較の中でWare Amatouが最も多く演奏されています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/stats/hanabie-2bf264fa.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-comparison-spicy-iconic-tokimeki-bucchigiri",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": {
+      "pt-BR": "Entre ICONIC, Tokimeki About you, Spicy Queen e Bucchigiri Tokyo, qual aparece com mais plays no setlist.fm?",
+      "en": "Between ICONIC, Tokimeki About you, Spicy Queen, and Bucchigiri Tokyo, which appears with the most plays on setlist.fm?",
+      "es": "Entre ICONIC, Tokimeki About you, Spicy Queen y Bucchigiri Tokyo, cual aparece con mas plays en setlist.fm?",
+      "ja": "ICONIC、Tokimeki About you、Spicy Queen、Bucchigiri Tokyoの中で、setlist.fm上の演奏回数が最も多い曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Spicy Queen",
+        "ICONIC",
+        "Tokimeki About you",
+        "Bucchigiri Tokyo"
+      ],
+      "en": [
+        "Spicy Queen",
+        "ICONIC",
+        "Tokimeki About you",
+        "Bucchigiri Tokyo"
+      ],
+      "es": [
+        "Spicy Queen",
+        "ICONIC",
+        "Tokimeki About you",
+        "Bucchigiri Tokyo"
+      ],
+      "ja": [
+        "Spicy Queen",
+        "ICONIC",
+        "Tokimeki About you",
+        "Bucchigiri Tokyo"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "No setlist.fm, Spicy Queen aparece acima dessas outras tres opcoes em numero de plays.",
+      "en": "On setlist.fm, Spicy Queen appears above those other three options by play count.",
+      "es": "En setlist.fm, Spicy Queen aparece por encima de esas otras tres opciones en numero de plays.",
+      "ja": "setlist.fmでは、Spicy Queenがこの4択の中で最も多い演奏回数として表示されています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/stats/hanabie-2bf264fa.html",
+    "tags": [
+      "setlist-pattern"
+    ]
+  },
+  {
+    "id": "setlist-over-200-osaki",
+    "category": "hardcore",
+    "difficulty": 5,
+    "prompt": {
+      "pt-BR": "Qual dessas aparece como musica muito constante em setlists e passa de 200 plays ao vivo no setlist.fm?",
+      "en": "Which of these appears as a very consistent setlist song and has over 200 live plays on setlist.fm?",
+      "es": "Cual de estas aparece como una cancion muy constante en setlists y supera 200 plays en vivo en setlist.fm?",
+      "ja": "setlist.fmで200回を超えるライブ演奏があり、セットリスト常連として目立つ曲はどれ?"
+    },
+    "choices": {
+      "pt-BR": [
+        "Osaki ni Shitsurei Shimasu.",
+        "Tasty Survivor",
+        "Hyperdimension Galaxy",
+        "Be the GAL~Early Summer ver. ~"
+      ],
+      "en": [
+        "Osaki ni Shitsurei Shimasu.",
+        "Tasty Survivor",
+        "Hyperdimension Galaxy",
+        "Be the GAL~Early Summer ver. ~"
+      ],
+      "es": [
+        "Osaki ni Shitsurei Shimasu.",
+        "Tasty Survivor",
+        "Hyperdimension Galaxy",
+        "Be the GAL~Early Summer ver. ~"
+      ],
+      "ja": [
+        "Osaki ni Shitsurei Shimasu.",
+        "Tasty Survivor",
+        "Hyperdimension Galaxy",
+        "Be the GAL~Early Summer ver. ~"
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "pt-BR": "Osaki ni Shitsurei Shimasu. aparece com mais de 200 performances nas estatisticas gerais do setlist.fm.",
+      "en": "Osaki ni Shitsurei Shimasu. appears with over 200 performances in setlist.fm's overall statistics.",
+      "es": "Osaki ni Shitsurei Shimasu. aparece con mas de 200 presentaciones en las estadisticas generales de setlist.fm.",
+      "ja": "setlist.fmの総合統計では、Osaki ni Shitsurei Shimasu.が200回を超える演奏回数で表示されています。"
+    },
+    "sourceUrl": "https://www.setlist.fm/stats/hanabie-2bf264fa.html",
+    "tags": [
+      "setlist-pattern"
+    ]
   }
 ]

@@ -95,6 +95,19 @@ test('seed question bank includes high-difficulty song meaning questions', async
   assert.ok(songMeaningQuestions.some((question) => question.difficulty >= 5));
 });
 
+test('seed question bank includes setlist pattern questions', async () => {
+  const filePath = join(__dirname, '..', 'data', 'questions.json');
+  const raw = JSON.parse(await readFile(filePath, 'utf8'));
+  const result = normalizeQuestionBank(raw);
+  const setlistQuestions = result.questions.filter((question) =>
+    question.tags.includes('setlist-pattern')
+  );
+
+  assert.equal(result.errors.length, 0);
+  assert.ok(setlistQuestions.length >= 9);
+  assert.ok(setlistQuestions.some((question) => question.difficulty >= 5));
+});
+
 test('seed question bank includes complete localized text for every supported language', async () => {
   const filePath = join(__dirname, '..', 'data', 'questions.json');
   const raw = JSON.parse(await readFile(filePath, 'utf8'));
