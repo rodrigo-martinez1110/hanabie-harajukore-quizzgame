@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HANABIE. HarajuQuizz Admin</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell admin-shell">
+      <section class="admin-panel">
+        <header class="admin-heading">
+          <div>
+            <p class="kicker">Owner stats</p>
+            <h1>Admin</h1>
+          </div>
+          <a class="ghost-link" href="./index.html">Jogo</a>
+        </header>
+
+        <form class="admin-login" id="admin-login-form">
+          <label>
+            <span>Senha do painel</span>
+            <input id="admin-password" type="password" autocomplete="current-password" placeholder="ADMIN_PASSWORD">
+          </label>
+          <button class="primary-action" type="submit">Entrar</button>
+        </form>
+
+        <div class="leaderboard-filters admin-filters" aria-label="Periodo">
+          <button class="filter-button" type="button" data-admin-period="today">Hoje</button>
+          <button class="filter-button is-active" type="button" data-admin-period="7d">7 dias</button>
+          <button class="filter-button" type="button" data-admin-period="30d">30 dias</button>
+          <button class="filter-button" type="button" data-admin-period="all">Tudo</button>
+        </div>
+
+        <p class="leaderboard-status" id="admin-status">Entre para carregar os dados.</p>
+
+        <section class="admin-grid" id="admin-metrics" aria-label="Metricas principais"></section>
+
+        <section class="admin-lists">
+          <article class="admin-card">
+            <h2>Paises</h2>
+            <ol id="admin-countries"></ol>
+          </article>
+          <article class="admin-card">
+            <h2>Idiomas</h2>
+            <ol id="admin-languages"></ol>
+          </article>
+          <article class="admin-card">
+            <h2>Ranks</h2>
+            <ol id="admin-ranks"></ol>
+          </article>
+          <article class="admin-card">
+            <h2>Perguntas mais erradas</h2>
+            <ol id="admin-questions"></ol>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/admin.mjs"></script>
+  </body>
+</html>

@@ -783,6 +783,144 @@ h1 span {
   line-height: 1.45;
 }
 
+.admin-shell {
+  min-height: 100vh;
+  padding: clamp(18px, 4vw, 48px);
+}
+
+.admin-panel {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(18px, 4vw, 34px);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.admin-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+}
+
+.admin-heading h1 {
+  color: var(--yellow);
+  font-size: clamp(42px, 8vw, 92px);
+}
+
+.admin-login {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.admin-login label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-login input {
+  min-height: 54px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .08);
+  font: inherit;
+  font-weight: 850;
+}
+
+.admin-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-metric,
+.admin-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .07);
+}
+
+.admin-metric {
+  min-height: 104px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  align-content: center;
+}
+
+.admin-metric span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.admin-metric strong {
+  color: var(--yellow);
+  font-size: clamp(24px, 4vw, 40px);
+  line-height: 1;
+}
+
+.admin-lists {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-card {
+  min-height: 220px;
+  padding: 16px;
+}
+
+.admin-card h2 {
+  margin: 0 0 12px;
+  color: var(--cyan);
+  font-size: 20px;
+}
+
+.admin-card ol {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.admin-card li {
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding-top: 8px;
+}
+
+.admin-card strong {
+  overflow-wrap: anywhere;
+}
+
+.admin-card span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
 dialog {
   width: min(520px, calc(100% - 32px));
   border: 1px solid var(--line);
@@ -858,6 +996,11 @@ dialog p {
   .rank-grid {
     grid-template-columns: 1fr;
   }
+
+  .admin-grid,
+  .admin-lists {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -906,5 +1049,12 @@ dialog p {
 
   .leaderboard-score {
     text-align: left;
+  }
+
+  .admin-heading,
+  .admin-login,
+  .admin-card li {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

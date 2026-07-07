@@ -1,4 +1,5 @@
 import { createGeneratedDemoAnalyser, createLocalAudioAnalyser, smoothSpectrum } from './audioReactive.mjs';
+import { trackAnalyticsEvent } from './analyticsClient.mjs';
 import { answerCurrentQuestion, createGameSession, getTimeRemaining } from './gameEngine.mjs';
 import { formatAnswerFeedback, formatDifficultyLabel } from './feedback.mjs';
 import {
@@ -180,6 +181,7 @@ function startGame() {
   });
   rememberRecentQuestions(shuffledQuestions.slice(0, SESSION_RECENT_MARK_COUNT).map((question) => question.id));
   state = createGameSession(shuffledQuestions, { startedAtMs: performance.now() });
+  trackGameEvent('game_started');
   setScreen('game');
   renderQuestion();
   renderHud();
@@ -237,6 +239,12 @@ function submitAnswer(answerIndex) {
   });
 
   const feedback = state.lastFeedback;
+  trackGameEvent('question_answered', {
+    questionId: previousQuestion.id,
+    questionCategory: previousQuestion.category,
+    questionDifficulty: previousQuestion.difficulty,
+    correct: feedback.correct
+  });
   feedbackEl.textContent = formatAnswerFeedback({
     correct: feedback.correct,
     points: feedback.points,
@@ -293,6 +301,13 @@ function endGame() {
     answered,
     language: currentLanguage
   };
+  trackGameEvent('game_finished', {
+    score: lastScorePayload.score,
+    accuracy: lastScorePayload.accuracy,
+    maxCombo: lastScorePayload.maxCombo,
+    answered: lastScorePayload.answered,
+    fanRank: rank.label
+  });
   submitScoreButton.disabled = false;
   submitStatus.textContent = t('submitScoreHint', currentLanguage);
   resultRankEl.textContent = rank.label;
@@ -327,6 +342,13 @@ async function handleScoreSubmit(event) {
     });
     submitStatus.textContent = t('submitScoreSuccess', currentLanguage, {
       rank: submitted.fanRank
+    });
+    trackGameEvent('score_submitted', {
+      score: submitted.score,
+      accuracy: submitted.accuracy,
+      maxCombo: submitted.maxCombo,
+      answered: submitted.answered,
+      fanRank: submitted.fanRank
     });
     await loadLeaderboard();
   } catch (error) {
@@ -513,6 +535,16 @@ function renderRankGrid() {
       <p>${escapeHtml(getRankMeaning(tier, currentLanguage))}</p>
     </article>
   `).join('');
+}
+
+function trackGameEvent(eventType, details = {}) {
+  trackAnalyticsEvent({
+    eventType,
+    playerId: playerProfile.playerId,
+    countryCode: playerProfile.countryCode,
+    language: currentLanguage,
+    ...details
+  });
 }
 
 function setLanguage(language) {
