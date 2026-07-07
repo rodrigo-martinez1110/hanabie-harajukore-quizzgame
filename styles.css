@@ -138,9 +138,9 @@ h1 {
 h1 span {
   display: block;
   color: var(--yellow);
-  width: max-content;
+  width: fit-content;
   max-width: 100%;
-  font-size: .86em;
+  font-size: clamp(56px, 5.8vw, 86px);
   overflow-wrap: normal;
   word-break: keep-all;
   white-space: nowrap;
@@ -767,6 +767,10 @@ dialog p {
 
   h1 {
     font-size: 48px;
+  }
+
+  h1 span {
+    font-size: clamp(42px, 13vw, 56px);
   }
 
   .question-board h2 {
