@@ -11,7 +11,7 @@
       <section class="screen screen-start is-active" id="start-screen" aria-labelledby="game-title">
         <div class="stage-grid">
           <div class="brand-zone" aria-label="HANABIE fan quiz">
-            <p class="kicker">Fan quiz nao oficial</p>
+            <p class="kicker" data-i18n="unofficialQuiz">Fan quiz nao oficial</p>
             <h1 id="game-title">HANABIE.<span>Mosh Pit Quiz</span></h1>
             <p class="jp">花冷え。 / Harajuku-Core Rush</p>
             <div class="pulse-rig" aria-hidden="true">
@@ -25,13 +25,17 @@
               <span>Combo x5</span>
               <span>Fever</span>
             </div>
-            <button class="primary-action" id="start-button" type="button">Jogar</button>
+            <div class="language-switcher" aria-label="Language">
+              <button class="language-button is-active" data-language="pt-BR" type="button">PT-BR</button>
+              <button class="language-button" data-language="en" type="button">EN</button>
+            </div>
+            <button class="primary-action" id="start-button" type="button" data-i18n="startButton">Jogar</button>
             <label class="file-action">
               <input id="audio-file-input" type="file" accept="audio/*">
-              <span>Carregar minha musica</span>
+              <span data-i18n="audioButton">Carregar minha musica</span>
             </label>
-            <button class="ghost-action" id="how-button" type="button">Como funciona</button>
-            <p class="audio-status" id="audio-status">Audio local opcional. Nada e enviado.</p>
+            <button class="ghost-action" id="how-button" type="button" data-i18n="howButton">Como funciona</button>
+            <p class="audio-status" id="audio-status" data-i18n="audioIdle">Audio local opcional. Nada e enviado.</p>
           </div>
         </div>
       </section>
@@ -39,19 +43,19 @@
       <section class="screen screen-game" id="game-screen" aria-live="polite">
         <header class="hud">
           <div class="hud-cell">
-            <span class="hud-label">Tempo</span>
+            <span class="hud-label" data-i18n="time">Tempo</span>
             <strong id="timer">01:30</strong>
           </div>
           <div class="hud-cell">
-            <span class="hud-label">Score</span>
+            <span class="hud-label" data-i18n="score">Score</span>
             <strong id="score">0</strong>
           </div>
           <div class="hud-cell combo-cell">
-            <span class="hud-label">Combo</span>
+            <span class="hud-label" data-i18n="combo">Combo</span>
             <strong id="combo">x1</strong>
           </div>
           <div class="hud-cell">
-            <span class="hud-label">Crowd</span>
+            <span class="hud-label" data-i18n="crowd">Crowd</span>
             <div class="meter" aria-hidden="true"><span id="crowd-meter"></span></div>
           </div>
         </header>
@@ -59,12 +63,12 @@
         <div class="category-row">
           <span id="category-label">Discography</span>
           <span id="difficulty-label">Nivel 1/5</span>
-          <span id="fever-label">Fever ready</span>
+          <span id="fever-label" data-i18n="feverReady">Fever ready</span>
         </div>
 
         <section class="question-board">
           <p class="round-label" id="round-label">Round 01</p>
-          <h2 id="question-text">Carregando pergunta...</h2>
+          <h2 id="question-text" data-i18n="loadingQuestion">Carregando pergunta...</h2>
           <div class="answers" id="answers"></div>
           <p class="feedback" id="feedback"></p>
         </section>
@@ -75,17 +79,17 @@
 
       <section class="screen screen-results" id="results-screen" aria-labelledby="rank-title">
         <div class="results-panel">
-          <p class="kicker">Resultado</p>
+          <p class="kicker" data-i18n="result">Resultado</p>
           <h2 id="rank-title">First Show Curious</h2>
           <div class="results-grid">
-            <div><span>Score</span><strong id="result-score">0</strong></div>
-            <div><span>Precisao</span><strong id="result-accuracy">0%</strong></div>
-            <div><span>Max combo</span><strong id="result-combo">x1</strong></div>
-            <div><span>Respondidas</span><strong id="result-answered">0</strong></div>
+            <div><span data-i18n="score">Score</span><strong id="result-score">0</strong></div>
+            <div><span data-i18n="accuracy">Precisao</span><strong id="result-accuracy">0%</strong></div>
+            <div><span data-i18n="maxCombo">Max combo</span><strong id="result-combo">x1</strong></div>
+            <div><span data-i18n="answered">Respondidas</span><strong id="result-answered">0</strong></div>
           </div>
           <div class="result-actions">
-            <button class="primary-action" id="play-again-button" type="button">Jogar de novo</button>
-            <a class="ghost-link" href="https://hanabie.jp/" target="_blank" rel="noreferrer">Links oficiais</a>
+            <button class="primary-action" id="play-again-button" type="button" data-i18n="playAgainButton">Jogar de novo</button>
+            <a class="ghost-link" href="https://hanabie.jp/" target="_blank" rel="noreferrer" data-i18n="officialLinks">Links oficiais</a>
           </div>
         </div>
       </section>
@@ -93,9 +97,9 @@
 
     <dialog id="how-dialog">
       <form method="dialog">
-        <h2>90 segundos. Combo. Fever.</h2>
-        <p>Responda rapido, mantenha a sequencia e suba a Crowd Energy. O audio local, se carregado, anima a tela e fica so no seu dispositivo.</p>
-        <button class="primary-action" type="submit">Fechar</button>
+        <h2 data-i18n="howTitle">90 segundos. Combo. Fever.</h2>
+        <p data-i18n="howBody">Responda rapido, mantenha a sequencia e suba a Crowd Energy. O audio local, se carregado, anima a tela e fica so no seu dispositivo.</p>
+        <button class="primary-action" type="submit" data-i18n="close">Fechar</button>
       </form>
     </dialog>
 

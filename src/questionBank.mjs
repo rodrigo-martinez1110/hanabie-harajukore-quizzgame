@@ -1,4 +1,5 @@
 export const SUPPORTED_CATEGORIES = ['music', 'video', 'members', 'history', 'hardcore'];
+const DEFAULT_LANGUAGE = 'pt-BR';
 
 export function validateQuestion(raw, seenIds = new Set()) {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) {
@@ -23,17 +24,17 @@ export function validateQuestion(raw, seenIds = new Set()) {
     return { ok: false, error: `Invalid difficulty for ${id}; expected 1 to 5.` };
   }
 
-  const prompt = normalizeText(raw.prompt);
+  const prompt = normalizeLocalizedText(raw.prompt);
   if (!prompt) {
     return { ok: false, error: `Question ${id} is missing prompt.` };
   }
 
-  if (!Array.isArray(raw.choices) || raw.choices.length !== 4) {
+  const choices = normalizeLocalizedChoices(raw.choices);
+  if (!hasExactlyFourChoices(choices)) {
     return { ok: false, error: `Question ${id} must have exactly 4 choices.` };
   }
 
-  const choices = raw.choices.map(normalizeText);
-  if (choices.some((choice) => !choice)) {
+  if (hasEmptyChoice(choices)) {
     return { ok: false, error: `Question ${id} has an empty choice.` };
   }
 
@@ -51,7 +52,7 @@ export function validateQuestion(raw, seenIds = new Set()) {
       prompt,
       choices,
       answerIndex,
-      explanation: normalizeText(raw.explanation),
+      explanation: normalizeLocalizedText(raw.explanation),
       sourceUrl: normalizeText(raw.sourceUrl),
       tags: Array.isArray(raw.tags) ? raw.tags.map(normalizeText).filter(Boolean) : []
     }
@@ -82,4 +83,57 @@ export function normalizeQuestionBank(rawQuestions) {
 
 function normalizeText(value) {
   return typeof value === 'string' ? value.trim() : '';
+}
+
+function normalizeLocalizedText(value) {
+  if (typeof value === 'string') {
+    return normalizeText(value);
+  }
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return '';
+  }
+
+  const localized = {};
+  for (const [language, text] of Object.entries(value)) {
+    const normalized = normalizeText(text);
+    if (normalized) {
+      localized[language] = normalized;
+    }
+  }
+
+  return localized[DEFAULT_LANGUAGE] ? localized : '';
+}
+
+function normalizeLocalizedChoices(value) {
+  if (Array.isArray(value)) {
+    return value.map(normalizeText);
+  }
+  if (!value || typeof value !== 'object') {
+    return [];
+  }
+
+  const localized = {};
+  for (const [language, choices] of Object.entries(value)) {
+    if (Array.isArray(choices)) {
+      localized[language] = choices.map(normalizeText);
+    }
+  }
+
+  return Array.isArray(localized[DEFAULT_LANGUAGE]) ? localized : [];
+}
+
+function hasExactlyFourChoices(value) {
+  if (Array.isArray(value)) {
+    return value.length === 4;
+  }
+
+  return Object.values(value).every((choices) => Array.isArray(choices) && choices.length === 4);
+}
+
+function hasEmptyChoice(value) {
+  if (Array.isArray(value)) {
+    return value.some((choice) => !choice);
+  }
+
+  return Object.values(value).some((choices) => choices.some((choice) => !choice));
 }

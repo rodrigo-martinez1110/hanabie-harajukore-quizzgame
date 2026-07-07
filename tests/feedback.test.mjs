@@ -33,7 +33,24 @@ test('formatAnswerFeedback includes the right answer and explanation for misses'
   );
 });
 
+test('formatAnswerFeedback supports English copy', () => {
+  const text = formatAnswerFeedback({
+    correct: false,
+    points: 0,
+    combo: 1,
+    correctChoice: 'WE LOVE SWEETS',
+    explanation: 'A hyperactive celebration of sweets and heavy kawaii energy.',
+    language: 'en'
+  });
+
+  assert.equal(
+    text,
+    'Combo broke. Answer: WE LOVE SWEETS - A hyperactive celebration of sweets and heavy kawaii energy.'
+  );
+});
+
 test('formatDifficultyLabel names the five-point scale', () => {
   assert.equal(formatDifficultyLabel(1), 'Nivel 1/5');
   assert.equal(formatDifficultyLabel(5), 'Nivel 5/5');
+  assert.equal(formatDifficultyLabel(5, 'en'), 'Level 5/5');
 });

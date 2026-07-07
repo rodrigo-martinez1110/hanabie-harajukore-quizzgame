@@ -1,17 +1,12 @@
 import { createLocalAudioAnalyser, smoothSpectrum } from './audioReactive.mjs';
 import { answerCurrentQuestion, createGameSession, getTimeRemaining } from './gameEngine.mjs';
 import { formatAnswerFeedback, formatDifficultyLabel } from './feedback.mjs';
+import { CATEGORY_LABELS, DEFAULT_LANGUAGE, getLanguage, localizeQuestion, t } from './i18n.mjs';
 import { normalizeQuestionBank } from './questionBank.mjs';
 import { shuffleQuestions } from './questionShuffle.mjs';
 import { calculateFanRank } from './scoring.mjs';
 
-const CATEGORY_LABELS = {
-  music: 'Discography',
-  video: 'Music Videos',
-  members: 'Member Rush',
-  history: 'Origin Story',
-  hardcore: 'Hardcore Fan'
-};
+const LANGUAGE_STORAGE_KEY = 'hanabie-quiz-language';
 
 const app = document.querySelector('#app');
 const screens = {
@@ -25,6 +20,7 @@ const howButton = document.querySelector('#how-button');
 const howDialog = document.querySelector('#how-dialog');
 const audioInput = document.querySelector('#audio-file-input');
 const audioStatus = document.querySelector('#audio-status');
+const languageButtons = Array.from(document.querySelectorAll('[data-language]'));
 const timerEl = document.querySelector('#timer');
 const scoreEl = document.querySelector('#score');
 const comboEl = document.querySelector('#combo');
@@ -51,12 +47,17 @@ let feedbackHandle = null;
 let audioAnalyser = null;
 let audioSpectrum = { bass: 0.22, mid: 0.22, treble: 0.22, pulse: 0.22 };
 let autoPulseTime = 0;
+let currentLanguage = getStoredLanguage();
 
 startButton.addEventListener('click', startGame);
 playAgainButton.addEventListener('click', startGame);
 howButton.addEventListener('click', () => howDialog.showModal());
 audioInput.addEventListener('change', handleAudioSelection);
+languageButtons.forEach((button) => {
+  button.addEventListener('click', () => setLanguage(button.dataset.language));
+});
 
+applyLanguage();
 await boot();
 requestAnimationFrame(animateVisuals);
 
@@ -78,11 +79,11 @@ async function boot() {
       throw new Error('Nenhuma pergunta valida encontrada em data/questions.json.');
     }
 
-    audioStatus.textContent = `${questions.length} perguntas carregadas. Audio local opcional.`;
+    audioStatus.textContent = t('audioLoaded', currentLanguage, { count: questions.length });
     startButton.disabled = false;
   } catch (error) {
     startButton.disabled = true;
-    audioStatus.textContent = `${error.message} Rode por um servidor local.`;
+    audioStatus.textContent = t('runLocalServer', currentLanguage, { message: error.message });
   }
 }
 
@@ -93,7 +94,8 @@ function startGame() {
 
   clearInterval(timerHandle);
   clearTimeout(feedbackHandle);
-  const shuffledQuestions = shuffleQuestions(questions);
+  const localizedQuestions = questions.map((question) => localizeQuestion(question, currentLanguage));
+  const shuffledQuestions = shuffleQuestions(localizedQuestions);
   state = createGameSession(shuffledQuestions, { startedAtMs: performance.now() });
   setScreen('game');
   renderQuestion();
@@ -116,10 +118,12 @@ function renderQuestion() {
   const question = state.currentQuestion;
   answersEl.innerHTML = '';
   feedbackEl.textContent = '';
-  roundLabelEl.textContent = `Round ${String(state.answeredCount + 1).padStart(2, '0')}`;
+  roundLabelEl.textContent = t('round', currentLanguage, {
+    number: String(state.answeredCount + 1).padStart(2, '0')
+  });
   questionTextEl.textContent = question.prompt;
-  categoryLabelEl.textContent = CATEGORY_LABELS[question.category] || question.category;
-  difficultyLabelEl.textContent = formatDifficultyLabel(question.difficulty);
+  categoryLabelEl.textContent = localizeCategory(question.category);
+  difficultyLabelEl.textContent = formatDifficultyLabel(question.difficulty, currentLanguage);
 
   question.choices.forEach((choice, index) => {
     const button = document.createElement('button');
@@ -155,7 +159,8 @@ function submitAnswer(answerIndex) {
     points: feedback.points,
     combo: state.combo,
     correctChoice: previousQuestion.choices[previousQuestion.answerIndex],
-    explanation: feedback.explanation
+    explanation: feedback.explanation,
+    language: currentLanguage
   });
 
   renderHud();
@@ -175,7 +180,7 @@ function renderHud() {
   scoreEl.textContent = String(state?.score ?? 0);
   comboEl.textContent = `x${state?.combo ?? 1}`;
   crowdMeterEl.style.width = `${state?.crowdEnergy ?? 0}%`;
-  feverLabelEl.textContent = feverActive ? 'FEVER MODE' : 'Fever ready';
+  feverLabelEl.textContent = feverActive ? t('feverMode', currentLanguage) : t('feverReady', currentLanguage);
   feverLabelEl.classList.toggle('is-hot', feverActive);
   app.style.setProperty('--fever-pulse', feverActive ? '1' : '0');
 }
@@ -212,11 +217,52 @@ async function handleAudioSelection(event) {
     const nextAudioElement = new Audio();
     audioAnalyser = await createLocalAudioAnalyser(file, nextAudioElement);
     await audioAnalyser.play();
-    audioStatus.textContent = `${file.name} tocando localmente. Nada e enviado.`;
+    audioStatus.textContent = t('audioPlaying', currentLanguage, { name: file.name });
   } catch (error) {
     audioAnalyser = null;
-    audioStatus.textContent = `Audio local indisponivel: ${error.message}`;
+    audioStatus.textContent = t('audioUnavailable', currentLanguage, { message: error.message });
   }
+}
+
+function setLanguage(language) {
+  currentLanguage = getLanguage(language);
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+  applyLanguage();
+  if (state) {
+    endGame();
+  }
+}
+
+function applyLanguage() {
+  document.documentElement.lang = currentLanguage === 'en' ? 'en' : 'pt-BR';
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
+    element.textContent = t(element.dataset.i18n, currentLanguage);
+  });
+  languageButtons.forEach((button) => {
+    button.classList.toggle('is-active', button.dataset.language === currentLanguage);
+  });
+
+  if (!startButton.disabled && questions.length > 0) {
+    audioStatus.textContent = t('audioLoaded', currentLanguage, { count: questions.length });
+  }
+  if (!state) {
+    questionTextEl.textContent = t('loadingQuestion', currentLanguage);
+    difficultyLabelEl.textContent = formatDifficultyLabel(1, currentLanguage);
+    categoryLabelEl.textContent = localizeCategory('music');
+    feverLabelEl.textContent = t('feverReady', currentLanguage);
+  }
+}
+
+function getStoredLanguage() {
+  try {
+    return getLanguage(localStorage.getItem(LANGUAGE_STORAGE_KEY));
+  } catch {
+    return DEFAULT_LANGUAGE;
+  }
+}
+
+function localizeCategory(category) {
+  return CATEGORY_LABELS[category]?.[currentLanguage] || CATEGORY_LABELS[category]?.[DEFAULT_LANGUAGE] || category;
 }
 
 function animateVisuals() {
