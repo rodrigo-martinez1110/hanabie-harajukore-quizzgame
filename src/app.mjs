@@ -16,6 +16,7 @@ import {
   savePlayerProfile,
   submitLeaderboardScore
 } from './leaderboardClient.mjs';
+import { getLeaderboardEntryClasses, getLeaderboardPositionLabel } from './leaderboardPresentation.mjs';
 import { normalizeQuestionBank } from './questionBank.mjs';
 import { shuffleQuestions } from './questionShuffle.mjs';
 import { calculateFanRank } from './scoring.mjs';
@@ -470,7 +471,7 @@ async function loadMyBest() {
       return;
     }
 
-    myBestCard.innerHTML = getScoreCardMarkup(score, 1);
+    myBestCard.innerHTML = getScoreCardMarkup(score, 1, { showPodiumLabel: false });
     myBestStatus.textContent = t('myBestLoaded', currentLanguage);
   } catch (error) {
     myBestStatus.textContent = t('leaderboardError', currentLanguage, { message: error.message });
@@ -479,16 +480,20 @@ async function loadMyBest() {
 
 function renderScoreList(scores, list) {
   list.innerHTML = scores.map((score, index) => `
-    <li class="leaderboard-entry">
+    <li class="${getLeaderboardEntryClasses(index + 1)}">
       ${getScoreCardMarkup(score, index + 1)}
     </li>
   `).join('');
 }
 
-function getScoreCardMarkup(score, position) {
+function getScoreCardMarkup(score, position, options = {}) {
+  const showPodiumLabel = (options.showPodiumLabel ?? true) && position <= 3;
   const accuracy = Math.round(Number(score.accuracy || 0) * 100);
   return `
-    <span class="leaderboard-position">#${position}</span>
+    <span class="leaderboard-position">
+      <span class="leaderboard-position-number">#${position}</span>
+      ${showPodiumLabel ? `<span class="leaderboard-position-title">${escapeHtml(getLeaderboardPositionLabel(position))}</span>` : ''}
+    </span>
     <div class="leaderboard-player">
       <strong>${escapeHtml(score.nickname)}</strong>
       <span>${escapeHtml(score.countryCode)} · ${escapeHtml(score.fanRank)}</span>
